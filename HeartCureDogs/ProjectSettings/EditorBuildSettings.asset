@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/achievement.unity
+    guid: 58552b84b99c1744081c7a7569953782
+  - enabled: 1
+    path: Assets/Scenes/bag.unity
+    guid: 4161528fd78d3b448b30afb0cddccf90
+  - enabled: 1
+    path: Assets/Scenes/map.unity
+    guid: 4090d27bf70d5b846999467ebda5a83a
+  - enabled: 1
+    path: Assets/Scenes/minigame.unity
+    guid: 3b2e56c91f197804a899246a6b0f0193
+  - enabled: 1
+    path: Assets/Scenes/task.unity
+    guid: c25e888ba6ead7042a2268923072d3f8
   m_configObjects: {}
