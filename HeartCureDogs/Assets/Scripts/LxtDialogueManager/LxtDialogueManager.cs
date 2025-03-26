@@ -15,15 +15,17 @@ public class LxtDialogueManager : MonoBehaviour
     Dictionary<string, Sprite> rolespritesDic = new Dictionary<string, Sprite>();//建立名字和图片的字典
     public int dialogueIndex;//当前的对话索引值
     public string[] dialogueRows;
+    public Button nextButton;
 
     private void Awake()
     {
-        rolespritesDic["墩墩"] = roleSprites[0];
+        rolespritesDic["印小棠"] = roleSprites[0];
     }
     // Start is called before the first frame update
     void Start()
     {
         ReadText(dialoguedataFiletest);
+        ShowDialogueRows();
         //UpdateText("墩墩", "你好");
         //UpdateSprite("墩墩");
     }
@@ -56,12 +58,25 @@ public class LxtDialogueManager : MonoBehaviour
         foreach (var row in dialogueRows)
         {
             string[] cells = row.Split(',');
-            if(int.Parse(cells[1]) == dialogueIndex && cells[0]=="#")
+            if(cells[0]=="#"&&int.Parse(cells[1]) == dialogueIndex)
             {
-                UpdateText(cells[2], cells[3]);
-                UpdateSprite(cells[2]);
-                dialogueIndex = int.Parse(cells[4]);
+                if (cells[2] == null)
+                {
+                    rolenameText.text = null;
+                    roleImage.GetComponent<Image>().sprite = null;
+                }
+                else
+                {
+                    UpdateText(cells[2], cells[3]);
+                    UpdateSprite(cells[2]);
+                    dialogueIndex = int.Parse(cells[4]);
+                }
+                break;
             }
         }
+    }
+    public void OnClickNextButton()
+    {
+        ShowDialogueRows();
     }
 }
