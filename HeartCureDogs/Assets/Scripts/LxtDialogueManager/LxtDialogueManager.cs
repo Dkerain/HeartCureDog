@@ -20,6 +20,7 @@ public class LxtDialogueManager : MonoBehaviour
     private void Awake()
     {
         rolespritesDic["Ó¡Ð¡ÌÄ"] = roleSprites[0];
+        rolespritesDic["ÅÔ°×"]=roleSprites[1];
     }
     // Start is called before the first frame update
     void Start()
@@ -60,17 +61,14 @@ public class LxtDialogueManager : MonoBehaviour
             string[] cells = row.Split(',');
             if(cells[0]=="#"&&int.Parse(cells[1]) == dialogueIndex)
             {
-                if (cells[2] == null)
-                {
-                    rolenameText.text = null;
-                    roleImage.GetComponent<Image>().sprite = null;
-                }
-                else
-                {
-                    UpdateText(cells[2], cells[3]);
-                    UpdateSprite(cells[2]);
-                    dialogueIndex = int.Parse(cells[4]);
-                }
+                //if (cells[2] == null)
+                //{
+                //    rolenameText.text = null;
+                //    roleImage.GetComponent<Image>().sprite = null;
+                //}
+                UpdateText(cells[2], cells[3]);
+                UpdateSprite(cells[2]);
+                dialogueIndex = int.Parse(cells[4]);
                 break;
             }
         }
