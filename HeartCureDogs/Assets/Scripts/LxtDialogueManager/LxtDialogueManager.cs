@@ -16,6 +16,8 @@ public class LxtDialogueManager : MonoBehaviour
     public int dialogueIndex;//当前的对话索引值
     public string[] dialogueRows;
     public Button nextButton;
+    public GameObject optionButton;//选项按钮预制体
+    public Transform buttonGroup;//选项按钮父节点，用于自动排序
 
     private void Awake()
     {
@@ -56,10 +58,10 @@ public class LxtDialogueManager : MonoBehaviour
     }
     public void ShowDialogueRows()
     {
-        foreach (var row in dialogueRows)
+        for (int i=0;i<dialogueRows.Length;i++)
         {
-            string[] cells = row.Split(',');
-            if(cells[0]=="#"&&int.Parse(cells[1]) == dialogueIndex)
+            string[] cells = dialogueRows[i].Split(',');
+            if (cells[0] == "#" && int.Parse(cells[1]) == dialogueIndex)
             {
                 //if (cells[2] == null)
                 //{
@@ -69,12 +71,48 @@ public class LxtDialogueManager : MonoBehaviour
                 UpdateText(cells[2], cells[3]);
                 UpdateSprite(cells[2]);
                 dialogueIndex = int.Parse(cells[4]);
+                nextButton.gameObject.SetActive(true);
                 break;
+            }
+            else if (cells[0] == "&" && int.Parse(cells[1])==dialogueIndex)
+            {
+                nextButton.gameObject.SetActive(false);
+                GenerateOption(i);
+            }
+            else if (cells[0] == "END" && int.Parse(cells[1]) == dialogueIndex)
+            {
+                Debug.Log("剧情结束");
             }
         }
     }
     public void OnClickNextButton()
     {
         ShowDialogueRows();
+    }
+    public void GenerateOption(int _index)
+    {
+        string[] cells=dialogueRows[_index].Split(",");
+        if (cells[0] == "&")
+        {
+            GameObject button = Instantiate(optionButton, buttonGroup);
+            button.GetComponentInChildren<TMP_Text>().text = cells[4];
+            button.GetComponent<Button>().onClick.AddListener
+                (
+                    delegate
+                    {
+                        OnOptionClick(int.Parse(cells[5]));
+                    }
+                );
+            GenerateOption(_index + 1);
+        }
+    }
+    public void OnOptionClick(int _id)
+    {
+        dialogueIndex = _id;
+        ShowDialogueRows();
+        for (int i = 0; i < buttonGroup.childCount; i++)
+        {
+            Destroy(buttonGroup.GetChild(i).gameObject);
+        }
     }
 }
