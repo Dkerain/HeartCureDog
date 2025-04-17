@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.UI;
 using UnityEngine.UI;
+using System.IO.Pipes;
 
 public class LxtDialogueManager : MonoBehaviour
 {
@@ -18,11 +19,18 @@ public class LxtDialogueManager : MonoBehaviour
     public Button nextButton;
     public GameObject optionButton;//选项按钮预制体
     public Transform buttonGroup;//选项按钮父节点，用于自动排序
+    public List<Character> chracters = new List<Character>();
 
     private void Awake()
     {
         rolespritesDic["印小棠"] = roleSprites[0];
         rolespritesDic["旁白"]=roleSprites[1];
+        Character npc0=new Character();
+        npc0.name = "印小棠";
+        chracters.Add(npc0);
+        Character narration=new Character();
+        narration.name = "旁白";
+        chracters.Add (narration);
     }
     // Start is called before the first frame update
     void Start()
@@ -101,6 +109,11 @@ public class LxtDialogueManager : MonoBehaviour
                     delegate
                     {
                         OnOptionClick(int.Parse(cells[5]));
+                        if (cells[6]!=" ")
+                        {
+                            string[] effect = cells[6].Split("@");
+                            OptionEffect(effect[0], int.Parse(effect[1]), cells[7]);
+                        }
                     }
                 );
             GenerateOption(_index + 1);
@@ -113,6 +126,109 @@ public class LxtDialogueManager : MonoBehaviour
         for (int i = 0; i < buttonGroup.childCount; i++)
         {
             Destroy(buttonGroup.GetChild(i).gameObject);
+        }
+    }
+    public void OptionEffect(string _effect, int _param, string _target)
+    {
+        if (_effect == "体力值加")
+        {
+            foreach (var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.brwanValue += _param;
+                }
+            }
+        }
+        if (_effect == "体力值减")
+        {
+            foreach (var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.brwanValue -= _param;
+                }
+            }
+        }
+        if (_effect == "金币加")
+        {
+            foreach (var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.coinValue -= _param;
+                }
+            }
+        }
+        if (_effect == "金币减")
+        {
+            foreach (var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.coinValue -= _param;
+                }
+            }
+        }
+        if (_effect == "体魄减")
+        {
+            foreach (var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.healthValue -= _param;
+                }
+            }
+        }
+        if (_effect=="体魄加")
+        {
+            foreach(var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.healthValue -= _param;
+                }
+            }
+        }
+        if(_effect=="精力加")
+        {
+            foreach(var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.energyValue += _param;
+                }
+            }
+        }
+        if( _effect=="精力减")
+        {
+            foreach(var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.energyValue -= _param;
+                }
+            }
+        }
+        if ( _effect=="信任加")
+        {
+            foreach(var character in chracters )
+            {
+                if (character.name == _target)
+                {
+                    character.believeValue += _param;
+                }
+            }
+        }
+        if(_effect=="信任减")
+        {
+            foreach(var character in chracters)
+            {
+                if(character.name == _target)
+                {
+                    character.believeValue -= _param;
+                }
+            }
         }
     }
 }
