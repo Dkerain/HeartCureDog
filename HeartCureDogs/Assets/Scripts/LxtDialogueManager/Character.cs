@@ -1,7 +1,7 @@
 public class Character
 {
     public string name;
-    public string emotionValue;
+    public string emotion;//心情
     public int healthValue;
     public int energyValue;//精力值
     public int believeValue;

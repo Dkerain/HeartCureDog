@@ -6,6 +6,7 @@ using Unity.UI;
 using UnityEngine.UI;
 //using UnityEngine.TextCore.Text;
 using System.IO.Pipes;
+using System;
 
 public class LxtDialogueManager : MonoBehaviour
 {
@@ -112,8 +113,16 @@ public class LxtDialogueManager : MonoBehaviour
                         OnOptionClick(int.Parse(cells[5]));
                         if (cells[6] != " ")
                         {
-                            string[] effect = cells[6].Split("@");
-                            OptionEffect(effect[0], int.Parse(effect[1]), cells[7]);
+                            string[] allEffects = cells[6].Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                            foreach (string effectStr in allEffects)
+                            {
+                                string[] effect = cells[6].Split("@");
+                                if (effect[0]=="心情")
+                                {
+                                    OptionEffect1(effect[0], effect[1], cells[7]);
+                                }
+                                OptionEffect2(effect[0], int.Parse(effect[1]), cells[7]);
+                            }
                         }
                     }
                 );
@@ -129,7 +138,20 @@ public class LxtDialogueManager : MonoBehaviour
             Destroy(buttonGroup.GetChild(i).gameObject);
         }
     }
-    public void OptionEffect(string _effect, int _param, string _target)
+    public void OptionEffect1(string _effect,string _param,string _target)//独属于心情的属性加成
+    {
+        if (_effect == "心情")
+        {
+            foreach (var character in chracters)
+            {
+                if (character.name == _target)
+                {
+                    character.emotion = _param;
+                }
+            }
+        }
+    }
+    public void OptionEffect2(string _effect, int _param, string _target)//其他的属性加成
     {
         if (_effect == "体力值加")
         {
