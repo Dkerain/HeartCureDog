@@ -21,16 +21,18 @@ public class LxtDialogueManager : MonoBehaviour
     public Button nextButton;
     public GameObject optionButton;//选项按钮预制体
     public Transform buttonGroup;//选项按钮父节点，用于自动排序
-    public List<Character> chracters = new List<Character>();
+    public List<Characters> chracters = new List<Characters>();
+    public List<Dogs> dogs = new List<Dogs>();
+    public List<NPCs> npcs = new List<NPCs>();
 
     private void Awake()
     {
         rolespritesDic["印小棠"] = roleSprites[0];
         rolespritesDic["旁白"]=roleSprites[1];
-        Character npc0 = new Character();
+        NPCs npc0 = new NPCs();
         npc0.name = "印小棠";
         chracters.Add(npc0);
-        Character narration = new Character();
+        Characters narration = new Characters();
         narration.name = "旁白";
         chracters.Add(narration);
     }
@@ -142,11 +144,11 @@ public class LxtDialogueManager : MonoBehaviour
     {
         if (_effect == "心情")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.emotion = _param;
+                    dog.emotion = _param;
                 }
             }
         }
@@ -155,101 +157,101 @@ public class LxtDialogueManager : MonoBehaviour
     {
         if (_effect == "体力值加")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.brwanValue += _param;
+                    dog.brwanValue += _param;
                 }
             }
         }
         if (_effect == "体力值减")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.brwanValue -= _param;
+                    dog.brwanValue -= _param;
                 }
             }
         }
         if (_effect == "金币加")
         {
-            foreach (var character in chracters)
+            foreach (var npc in npcs)
             {
-                if (character.name == _target)
+                if (npc.name == _target)
                 {
-                    character.coinValue -= _param;
+                    npc.coinValue -= _param;
                 }
             }
         }
         if (_effect == "金币减")
         {
-            foreach (var character in chracters)
+            foreach (var npc in npcs)
             {
-                if (character.name == _target)
+                if (npc.name == _target)
                 {
-                    character.coinValue -= _param;
+                    npc.coinValue -= _param;
                 }
             }
         }
         if (_effect == "体魄减")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.healthValue -= _param;
+                    dog.healthValue -= _param;
                 }
             }
         }
         if (_effect == "体魄加")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.healthValue -= _param;
+                    dog.healthValue -= _param;
                 }
             }
         }
         if (_effect == "精力加")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.energyValue += _param;
+                    dog.energyValue += _param;
                 }
             }
         }
         if (_effect == "精力减")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.energyValue -= _param;
+                    dog.energyValue -= _param;
                 }
             }
         }
         if (_effect == "信任加")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.believeValue += _param;
+                    dog.believeValue += _param;
                 }
             }
         }
         if (_effect == "信任减")
         {
-            foreach (var character in chracters)
+            foreach (var dog in dogs)
             {
-                if (character.name == _target)
+                if (dog.name == _target)
                 {
-                    character.believeValue -= _param;
+                    dog.believeValue -= _param;
                 }
             }
         }
