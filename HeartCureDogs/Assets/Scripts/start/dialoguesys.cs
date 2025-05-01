@@ -162,7 +162,7 @@ public class CombinedDialogueSystem : MonoBehaviour
                 int nextIndex;
                 if (!int.TryParse(cells[4], out nextIndex))
                 {
-                    Debug.LogError("Invalid next index format: " + cells[4] + " in row: " + i);
+                    //Debug.LogError("Invalid next index format: " + cells[4] + " in row: " + i);
                     continue; // 跳过当前行
                 }
 
