@@ -9,7 +9,8 @@ public class DogControllerr : MonoBehaviour
     [Header("移动参数")]
     [Tooltip("调整小狗移动速度")]
     public float moveSpeed = 5f; // 默认速度，面板可调
-
+    [Header("移动限制")]
+    public LayerMask walkableLayer;
     private Vector3 targetPosition; // 存储目标位置
     private bool isMoving = false; // 移动状态标记
 
@@ -35,14 +36,19 @@ public class DogControllerr : MonoBehaviour
 
     void SetTargetPosition()
     {
-        // 将鼠标屏幕坐标转换为世界坐标
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = 10f; // 确保z值与相机距离一致
+        Vector3 worldPos = GetMouseWorldPos();
 
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-        targetPosition = new Vector3(worldPos.x, worldPos.y, 0);
-
-        isMoving = true; // 进入移动状态
+        // 检测目标点是否在可移动区域
+        if (IsPositionWalkable(worldPos))
+        {
+            targetPosition = worldPos;
+            isMoving = true;
+        }
+    }
+    bool IsPositionWalkable(Vector3 pos)
+    {
+        Collider2D hit = Physics2D.OverlapPoint(pos, walkableLayer);
+        return hit != null;
     }
 
     void MoveToTarget()
@@ -79,6 +85,11 @@ public class DogControllerr : MonoBehaviour
         float moveDir = targetPosition.x - transform.position.x;
         dogAnimator.SetFloat("MoveX", moveDir); // X轴移动方向
     }
-
+    Vector3 GetMouseWorldPos()
+    {
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 10f;
+        return Camera.main.ScreenToWorldPoint(mousePos);
+    }
 
 }
