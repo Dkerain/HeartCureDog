@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DogControllerr : MonoBehaviour
 {
+    [Header("动画控制")]
+    public Animator dogAnimator;
     [Header("移动参数")]
     [Tooltip("调整小狗移动速度")]
     public float moveSpeed = 5f; // 默认速度，面板可调
@@ -27,6 +29,8 @@ public class DogControllerr : MonoBehaviour
 
         // 持续向目标点移动
         MoveToTarget();
+        UpdateSpriteRotation(); // 新增此行
+        dogAnimator.SetBool("IsWalking", isMoving);
     }
 
     void SetTargetPosition()
@@ -61,4 +65,20 @@ public class DogControllerr : MonoBehaviour
             isMoving = false;
         }
     }
+    void UpdateSpriteRotation()
+    {
+        // 根据移动方向水平翻转精灵
+        if (targetPosition.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(-0.2016079f, 0.2016079f, 1); // 朝右
+        }
+        else if (targetPosition.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(0.2016079f, 0.2016079f, 1); // 朝左
+        }
+        float moveDir = targetPosition.x - transform.position.x;
+        dogAnimator.SetFloat("MoveX", moveDir); // X轴移动方向
+    }
+
+
 }
