@@ -319,8 +319,8 @@ MonoBehaviour:
   dialogueIndex: 0
   dialogueRows: []
   nextButton: {fileID: 1314730386}
-  optionButton: {fileID: 0}
-  buttonGroup: {fileID: 0}
+  optionButton: {fileID: 5289855629304064827, guid: ec4b412facf59aa43a89914e99e53a06, type: 3}
+  buttonGroup: {fileID: 615385905}
 --- !u!1 &263264577
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,6 +664,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &615385904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 615385905}
+  - component: {fileID: 615385906}
+  m_Layer: 5
+  m_Name: ButtonGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &615385905
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615385904}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1624219426}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -50, y: 189}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &615385906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615385904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 200, y: 30}
+  m_Spacing: {x: 0, y: 200}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &688460627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2224,7 @@ RectTransform:
   - {fileID: 806089566}
   - {fileID: 1261687183}
   - {fileID: 263264578}
+  - {fileID: 615385905}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2221,7 +2282,7 @@ MonoBehaviour:
   roleNameText: {fileID: 1376305503}
   typingSound: {fileID: 0}
   continueSound: {fileID: 0}
-  dialogDataFile: {fileID: 4900000, guid: d20528851c382a646a23e7465e5009cb, type: 3}
+  dialogDataFile: {fileID: 4900000, guid: 8ff7dcb5e9586af4eb15768aff7f9bbd, type: 3}
   roleSprites:
   - {fileID: 21300000, guid: 5088cf19c6352e4429809c055322a88f, type: 3}
   - {fileID: 0}
