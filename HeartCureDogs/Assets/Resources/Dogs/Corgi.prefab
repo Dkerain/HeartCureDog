@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6276668711152180415}
   - component: {fileID: 3282300376050948547}
-  - component: {fileID: 3897819931336055242}
   - component: {fileID: -919859797802818421}
   - component: {fileID: -8534307019784150756}
   - component: {fileID: -5614660349743982702}
@@ -89,24 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3897819931336055242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807379293324936156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d2a114b190cff4b85929c14e3a4e7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 1
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  stopDistance: 0.1
-  showDebug: 1
 --- !u!114 &-919859797802818421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +105,12 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 64
+  dogPrefabs:
+  - {fileID: 3328498613482096799, guid: 96131aee91af8ce458d58a1cd150ffab, type: 3}
+  - {fileID: 807379293324936156}
+  - {fileID: 1423234306042550231, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  spawnPoint: {fileID: 0}
+  blanket: {fileID: 0}
 --- !u!95 &-8534307019784150756
 Animator:
   serializedVersion: 5

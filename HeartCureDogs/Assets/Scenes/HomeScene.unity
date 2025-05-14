@@ -4336,8 +4336,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1961782741}
-        m_TargetAssemblyTypeName: HomeSceneController, Assembly-CSharp
+      - m_Target: {fileID: 1961782744}
+        m_TargetAssemblyTypeName: homesceneson, Assembly-CSharp
         m_MethodName: OnAddFoodButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -4741,6 +4741,7 @@ GameObject:
   - component: {fileID: 1746546818}
   - component: {fileID: 1746546817}
   - component: {fileID: 1746546816}
+  - component: {fileID: 1746546819}
   m_Layer: 5
   m_Name: foodBowl
   m_TagString: Untagged
@@ -4765,8 +4766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 754, y: -179.79}
-  m_SizeDelta: {x: 228.9244, y: 185.5724}
+  m_AnchoredPosition: {x: 754, y: -179.78998}
+  m_SizeDelta: {x: 228.92432, y: 185.57239}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746546816
 MonoBehaviour:
@@ -4812,8 +4813,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1961782741}
-        m_TargetAssemblyTypeName: HomeSceneController, Assembly-CSharp
+      - m_Target: {fileID: 1961782744}
+        m_TargetAssemblyTypeName: homesceneson, Assembly-CSharp
         m_MethodName: OnAddFoodButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -4862,6 +4863,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746546814}
   m_CullTransparentMesh: 1
+--- !u!95 &1746546819
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746546814}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7be26828ee1917448cbe826d042abe5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1758017649
 GameObject:
   m_ObjectHideFlags: 0
@@ -5060,8 +5082,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1961782741}
-        m_TargetAssemblyTypeName: HomeSceneController, Assembly-CSharp
+      - m_Target: {fileID: 1961782744}
+        m_TargetAssemblyTypeName: homesceneson, Assembly-CSharp
         m_MethodName: OnLeaveButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -5511,6 +5533,8 @@ GameObject:
   - component: {fileID: 1961782741}
   - component: {fileID: 1961782742}
   - component: {fileID: 1961782743}
+  - component: {fileID: 1961782744}
+  - component: {fileID: 1961782745}
   m_Layer: 0
   m_Name: HomeSceneController
   m_TagString: Untagged
@@ -5540,7 +5564,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961782731}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cd05cd09b66f1e41bf22fecb1f9dae5, type: 3}
   m_Name: 
@@ -5582,7 +5606,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961782731}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d04958f946f68645b648156831392ba, type: 3}
   m_Name: 
@@ -5594,6 +5618,55 @@ MonoBehaviour:
   spawnPoint: {fileID: 902738868}
   blanket: {fileID: 2087357530}
   dogInstance: {fileID: 0}
+--- !u!114 &1961782744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961782731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fdb8298452451540a3595934936502c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dogPrefabs:
+  - {fileID: 3328498613482096799, guid: 96131aee91af8ce458d58a1cd150ffab, type: 3}
+  - {fileID: 807379293324936156, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
+  - {fileID: 1423234306042550231, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  spawnPoint: {fileID: 1207829878}
+  spawnPoint1: {fileID: 902738868}
+  blanket: {fileID: 2087357530}
+  statusPanel: {fileID: 1004059735}
+  feedPrompt: {fileID: 1487724816}
+  foodBowl: {fileID: 1746546814}
+  dialogueBox: {fileID: 262591221}
+  dialogueSystem: {fileID: 1961782742}
+  leaveButton: {fileID: 1790834707}
+  optionsPanel: {fileID: 800119389}
+--- !u!114 &1961782745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961782731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c81e071ebd136243a2a684cfa1d9fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dogAnimator: {fileID: -8534307019784150756, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
+  moveSpeed: 5
+  walkableLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  dogPrefabs:
+  - {fileID: 3328498613482096799, guid: 96131aee91af8ce458d58a1cd150ffab, type: 3}
+  - {fileID: 807379293324936156, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
+  - {fileID: 1423234306042550231, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  spawnPoint: {fileID: 902738868}
+  blanket: {fileID: 2087357531}
 --- !u!1 &1977290870
 GameObject:
   m_ObjectHideFlags: 0
