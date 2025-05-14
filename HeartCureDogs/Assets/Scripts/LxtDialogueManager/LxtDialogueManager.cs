@@ -181,7 +181,7 @@ public class LxtDialogueManager : MonoBehaviour
             {
                 if (npc.name == _target)
                 {
-                    npc.coinValue += _param;
+                    npc.coinValue -= _param;
                 }
             }
         }
@@ -211,7 +211,7 @@ public class LxtDialogueManager : MonoBehaviour
             {
                 if (dog.name == _target)
                 {
-                    dog.healthValue += _param;
+                    dog.healthValue -= _param;
                 }
             }
         }
@@ -256,6 +256,4 @@ public class LxtDialogueManager : MonoBehaviour
             }
         }
     }
-   
-
 }
