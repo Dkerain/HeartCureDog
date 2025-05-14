@@ -94,7 +94,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423234306042550231}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4d2a114b190cff4b85929c14e3a4e7f, type: 3}
   m_Name: 
@@ -148,4 +148,7 @@ MonoBehaviour:
   moveSpeed: 5
   walkableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  dogPrefabs: []
+  spawnPoint: {fileID: 0}
+  blanket: {fileID: 0}

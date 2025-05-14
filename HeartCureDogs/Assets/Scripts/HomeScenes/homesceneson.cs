@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class homesceneson : MonoBehaviour
+public class HomeSceneController : MonoBehaviour
 {
     public GameObject[] dogPrefabs;
     public Transform spawnPoint;
@@ -20,7 +20,7 @@ public class homesceneson : MonoBehaviour
     public GameObject leaveButton;
     public GameObject optionsPanel;
 
-    private DogControllerr dogController; // DogController 的引用
+    private DogController dogController; // DogController 的引用
     private GameObject dogInstance;
     private bool hasFedDog = false;
 
@@ -33,26 +33,25 @@ public class homesceneson : MonoBehaviour
 
         statusPanel.SetActive(true);
 
-        // 初始化新版控制器
-        InitializeDogController();
+        // 获取 DogController 的引用
+        GameObject dogManager = GameObject.Find("DogManager");
+        if (dogManager != null)
+        {
+            dogController = dogManager.GetComponent<DogController>();
+        }
+        else
+        {
+            Debug.LogError("无法找到名为 'DogManager' 的 GameObject！");
+        }
+
+        if (dogController == null)
+        {
+            Debug.LogError("DogController 组件未正确绑定！");
+        }
 
         dialogueBox.SetActive(false);
         feedPrompt.SetActive(true);
         StartCoroutine(FeedDogRoutine());
-    }
-    private void InitializeDogController()
-    {
-        dogController = FindObjectOfType<DogControllerr>();
-
-        if (dogController != null)
-        {
-            // 如果需要在初始化时锁定位置
-            dogController.GetComponent<DogControllerr>().enabled = false;
-        }
-        else
-        {
-            Debug.LogError("找不到DogControllerr，请确保场景中有对应的控制器！");
-        }
     }
 
     private IEnumerator FeedDogRoutine()
@@ -202,19 +201,14 @@ public class homesceneson : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
-        // 启用新版移动控制
+        // 启用小狗的移动控制
         if (dogController != null)
         {
-            dogController.enabled = true;
-            // 设置一个预设的初始目标点 （示例位置）
-            Vector3 initialTarget = blanket.transform.position + new Vector3(2f, 0, 0);
-
-            // 调用新版方法
-            dogController.SetTargetPosition(initialTarget);
+            dogController.EnableDogMovement();
         }
         else
         {
-            Debug.LogError("DogControllerr 组件未正确绑定！");
+            Debug.LogError("DogController 组件未正确绑定！");
         }
     }
 }
