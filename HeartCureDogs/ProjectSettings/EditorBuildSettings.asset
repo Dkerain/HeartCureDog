@@ -41,4 +41,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HomeScene.unity
     guid: a6092816822c0234386b69207c6c4072
+  - enabled: 1
+    path: Assets/Scenes/bathroom.unity
+    guid: de6ef3ffa0eaf77479f5c8b0ee1b55f6
+  - enabled: 1
+    path: Assets/Scenes/bedroom.unity
+    guid: 93b746b8031143f4b8a57d004c493445
+  - enabled: 1
+    path: Assets/Scenes/hospital.unity
+    guid: a739fe106cc7ceb4eba4be7731e766f3
+  - enabled: 1
+    path: Assets/Scenes/park.unity
+    guid: 7316830307b8cd449b3c0ab87fc8c4b0
   m_configObjects: {}
