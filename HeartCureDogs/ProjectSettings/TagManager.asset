@@ -8,7 +8,6 @@ TagManager:
   - Bowl
   - Ground
   - DialogPanel
-  - DogController
   layers:
   - Default
   - TransparentFX
