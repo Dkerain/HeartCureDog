@@ -13,28 +13,13 @@ public class DogControllerr : MonoBehaviour
     public LayerMask walkableLayer;
     private Vector3 targetPosition; // 存储目标位置
     private bool isMoving = false; // 移动状态标记
-    [Header("实例化设置")]
-    public GameObject[] dogPrefabs; // 添加这行
-    public Transform spawnPoint;    // 添加这行
-    public Transform blanket; // 新增毛毯引用
 
     void Start()
     {
-        SpawnDog(); // 新增生成方法
         // 初始位置作为第一个目标点
         targetPosition = transform.position;
     }
-    void SpawnDog()
-    {
-        int selectedBreed = PlayerPrefs.GetInt("SelectedBreed", 0);
-        if (selectedBreed >= 0 && dogPrefabs.Length > selectedBreed)
-        {
-            GameObject newDog = Instantiate(dogPrefabs[selectedBreed], spawnPoint.position, Quaternion.identity);
-            dogAnimator = newDog.GetComponent<Animator>();
-            newDog.transform.SetParent(blanket);
-        }
-    }
-    public void EnableControl() => enabled = true;
+
     void Update()
     {
         // 仅在左键点击时更新目标点
@@ -105,14 +90,6 @@ public class DogControllerr : MonoBehaviour
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10f;
         return Camera.main.ScreenToWorldPoint(mousePos);
-    }
-    public void SetTargetPosition(Vector3 target)
-    {
-        if (IsPositionWalkable(target))
-        {
-            targetPosition = target;
-            isMoving = true;
-        }
     }
 
 }
