@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1422868703495666997}
   - component: {fileID: 4243498116869576503}
   - component: {fileID: 7483861453923942957}
+  - component: {fileID: 5248582339107779670}
   m_Layer: 0
   m_Name: Labrador
   m_TagString: Dog
@@ -94,7 +95,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3328498613482096799}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4d2a114b190cff4b85929c14e3a4e7f, type: 3}
   m_Name: 
@@ -144,8 +145,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c81e071ebd136243a2a684cfa1d9fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogAnimator: {fileID: 0}
+  dogAnimator: {fileID: 5248582339107779670}
   moveSpeed: 5
   walkableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  dogPrefabs:
+  - {fileID: 3328498613482096799}
+  - {fileID: 807379293324936156, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
+  - {fileID: 1423234306042550231, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  spawnPoint: {fileID: 0}
+  blanket: {fileID: 0}
+--- !u!95 &5248582339107779670
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3328498613482096799}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd85e38a4e0de1a478534cc70538e477, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

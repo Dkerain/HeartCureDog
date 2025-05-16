@@ -2902,6 +2902,61 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596448934}
   m_CullTransparentMesh: 1
+--- !u!1 &618672527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 618672529}
+  - component: {fileID: 618672528}
+  m_Layer: 0
+  m_Name: DogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &618672528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618672527}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c81e071ebd136243a2a684cfa1d9fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dogAnimator: {fileID: -8534307019784150756, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
+  moveSpeed: 4.94
+  walkableLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  dogPrefabs:
+  - {fileID: 3328498613482096799, guid: 96131aee91af8ce458d58a1cd150ffab, type: 3}
+  - {fileID: 807379293324936156, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
+  - {fileID: 1423234306042550231, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  spawnPoint: {fileID: 902738868}
+  blanket: {fileID: 2087357531}
+--- !u!4 &618672529
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618672527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6570501, y: 1.2716963, z: -0.02990642}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &800119389
 GameObject:
   m_ObjectHideFlags: 0
@@ -6531,20 +6586,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd05cd09b66f1e41bf22fecb1f9dae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogPrefabs:
-  - {fileID: 3328498613482096799, guid: 96131aee91af8ce458d58a1cd150ffab, type: 3}
-  - {fileID: 807379293324936156, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
-  - {fileID: 1423234306042550231, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
-  spawnPoint: {fileID: 1207829878}
-  spawnPoint1: {fileID: 902738868}
-  blanket: {fileID: 2087357530}
-  statusPanel: {fileID: 1004059735}
-  feedPrompt: {fileID: 1487724816}
-  foodBowl: {fileID: 1746546814}
-  dialogueBox: {fileID: 262591221}
-  dialogueSystem: {fileID: 1961782742}
-  leaveButton: {fileID: 1790834707}
-  optionsPanel: {fileID: 800119389}
 --- !u!114 &1961782742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6568,7 +6609,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961782731}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d04958f946f68645b648156831392ba, type: 3}
   m_Name: 
@@ -6613,7 +6654,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1961782731}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c81e071ebd136243a2a684cfa1d9fd0, type: 3}
   m_Name: 
@@ -6623,12 +6664,9 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 64
-  dogPrefabs:
-  - {fileID: 3328498613482096799, guid: 96131aee91af8ce458d58a1cd150ffab, type: 3}
-  - {fileID: 807379293324936156, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
-  - {fileID: 1423234306042550231, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
-  spawnPoint: {fileID: 902738868}
-  blanket: {fileID: 2087357531}
+  dogPrefabs: []
+  spawnPoint: {fileID: 0}
+  blanket: {fileID: 0}
 --- !u!1 &1977290870
 GameObject:
   m_ObjectHideFlags: 0
@@ -7125,3 +7163,4 @@ SceneRoots:
   - {fileID: 902738868}
   - {fileID: 1839229772}
   - {fileID: 500623035}
+  - {fileID: 618672529}
