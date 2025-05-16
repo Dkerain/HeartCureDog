@@ -8,7 +8,12 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText; // 对话文本组件
     public string[] dialogues; // 对话内容数组
     private int currentDialogueIndex = 0; // 当前对话索引
-
+    void Start()
+    {
+        SpawnDog();
+        enabled = false; // 初始禁用主动控制
+                         // ...其他初始化...
+    }
     // 显示对话
     public void ShowDialogue(string dialogue)
     {
