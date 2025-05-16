@@ -157,21 +157,21 @@ public class LxtDialogueManager : MonoBehaviour
     {
         if (_effect == "体力值加")
         {
-            foreach (var dog in dogs)
+            foreach (var npc in npcs)
             {
-                if (dog.name == _target)
+                if (npc.name == _target)
                 {
-                    dog.brwanValue += _param;
+                    npc.brwanValue += _param;
                 }
             }
         }
         if (_effect == "体力值减")
         {
-            foreach (var dog in dogs)
+            foreach (var npc in npcs)
             {
-                if (dog.name == _target)
+                if (npc.name == _target)
                 {
-                    dog.brwanValue -= _param;
+                    npc.brwanValue -= _param;
                 }
             }
         }

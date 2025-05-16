@@ -2282,7 +2282,7 @@ MonoBehaviour:
   roleNameText: {fileID: 1376305503}
   typingSound: {fileID: 0}
   continueSound: {fileID: 0}
-  dialogDataFile: {fileID: 4900000, guid: 8ff7dcb5e9586af4eb15768aff7f9bbd, type: 3}
+  dialogDataFile: {fileID: 4900000, guid: d20528851c382a646a23e7465e5009cb, type: 3}
   roleSprites:
   - {fileID: 21300000, guid: 5088cf19c6352e4429809c055322a88f, type: 3}
   - {fileID: 0}
