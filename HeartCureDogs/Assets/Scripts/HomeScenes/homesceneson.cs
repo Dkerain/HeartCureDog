@@ -20,7 +20,7 @@ public class HomeSceneController : MonoBehaviour
     public GameObject leaveButton;
     public GameObject optionsPanel;
 
-    private DogController dogController; // DogController 的引用
+    private DogControllerr dogControllerr; // DogController 的引用
     private GameObject dogInstance;
     private bool hasFedDog = false;
 
@@ -34,20 +34,9 @@ public class HomeSceneController : MonoBehaviour
         statusPanel.SetActive(true);
 
         // 获取 DogController 的引用
-        GameObject dogManager = GameObject.Find("DogManager");
-        if (dogManager != null)
-        {
-            dogController = dogManager.GetComponent<DogController>();
-        }
-        else
-        {
-            Debug.LogError("无法找到名为 'DogManager' 的 GameObject！");
-        }
+        dogControllerr = FindObjectOfType<DogControllerr>();
 
-        if (dogController == null)
-        {
-            Debug.LogError("DogController 组件未正确绑定！");
-        }
+        
 
         dialogueBox.SetActive(false);
         feedPrompt.SetActive(true);
@@ -95,7 +84,7 @@ public class HomeSceneController : MonoBehaviour
     {
         feedPrompt.SetActive(false);
         dialogueBox.SetActive(true);
-
+        dogControllerr.DisableMovement(); // 禁用移动
         // 添加安全检查
         if (foodBowl.TryGetComponent<Button>(out var bowlButton))
         {
@@ -200,15 +189,6 @@ public class HomeSceneController : MonoBehaviour
     private IEnumerator AfterLeaveActions()
     {
         yield return new WaitForSeconds(0.5f);
-
-        // 启用小狗的移动控制
-        if (dogController != null)
-        {
-            dogController.EnableDogMovement();
-        }
-        else
-        {
-            Debug.LogError("DogController 组件未正确绑定！");
-        }
+        dogControllerr.EnableMovement(); // 调用新方法
     }
 }

@@ -10,7 +10,7 @@ public class DialogueManager : MonoBehaviour
     private int currentDialogueIndex = 0; // 当前对话索引
     void Start()
     {
-        SpawnDog();
+        
         enabled = false; // 初始禁用主动控制
                          // ...其他初始化...
     }

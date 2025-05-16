@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class UpdateUI : MonoBehaviour
 {
+    // 使用你现有的类体系
+    public Dogs myDog;
+    public NPCs mainCharacter;
+
+    // 需要补充的UI更新方法
+    private void UpdateCharacterUI()
+    {
+        // 实现你的UI更新逻辑，例如：
+        // healthText.text = myDog.healthValue.ToString();
+        Debug.Log("UI已更新");
+    }
     public void UpdateDogStats(string newEmotion, int newHealth, int newBelieve, int newEnergy)
     {
         myDog.emotion = newEmotion;
