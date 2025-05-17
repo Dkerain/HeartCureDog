@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using NodeCanvas.DialogueTrees;
 
 public class HomeSceneController : MonoBehaviour
 {
@@ -19,11 +20,12 @@ public class HomeSceneController : MonoBehaviour
     public DialogueSystem dialogueSystem;
     public GameObject leaveButton;
     public GameObject optionsPanel;
-
+    public DialogueTreeController dialogueController;
+    
     private DogControllerr dogControllerr; // DogController 的引用
     private GameObject dogInstance;
     private bool hasFedDog = false;
-
+   
     private void Start()
     {
         if (feedPrompt == null || dialogueBox == null || statusPanel == null)
@@ -96,7 +98,7 @@ public class HomeSceneController : MonoBehaviour
             Debug.LogError("对话系统实例未初始化！");
             return;
         }
-
+        dialogueController.StartDialogue();
         StartCoroutine(SafeStartDialogue());
     }
 

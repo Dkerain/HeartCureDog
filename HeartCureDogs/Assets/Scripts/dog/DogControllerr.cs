@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using NodeCanvas.DialogueTrees; // 添加命名空间引用
 public class DogControllerr : MonoBehaviour
 {
     [Header("动画控制")]
@@ -113,6 +113,29 @@ public class DogControllerr : MonoBehaviour
             dogAnimator = currentDog.GetComponent<Animator>();
         }
     }
+    void OnEnable()
+    {
+        DialogueTree.OnDialogueStarted += OnDialogueStarted;
+        DialogueTree.OnDialogueFinished += OnDialogueFinished;
+    }
+
+    void OnDisable()
+    {
+        DialogueTree.OnDialogueStarted -= OnDialogueStarted;
+        DialogueTree.OnDialogueFinished -= OnDialogueFinished;
+    }
+
+    private void OnDialogueStarted(DialogueTree dlg)
+    {
+        DisableMovement();
+    }
+
+    private void OnDialogueFinished(DialogueTree dlg)
+    {
+        EnableMovement();
+    }
+
+
 
     public void EnableMovement() => canMove = true;
     public void DisableMovement() => canMove = false;
