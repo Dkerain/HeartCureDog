@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c81e071ebd136243a2a684cfa1d9fd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dogAnimator: {fileID: 0}
+  dogAnimator: {fileID: -5086809450714989383}
   moveSpeed: 5
   walkableLayer:
     serializedVersion: 2
