@@ -20,7 +20,7 @@ namespace DogUnity
 
         // ***请在这里输入你的智谱AI密钥***
         // 请检查你的GLM API密钥格式为：{id}.{secret}
-        private static string _key = "65d7176aa065b3e3af0ed2c6f65eb466.j9yFILNn3funSyxs";
+        private static string _key = "6a24fdffd3df4ced98012ed990c82ea8.k6sk0fDEPSfLaNOv";
 
         private static string _apiKey => _key.Split('.')[0];
         private static string _secretKey => _key.Split(".")[1];
@@ -38,7 +38,7 @@ namespace DogUnity
             // 将请求转化为JSON
             RequestData requestObject = new RequestData
             {
-                model = "glm-4-air",  // 使用的GLM模型类型，可视情况更换
+                model = "glm-4-flash",  // 使用的GLM模型类型，可视情况更换
                 messages = chatHistory,
                 temperature = Mathf.Clamp(temperature, 0f, 1f),
                 tools = toolList,
