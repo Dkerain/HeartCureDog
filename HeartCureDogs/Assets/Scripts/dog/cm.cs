@@ -88,4 +88,9 @@ public class cm : MonoBehaviour
             UpdateCharacterUI();
         }
     }
+     // 在对话树中手动调用UI更新的方法
+    public void RefreshUI()
+    {
+        UpdateCharacterUI();
+    }
 }
