@@ -150,12 +150,6 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 64
-  dogPrefabs:
-  - {fileID: 3328498613482096799, guid: 96131aee91af8ce458d58a1cd150ffab, type: 3}
-  - {fileID: 807379293324936156, guid: 9a61b36e33728bc4184ec174ceb3e73c, type: 3}
-  - {fileID: 1423234306042550231}
-  spawnPoint: {fileID: 0}
-  blanket: {fileID: 0}
 --- !u!95 &-5086809450714989383
 Animator:
   serializedVersion: 5
