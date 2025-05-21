@@ -14,14 +14,12 @@ public class DogControllerr : MonoBehaviour
     private Vector3 targetPosition; // 存储目标位置
     private bool isMoving = false; // 移动状态标记
     [Header("生成设置")]
-    public GameObject[] dogPrefabs;
-    public Transform spawnPoint;
-    public Transform blanket;
+   
     private GameObject currentDog;
     private bool canMove = false;
     void Start()
     {
-        SpawnDog();
+       
         DisableMovement(); // 初始时禁用移动
         // 初始位置作为第一个目标点
         targetPosition = transform.position;
@@ -99,20 +97,7 @@ public class DogControllerr : MonoBehaviour
         mousePos.z = 10f;
         return Camera.main.ScreenToWorldPoint(mousePos);
     }
-    public void SpawnDog()
-    {
-        if (currentDog != null) Destroy(currentDog);
-
-        int selectedBreed = PlayerPrefs.GetInt("SelectedBreed", 0);
-        if (selectedBreed >= 0 && selectedBreed < dogPrefabs.Length)
-        {
-            currentDog = Instantiate(dogPrefabs[selectedBreed],
-                                   spawnPoint.position,
-                                   Quaternion.identity);
-            currentDog.transform.SetParent(blanket);
-            dogAnimator = currentDog.GetComponent<Animator>();
-        }
-    }
+    
     void OnEnable()
     {
         DialogueTree.OnDialogueStarted += OnDialogueStarted;
