@@ -84,7 +84,7 @@ EditorBuildSettings:
     path: "Assets/Scenes/\u6D3B\u52A8\u573A\u666F/\u516C\u56ED.unity"
     guid: ae1f6ebcda4bba94ab7479d8c7bfe699
   - enabled: 1
-    path: Assets/Scenes/SaveScene.unity
+    path: Assets/Scenes/LxtScene/SaveScene.unity
     guid: 74c9cc151a6b99340ba6d91aa475c457
   - enabled: 1
     path: "Assets/Scenes/\u6D3B\u52A8\u573A\u666F/\u5BA2\u5385.unity"
