@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using NodeCanvas.DialogueTrees; // 添加命名空间引用
+using NodeCanvas.DialogueTrees;
+using UnityEngine.UI; // 添加命名空间引用
 public class DogControllerr : MonoBehaviour
 {
     [Header("动画控制")]
@@ -16,7 +17,7 @@ public class DogControllerr : MonoBehaviour
     [Header("生成设置")]
 
     [Header("触发区域设置")]
-    public GameObject triggerPanel; // 要触发的Panel
+    public GameObject button; // 要触发的button
     public string squareTag = "TriggerSquare"; // 触发区域的标签
 
     private GameObject currentDog;
@@ -30,9 +31,9 @@ public class DogControllerr : MonoBehaviour
         targetPosition = transform.position;
 
         // 确保Panel初始状态为关闭
-        if (triggerPanel != null)
+        if (button != null)
         {
-            triggerPanel.SetActive(false);
+            button.SetActive(false);
         }
     }
 
@@ -117,7 +118,7 @@ public class DogControllerr : MonoBehaviour
         if (other.CompareTag(squareTag))
         {
             isInTriggerSquare = true;
-            ShowPanel();
+            Showbutton();
             Debug.Log("进入触发区域");
         }
     }
@@ -128,45 +129,46 @@ public class DogControllerr : MonoBehaviour
         if (other.CompareTag(squareTag))
         {
             isInTriggerSquare = false;
-            HidePanel();
+            Hidebutton();
             Debug.Log("离开触发区域");
         }
     }
 
-    // 显示Panel的方法
-    void ShowPanel()
+    // 显示button的方法
+    void Showbutton()
     {
-        if (triggerPanel != null && !triggerPanel.activeSelf)
+        if (button != null && !button.activeSelf)
         {
-            triggerPanel.SetActive(true);
+            button.SetActive(true);
             Debug.Log("Panel已显示");
         }
     }
 
-    // 隐藏Panel的方法
-    void HidePanel()
+    // 隐藏button的方法
+    void Hidebutton()
     {
-        if (triggerPanel != null && triggerPanel.activeSelf)
+        if (button != null && button.activeSelf)
         {
-            triggerPanel.SetActive(false);
-            Debug.Log("Panel已隐藏");
+            button.SetActive(false);
+            Debug.Log("button已隐藏");
         }
     }
-    // 检查并触发Panel
+    // 检查并触发button
     void CheckTriggerSquare()
     {
-        if (isInTriggerSquare && triggerPanel != null)
+        /*if (isInTriggerSquare && button != null)
         {
-            triggerPanel.SetActive(true);
-            Debug.Log("触发Panel显示");
+            button.SetActive(true);
+            Debug.Log("触发button显示");
 
-            // 可选：触发Panel时暂停移动
+            // 可选：触发button时暂停移动
             // DisableMovement();
         }
-        else if (triggerPanel != null)
+        else if (button != null)
         {
-            triggerPanel.SetActive(false);
-        }
+            button.SetActive(false);
+        }*/
+        Debug.Log($"当前触发状态: isInTriggerSquare = {isInTriggerSquare}, Button状态: {(button != null ? button.activeSelf : false)}");
     }
 
     void OnEnable()

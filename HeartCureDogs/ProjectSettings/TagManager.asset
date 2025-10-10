@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - DialogPanel
   - DogController
+  - TriggerSquare
   layers:
   - Default
   - TransparentFX
