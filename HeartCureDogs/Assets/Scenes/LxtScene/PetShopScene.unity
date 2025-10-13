@@ -4910,7 +4910,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3273859030929533118, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: targetScene
-      value: "\u5BA0\u7269\u5E97"
+      value: PetShopScene
       objectReference: {fileID: 0}
     - target: {fileID: 3639537349170160800, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: m_Name
@@ -4918,11 +4918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3639537349170160800, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3694062960166317193, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: targetScene
-      value: "\u5367\u5BA4"
+      value: BedroomScene
       objectReference: {fileID: 0}
     - target: {fileID: 6114341688309795280, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: targetScene
