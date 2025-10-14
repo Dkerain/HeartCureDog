@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u4FDD\u5B58\u6E38\u620F"
+  m_text: "\u52A0\u8F7D\u6E38\u620F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32f86a27d04b6594f8b7d3b7d3c6dedc, type: 2}
   m_sharedMaterial: {fileID: 7530715499238759673, guid: 32f86a27d04b6594f8b7d3b7d3c6dedc, type: 2}
@@ -5302,7 +5302,7 @@ GameObject:
   - component: {fileID: 1615372348}
   - component: {fileID: 1615372347}
   m_Layer: 5
-  m_Name: SaveCanvas
+  m_Name: LoadCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5800,8 +5800,9 @@ GameObject:
   - component: {fileID: 1977623404}
   - component: {fileID: 1977623403}
   - component: {fileID: 1977623402}
+  - component: {fileID: 1977623405}
   m_Layer: 5
-  m_Name: SaveButton
+  m_Name: LoadButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5921,6 +5922,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977623400}
   m_CullTransparentMesh: 1
+--- !u!114 &1977623405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977623400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 158f40506ee5b5f4d8362a34e835d80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsPanel: {fileID: 1615372346}
 --- !u!1 &1991616123
 GameObject:
   m_ObjectHideFlags: 0
