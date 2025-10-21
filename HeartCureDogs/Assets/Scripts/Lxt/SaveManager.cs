@@ -40,7 +40,7 @@ public class SaveManager : MonoBehaviour
     {
         // 获取 AppData/Local 文件夹路径
         string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-        string gameFolder = Path.Combine(appDataPath, "YourGameName");
+        string gameFolder = Path.Combine(appDataPath, "HeartCureDogs");
         saveFilePath = Path.Combine(gameFolder, "saves.json");
 
         // 确保目录存在
