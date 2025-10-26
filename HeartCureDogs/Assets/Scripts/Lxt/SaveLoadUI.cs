@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class SaveLoadUI : MonoBehaviour
 {
     [Header("存档按钮")]
     public Button[] saveButtons;
     public TextMeshProUGUI[] saveTexts;
+
+    [Header("读档按钮")]
+    public Button[] loadButtons;
+    public TextMeshProUGUI[] loadTexts;
 
     [Header("界面控制")]
     public GameObject savePanel;
@@ -21,16 +26,27 @@ public class SaveLoadUI : MonoBehaviour
 
     private void InitializeUI()
     {
-        // 为每个存档按钮添加监听
+        //初始化存档界面按钮
         for (int i = 0; i < saveButtons.Length; i++)
         {
             int slotIndex = i; // 重要：创建局部变量
-            saveButtons[i].onClick.AddListener(() => OnSaveButtonClicked(slotIndex));
+            if(saveButtons[i] != null)
+            {
+                saveButtons[i].onClick.RemoveAllListeners();
+                saveButtons[i].onClick.AddListener(()=>OnSaveButtonClicked(slotIndex));
+            }
         }
-
-        RefreshSaveDisplays();
+        // 初始化读档界面按钮
+        for (int i = 0; i < loadButtons.Length; i++)
+        {
+            int slotIndex = i;
+            if (loadButtons[i] != null)
+            {
+                loadButtons[i].onClick.RemoveAllListeners();
+                loadButtons[i].onClick.AddListener(() => OnLoadButtonClicked(slotIndex));
+            }
+        }
     }
-
     // 显示存档界面
     public void ShowSavePanel()
     {
@@ -47,15 +63,17 @@ public class SaveLoadUI : MonoBehaviour
         RefreshSaveDisplays();
     }
 
+    //存档按钮点击事件
     private void OnSaveButtonClicked(int slotIndex)
     {
-        if (savePanel.activeInHierarchy)
+        //if (savePanel.activeInHierarchy)
         {
             // 存档模式
+            Debug.Log($"存档到位置{slotIndex}");
             SaveManager.Instance.SaveGame(slotIndex);
-            RefreshSaveDisplays();
+            RefreshSaveDisplays();//立即刷新存档界面显示
         }
-        else if (loadPanel.activeInHierarchy)
+        /*else if (loadPanel.activeInHierarchy)
         {
             // 读档模式
             if (!SaveManager.Instance.IsSaveSlotEmpty(slotIndex))
@@ -64,14 +82,49 @@ public class SaveLoadUI : MonoBehaviour
                 // 可以在这里关闭界面或加载场景
                 gameObject.SetActive(false);
             }
+        }*/
+    }
+    // 读档按钮点击事件
+    private void OnLoadButtonClicked(int slotIndex)
+    {
+        Debug.Log($"从位置 {slotIndex} 读档");
+        if (!SaveManager.Instance.IsSaveSlotEmpty(slotIndex))
+        {
+            SaveManager.Instance.LoadGame(slotIndex);
+            // 读档后可以关闭界面或进行其他操作
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.Log("该存档位为空");
         }
     }
-
+    //刷新存档界面显示
     private void RefreshSaveDisplays()
     {
         for (int i = 0; i < saveTexts.Length; i++)
         {
-            saveTexts[i].text = SaveManager.Instance.GetSaveDisplayText(i);
+            if (saveTexts[i] != null)
+            {
+                saveTexts[i].text = SaveManager.Instance.GetSaveDisplayText(i);
+            }
         }
+    }
+    // 刷新读档界面显示
+    private void RefreshLoadDisplays()
+    {
+        for (int i = 0; i < loadTexts.Length; i++)
+        {
+            if (loadTexts[i] != null)
+            {
+                loadTexts[i].text = SaveManager.Instance.GetSaveDisplayText(i);
+            }
+        }
+    }
+    // 统一刷新所有界面（可选）
+    public void RefreshAllDisplays()
+    {
+        RefreshSaveDisplays();
+        RefreshLoadDisplays();
     }
 }
