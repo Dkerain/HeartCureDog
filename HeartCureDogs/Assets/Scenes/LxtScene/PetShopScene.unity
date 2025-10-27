@@ -3093,6 +3093,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410694244}
   m_CullTransparentMesh: 1
+--- !u!1 &418460134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 418460136}
+  - component: {fileID: 418460135}
+  m_Layer: 0
+  m_Name: CriticalObjectProtector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &418460135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418460134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 743e1c80efb05aa43a86bf900f4eac8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1465148813}
+  mainCanvas: {fileID: 1120822462}
+--- !u!4 &418460136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418460134}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1205.7576, y: 584.0823, z: 3.0831523}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &439722419
 GameObject:
   m_ObjectHideFlags: 0
@@ -7962,7 +8008,7 @@ GameObject:
   - component: {fileID: 1120822463}
   - component: {fileID: 1120822467}
   m_Layer: 0
-  m_Name: MainCanvas
+  m_Name: Main Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10590,8 +10636,24 @@ MonoBehaviour:
   - {fileID: 1846026183}
   - {fileID: 65661648}
   - {fileID: 731500868}
-  loadButtons: []
-  loadTexts: []
+  loadButtons:
+  - {fileID: 124644862}
+  - {fileID: 1540498299}
+  - {fileID: 910457233}
+  - {fileID: 1038424001}
+  - {fileID: 1778139401}
+  - {fileID: 439722421}
+  - {fileID: 1238301105}
+  - {fileID: 0}
+  loadTexts:
+  - {fileID: 1299109573}
+  - {fileID: 840239574}
+  - {fileID: 596236976}
+  - {fileID: 1435435777}
+  - {fileID: 1593002837}
+  - {fileID: 1468597301}
+  - {fileID: 1468597301}
+  - {fileID: 1276424897}
   savePanel: {fileID: 1455218724}
   loadPanel: {fileID: 947526222}
 --- !u!1 &1468597299
@@ -14780,3 +14842,4 @@ SceneRoots:
   - {fileID: 1533776634}
   - {fileID: 195137905}
   - {fileID: 1192167356}
+  - {fileID: 418460136}
