@@ -7,6 +7,18 @@ using System;
 
 public class SaveLoadUI : MonoBehaviour
 {
+    [Header("界面引用")]
+    public Button[] saveButtons;
+    public TextMeshProUGUI[] saveTexts;
+    public Button[] loadButtons;
+    public TextMeshProUGUI[] loadTexts;
+    public GameObject savePanel;
+    public GameObject loadPanel;
+
+    [Header("预制体设置")]
+    public static SaveLoadUI Instance;
+
+    /*
     [Header("存档按钮")]
     public Button[] saveButtons;
     public TextMeshProUGUI[] saveTexts;
@@ -18,6 +30,53 @@ public class SaveLoadUI : MonoBehaviour
     [Header("界面控制")]
     public GameObject savePanel;
     public GameObject loadPanel;
+    */
+
+    // 静态方法用于创建读档界面
+    public static void CreateLoadMenu(Transform parent = null)
+    {
+        // 如果已经存在，直接显示
+        if (Instance != null)
+        {
+            Instance.ShowLoadPanel();
+            return;
+        }
+
+        // 动态加载预制体
+        GameObject loadCanvasPrefab = Resources.Load<GameObject>("Prefabs/LoadCanvas");
+        if (loadCanvasPrefab != null)
+        {
+            GameObject loadCanvas = Instantiate(loadCanvasPrefab, parent);
+            Instance = loadCanvas.GetComponent<SaveLoadUI>();
+            Instance.ShowLoadPanel();
+        }
+        else
+        {
+            Debug.LogError("LoadCanvas 预制体未找到！请确保路径为 Resources/Prefabs/LoadCanvas");
+        }
+    }
+
+    // 静态方法用于创建存档界面
+    public static void CreateSaveMenu(Transform parent = null)
+    {
+        if (Instance != null)
+        {
+            Instance.ShowSavePanel();
+            return;
+        }
+
+        GameObject loadCanvasPrefab = Resources.Load<GameObject>("Prefabs/LoadCanvas");
+        if (loadCanvasPrefab != null)
+        {
+            GameObject loadCanvas = Instantiate(loadCanvasPrefab, parent);
+            Instance = loadCanvas.GetComponent<SaveLoadUI>();
+            Instance.ShowSavePanel();
+        }
+        else
+        {
+            Debug.LogError("LoadCanvas 预制体未找到！");
+        }
+    }
 
     void Start()
     {
