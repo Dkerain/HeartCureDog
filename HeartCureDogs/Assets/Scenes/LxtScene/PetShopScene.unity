@@ -8686,10 +8686,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb96e107a679dd41b27c3880573f4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveButtons: []
-  saveTexts: []
-  loadButtons: []
-  loadTexts: []
+  saveButtons:
+  - {fileID: 1928001147}
+  - {fileID: 625450488}
+  - {fileID: 1891437484}
+  - {fileID: 650194875}
+  - {fileID: 371651735}
+  - {fileID: 1987099127}
+  - {fileID: 442003306}
+  - {fileID: 171576058}
+  saveTexts:
+  - {fileID: 722534238}
+  - {fileID: 989533119}
+  - {fileID: 1596873491}
+  - {fileID: 54352027}
+  - {fileID: 1701463774}
+  - {fileID: 1846026183}
+  - {fileID: 65661648}
+  - {fileID: 731500868}
+  loadButtons:
+  - {fileID: 124644862}
+  - {fileID: 1540498299}
+  - {fileID: 910457233}
+  - {fileID: 1038424001}
+  - {fileID: 1778139401}
+  - {fileID: 439722421}
+  - {fileID: 1238301105}
+  - {fileID: 1198208581}
+  loadTexts:
+  - {fileID: 1299109573}
+  - {fileID: 840239574}
+  - {fileID: 596236976}
+  - {fileID: 1435435777}
+  - {fileID: 1593002837}
+  - {fileID: 262683082}
+  - {fileID: 1468597301}
+  - {fileID: 1276424897}
   savePanel: {fileID: 1455218724}
   loadPanel: {fileID: 947526222}
 --- !u!4 &1192167356
