@@ -55,6 +55,20 @@ public class SaveLoadUI : MonoBehaviour
     public void ShowSavePanel()
     {
         Debug.Log("显示存档界面");
+        // 检查数组引用
+        Debug.Log($"loadPanelTexts 数组: {(loadTexts == null ? "null" : "not null")}");
+        if (loadTexts != null)
+        {
+            Debug.Log($"loadPanelTexts 长度: {loadTexts.Length}");
+            for (int i = 0; i < loadTexts.Length; i++)
+            {
+                Debug.Log($"loadPanelTexts[{i}]: {(loadTexts[i] == null ? "null" : loadTexts[i].name)}");
+            }
+        }
+        else
+        {
+            Debug.LogError("loadPanelTexts 数组为 null!");
+        }
         savePanel.SetActive(true);
         loadPanel.SetActive(false);
         RefreshSaveDisplays();
@@ -201,24 +215,46 @@ public class SaveLoadUI : MonoBehaviour
                 //saveTexts[i].text = SaveManager.Instance.GetSaveDisplayText(i);
                 string displayText = SaveManager.Instance.GetSaveDisplayText(i);
                 saveTexts[i].text = displayText;
+                Debug.Log($"存档位 {i}: Text组件={saveTexts[i].name}, 文本内容='{displayText}'");
+                Debug.Log($"Text组件激活状态: {saveTexts[i].gameObject.activeInHierarchy}");
+                Debug.Log($"Text组件启用状态: {saveTexts[i].enabled}");
                 Debug.Log($"存档界面按钮 {i} 文本设置为: {displayText}");
             }
+            else
+            {
+                Debug.LogError($"存档位 {i}: savePanelTexts 为 null!");
+            }
         }
+        Debug.Log("=== 结束刷新存档界面显示 ===");
     }
     // 刷新读档界面显示
     private void RefreshLoadDisplays()
     {
-        Debug.Log("刷新读档界面显示");
+        Debug.Log("===开始刷新读档界面显示===");
         for (int i = 0; i < loadTexts.Length; i++)
         {
             if (loadTexts[i] != null)
             {
                 string displayText = SaveManager.Instance.GetSaveDisplayText(i);
                 loadTexts[i].text = displayText;
-                Debug.Log($"读档界面按钮 {i} 文本设置为: {displayText}");
+                //Debug.Log($"读档界面按钮 {i} 文本设置为: {displayText}");
+                Debug.Log($"读档位 {i}: Text组件={loadTexts[i].name}, 文本内容='{displayText}'");
+                Debug.Log($"Text组件激活状态: {loadTexts[i].gameObject.activeInHierarchy}");
+                Debug.Log($"Text组件启用状态: {loadTexts[i].enabled}");
                 //loadTexts[i].text = SaveManager.Instance.GetSaveDisplayText(i);
+                // 强制刷新 UI 布局
+                Canvas.ForceUpdateCanvases();
+                LayoutRebuilder.ForceRebuildLayoutImmediate(loadTexts[i].transform as RectTransform);
+                Debug.Log($"读档位 {i}: 文本已设置并强制刷新");
+            }
+            else
+            {
+                Debug.LogError($"读档位{i}:saveTexts为null");
             }
         }
+        // 整体刷新画布
+        Canvas.ForceUpdateCanvases();
+        Debug.Log("===结束刷新读档界面显示===");
     }
     // 统一刷新所有界面（可选）
     public void RefreshAllDisplays()

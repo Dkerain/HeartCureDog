@@ -137,6 +137,7 @@ public class SaveManager : MonoBehaviour
             Debug.Log($"存档位{slotIndex}为空存档");
             return "空存档位";
         }
+        string title = GetChapterTitle(saveData.Chapter);
         string displayText = $"第{saveData.Chapter}章: {saveData.Title}\n{saveData.SaveTime:yyyy-MM-dd HH:mm}";
         Debug.Log($"存档位 {slotIndex} 显示文本: {displayText}");
         return displayText;
