@@ -4,9 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
+
 
 public class SaveLoadUI : MonoBehaviour
 {
+    //private System.Action onCloseCallback;
     [Header("界面引用")]
     public Button[] saveButtons;
     public TextMeshProUGUI[] saveTexts;
@@ -15,8 +18,13 @@ public class SaveLoadUI : MonoBehaviour
     public GameObject savePanel;
     public GameObject loadPanel;
 
-    [Header("预制体设置")]
+    //[Header("预制体设置")]
+    //public static SaveLoadUI Instance;
+    [Header("回调设置")]
+    private System.Action onCloseCallback;
+
     public static SaveLoadUI Instance;
+    private bool isLoadMenu; // true=读档界面, false=存档界面
 
     /*
     [Header("存档按钮")]
@@ -33,12 +41,13 @@ public class SaveLoadUI : MonoBehaviour
     */
 
     // 静态方法用于创建读档界面
-    public static void CreateLoadMenu(Transform parent = null)
+    public static void CreateLoadMenu(Transform parent = null, System.Action onClose = null)
     {
         // 如果已经存在，直接显示
         if (Instance != null)
         {
             Instance.ShowLoadPanel();
+            Instance.onCloseCallback = onClose;
             return;
         }
 
@@ -48,7 +57,10 @@ public class SaveLoadUI : MonoBehaviour
         {
             GameObject loadCanvas = Instantiate(loadCanvasPrefab, parent);
             Instance = loadCanvas.GetComponent<SaveLoadUI>();
+            Instance.isLoadMenu = true;
+            Instance.onCloseCallback = onClose;
             Instance.ShowLoadPanel();
+            Debug.Log("读档界面创建完成");
         }
         else
         {
@@ -57,11 +69,12 @@ public class SaveLoadUI : MonoBehaviour
     }
 
     // 静态方法用于创建存档界面
-    public static void CreateSaveMenu(Transform parent = null)
+    public static void CreateSaveMenu(Transform parent = null,System.Action onClose=null)
     {
         if (Instance != null)
         {
             Instance.ShowSavePanel();
+            Instance.onCloseCallback = onClose;
             return;
         }
 
@@ -70,14 +83,51 @@ public class SaveLoadUI : MonoBehaviour
         {
             GameObject loadCanvas = Instantiate(loadCanvasPrefab, parent);
             Instance = loadCanvas.GetComponent<SaveLoadUI>();
+            Instance.isLoadMenu = false;
+            Instance.onCloseCallback = onClose;
             Instance.ShowSavePanel();
+            Debug.Log("存档界面创建完成");
         }
         else
         {
             Debug.LogError("LoadCanvas 预制体未找到！");
         }
     }
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            // 不要使用 DontDestroyOnLoad，我们想要每个场景独立控制
+            InitializeUI();
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    // 添加关闭方法
+    public void CloseMenu()
+    {
+        Debug.Log("关闭存档/读档界面");
+        onCloseCallback?.Invoke();
+        // 如果是动态创建的，销毁；如果是场景中的，只是隐藏
+        if (IsDynamicallyCreated())
+        {
+            Destroy(gameObject);
+            Instance = null;
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+    }
 
+    public bool IsDynamicallyCreated()
+    {
+        // 检查这个对象是否来自预制体实例
+        return gameObject.scene.name == null;
+    }
     void Start()
     {
         Debug.Log("SaveLoadUI Start 开始初始化");
@@ -109,6 +159,8 @@ public class SaveLoadUI : MonoBehaviour
                 Debug.Log($"初始化读档按钮 {i}");
             }
         }
+        // 初始刷新显示
+        RefreshAllDisplays();
     }
     // 显示存档界面
     public void ShowSavePanel()
@@ -131,6 +183,7 @@ public class SaveLoadUI : MonoBehaviour
         savePanel.SetActive(true);
         loadPanel.SetActive(false);
         RefreshSaveDisplays();
+        StartCoroutine(DelayedRefreshSavePanel());
     }
 
     // 显示读档界面
@@ -139,6 +192,18 @@ public class SaveLoadUI : MonoBehaviour
         Debug.Log("显示读档界面");
         savePanel.SetActive(false);
         loadPanel.SetActive(true);
+        RefreshLoadDisplays();
+        StartCoroutine(DelayedRefreshLoadPanel());
+    }
+    private IEnumerator DelayedRefreshSavePanel()
+    {
+        yield return new WaitForEndOfFrame();
+        RefreshSaveDisplays();
+    }
+
+    private IEnumerator DelayedRefreshLoadPanel()
+    {
+        yield return new WaitForEndOfFrame();
         RefreshLoadDisplays();
     }
     /*private System.Collections.IEnumerator DelayedRefreshSavePanel()
@@ -214,6 +279,8 @@ public class SaveLoadUI : MonoBehaviour
 
             // 只关闭存档界面，不影响其他对象
             loadPanel.SetActive(false);
+            // 读档后延迟关闭界面并加载游戏场景
+            StartCoroutine(LoadGameAfterDelay());
 
             Debug.Log("读档完成，仅关闭读档界面");
         }
@@ -221,6 +288,15 @@ public class SaveLoadUI : MonoBehaviour
         {
             Debug.Log("该存档位为空");
         }
+    }
+    private System.Collections.IEnumerator LoadGameAfterDelay()
+    {
+        yield return new WaitForSeconds(0.5f); // 短暂延迟让存档加载完成
+        CloseMenu();
+
+        // 加载游戏场景
+        //SceneManager.LoadScene("GameScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }
     // 检查关键对象状态
     private void CheckCriticalObjects(string context)
@@ -327,5 +403,10 @@ public class SaveLoadUI : MonoBehaviour
     {
         RefreshSaveDisplays();
         RefreshLoadDisplays();
+    }
+    [ContextMenu("手动刷新显示")]
+    public void ManualRefresh()
+    {
+        RefreshAllDisplays();
     }
 }
