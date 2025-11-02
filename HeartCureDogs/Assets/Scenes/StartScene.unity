@@ -224,7 +224,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 138504338}
-  - component: {fileID: 138504337}
   m_Layer: 0
   m_Name: SaveLoadUI
   m_TagString: Untagged
@@ -232,56 +231,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &138504337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138504336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb96e107a679dd41b27c3880573f4cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  saveButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  saveTexts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  loadButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  loadTexts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  savePanel: {fileID: 0}
-  loadPanel: {fileID: 0}
 --- !u!4 &138504338
 Transform:
   m_ObjectHideFlags: 0
@@ -867,6 +816,7 @@ MonoBehaviour:
   startButton: {fileID: 1470447874}
   loadButton: {fileID: 1977623402}
   exitButton: {fileID: 0}
+  loadingPanel: {fileID: 0}
 --- !u!1 &996877457
 GameObject:
   m_ObjectHideFlags: 0

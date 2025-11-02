@@ -1513,6 +1513,7 @@ GameObject:
   - component: {fileID: 1838339598791932332}
   - component: {fileID: 4344864845392591081}
   - component: {fileID: 862003405407695052}
+  - component: {fileID: 687107927599797976}
   m_Layer: 5
   m_Name: LoadCanvas
   m_TagString: Untagged
@@ -1604,6 +1605,40 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &687107927599797976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4346398213879936072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb96e107a679dd41b27c3880573f4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveButtons: []
+  saveTexts: []
+  loadButtons:
+  - {fileID: 3597493449068774178}
+  - {fileID: 3832829614703438616}
+  - {fileID: 6752410064804610679}
+  - {fileID: 6777897065620782462}
+  - {fileID: 8691310760855074278}
+  - {fileID: 4907377420606604621}
+  - {fileID: 7818231887521869120}
+  - {fileID: 3577066680258585816}
+  loadTexts:
+  - {fileID: 2075713441636993965}
+  - {fileID: 7717515063345890361}
+  - {fileID: 1671886500075564636}
+  - {fileID: 1226726098959378095}
+  - {fileID: 8285255529127367461}
+  - {fileID: 4616609931857915937}
+  - {fileID: 1782824448511975061}
+  - {fileID: 6893591208216430221}
+  savePanel: {fileID: 7704790270025266729}
+  loadPanel: {fileID: 0}
 --- !u!1 &4506037976840920262
 GameObject:
   m_ObjectHideFlags: 0
