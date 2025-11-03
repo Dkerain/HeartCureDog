@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("MainMenu 启动，检查 SaveManager: " + (SaveManager.Instance != null));
         // 按钮事件绑定
         startButton.onClick.AddListener(OnStartGame);
         loadButton.onClick.AddListener(OnLoadGame);
