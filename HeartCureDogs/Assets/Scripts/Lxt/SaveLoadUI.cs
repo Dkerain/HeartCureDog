@@ -340,7 +340,7 @@ public class SaveLoadUI : MonoBehaviour
 
         // 加载游戏场景
         //SceneManager.LoadScene("GameScene");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("HomeScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }
     // 检查关键对象状态
     private void CheckCriticalObjects(string context)

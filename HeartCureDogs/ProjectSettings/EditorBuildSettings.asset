@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: "Assets/Scenes/\u4E0D\u7528\u7684\u573A\u666F/HomeScene2.unity"
     guid: 4a998a23bb2ef004db093eb96063e0f0
   - enabled: 1
-    path: Assets/Scenes/HomeScene1.unity
+    path: Assets/Scenes/HomeScene.unity
     guid: a6092816822c0234386b69207c6c4072
   - enabled: 1
     path: "Assets/Scenes/\u4E0D\u7528\u7684\u573A\u666F/bathroom.unity"
