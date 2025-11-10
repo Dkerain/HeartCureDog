@@ -78,11 +78,11 @@ public class SaveLoadUI : MonoBehaviour
             return;
         }
 
-        GameObject saveCanvasPrefab = Resources.Load<GameObject>("Prefabs/SaveCanvas");
-        if (saveCanvasPrefab != null)
+        GameObject loadCanvasPrefab = Resources.Load<GameObject>("Prefabs/LoadCanvas");
+        if (loadCanvasPrefab != null)
         {
-            GameObject saveCanvas = Instantiate(saveCanvasPrefab, parent);
-            Instance = saveCanvas.GetComponent<SaveLoadUI>();
+            GameObject loadCanvas = Instantiate(loadCanvasPrefab, parent);
+            Instance = loadCanvas.GetComponent<SaveLoadUI>();
             Instance.isLoadMenu = false;
             Instance.onCloseCallback = onClose;
             Instance.ShowSavePanel();
@@ -92,11 +92,6 @@ public class SaveLoadUI : MonoBehaviour
         {
             Debug.LogError("LoadCanvas 预制体未找到！");
         }
-    }
-    void Start()
-    {
-        Debug.Log("SaveLoadUI Start 开始初始化");
-        InitializeUI();
     }
     void Awake()
     {
@@ -109,13 +104,6 @@ public class SaveLoadUI : MonoBehaviour
         else
         {
             Destroy(gameObject);
-        }
-    }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            CloseMenu(); 
         }
     }
     // 添加关闭方法
@@ -140,72 +128,46 @@ public class SaveLoadUI : MonoBehaviour
         // 检查这个对象是否来自预制体实例
         return gameObject.scene.name == null;
     }
-  
+    void Start()
+    {
+        Debug.Log("SaveLoadUI Start 开始初始化");
+        InitializeUI();
+    }
 
     private void InitializeUI()
     {
-        Debug.Log("初始化SaveLoadUI界面");
-
-        // 检查关键引用
-        CheckReferences();
-
-        // 初始化存档界面按钮（只有savePanelButtons不为空时才初始化）
-        if (saveButtons != null && saveButtons.Length > 0)
+        Debug.Log($"初始化UI: 存档按钮{saveButtons.Length}个, 读档按钮{loadButtons.Length}个");
+        //初始化存档界面按钮
+        for (int i = 0; i < saveButtons.Length; i++)
         {
-            for (int i = 0; i < saveButtons.Length; i++)
+            int slotIndex = i; // 重要：创建局部变量
+            if(saveButtons[i] != null)
             {
-                int slotIndex = i;
-                if (saveButtons[i] != null)
-                {
-                    saveButtons[i].onClick.RemoveAllListeners();
-                    saveButtons[i].onClick.AddListener(() => OnSaveButtonClicked(slotIndex));
-                    Debug.Log($"初始化存档按钮 {i}");
-                }
+                saveButtons[i].onClick.RemoveAllListeners();
+                saveButtons[i].onClick.AddListener(()=>OnSaveButtonClicked(slotIndex));
+                Debug.Log($"初始化存档按钮 {i}");
             }
         }
-
-        // 初始化读档界面按钮（只有loadPanelButtons不为空时才初始化）
-        if (loadButtons != null && loadButtons.Length > 0)
+        // 初始化读档界面按钮
+        for (int i = 0; i < loadButtons.Length; i++)
         {
-            for (int i = 0; i < loadButtons.Length; i++)
+            int slotIndex = i;
+            if (loadButtons[i] != null)
             {
-                int slotIndex = i;
-                if (loadButtons[i] != null)
-                {
-                    loadButtons[i].onClick.RemoveAllListeners();
-                    loadButtons[i].onClick.AddListener(() => OnLoadButtonClicked(slotIndex));
-                    Debug.Log($"初始化读档按钮 {i}");
-                }
+                loadButtons[i].onClick.RemoveAllListeners();
+                loadButtons[i].onClick.AddListener(() => OnLoadButtonClicked(slotIndex));
+                Debug.Log($"初始化读档按钮 {i}");
             }
         }
-
         // 初始刷新显示
         RefreshAllDisplays();
     }
-    // 检查所有引用是否设置
-    private void CheckReferences()
-    {
-        Debug.Log("检查SaveLoadUI引用...");
-        Debug.Log($"savePanel: {savePanel != null}");
-        Debug.Log($"loadPanel: {loadPanel != null}");
-        Debug.Log($"savePanelButtons: {saveButtons != null} (长度: {saveButtons?.Length})");
-        Debug.Log($"loadPanelButtons: {loadButtons != null} (长度: {loadButtons?.Length})");
-        Debug.Log($"savePanelTexts: {saveTexts != null} (长度: {saveTexts?.Length})");
-        Debug.Log($"loadPanelTexts: {loadTexts != null} (长度: {loadTexts?.Length})");
-    }
-
     // 显示存档界面
     public void ShowSavePanel()
     {
         Debug.Log("显示存档界面");
         // 检查数组引用
         Debug.Log($"loadPanelTexts 数组: {(loadTexts == null ? "null" : "not null")}");
-        // 检查引用
-        if (savePanel == null)
-        {
-            Debug.LogError("savePanel 未设置！");
-            return;
-        }
         if (loadTexts != null)
         {
             Debug.Log($"loadPanelTexts 长度: {loadTexts.Length}");
@@ -219,7 +181,7 @@ public class SaveLoadUI : MonoBehaviour
             Debug.LogError("loadPanelTexts 数组为 null!");
         }
         savePanel.SetActive(true);
-        if (loadPanel != null) loadPanel.SetActive(false);
+        loadPanel.SetActive(false);
         RefreshSaveDisplays();
         StartCoroutine(DelayedRefreshSavePanel());
     }
@@ -228,13 +190,7 @@ public class SaveLoadUI : MonoBehaviour
     public void ShowLoadPanel()
     {
         Debug.Log("显示读档界面");
-        // 检查引用
-        if (loadPanel == null)
-        {
-            Debug.LogError("loadPanel 未设置！");
-            return;
-        }
-        if(savePanel != null) savePanel.SetActive(false);
+        savePanel.SetActive(false);
         loadPanel.SetActive(true);
         RefreshLoadDisplays();
         StartCoroutine(DelayedRefreshLoadPanel());
@@ -387,12 +343,6 @@ public class SaveLoadUI : MonoBehaviour
     private void RefreshSaveDisplays()
     {
         Debug.Log("刷新存档界面显示");
-        // 检查数组是否为空
-        if (saveTexts == null || saveTexts.Length == 0)
-        {
-            Debug.LogWarning("savePanelTexts 数组为空，无法刷新存档显示");
-            return;
-        }
         for (int i = 0; i < saveTexts.Length; i++)
         {
             if (saveTexts[i] != null)
@@ -416,13 +366,6 @@ public class SaveLoadUI : MonoBehaviour
     private void RefreshLoadDisplays()
     {
         Debug.Log("===开始刷新读档界面显示===");
-        // 检查数组是否为空
-        if (loadTexts == null || loadTexts.Length == 0)
-        {
-            Debug.LogWarning("loadPanelTexts 数组为空，无法刷新读档显示");
-            return;
-        }
-
         for (int i = 0; i < loadTexts.Length; i++)
         {
             if (loadTexts[i] != null)
@@ -465,33 +408,5 @@ public class SaveLoadUI : MonoBehaviour
     public void ManualRefresh()
     {
         RefreshAllDisplays();
-    }
-    [ContextMenu("自动查找引用")]
-    public void AutoFindReferences()
-    {
-        Debug.Log("开始自动查找引用...");
-
-        // 自动查找面板
-        if (savePanel == null)
-        {
-            Transform savePanelTransform = transform.Find("SavePanel");
-            if (savePanelTransform != null)
-            {
-                savePanel = savePanelTransform.gameObject;
-                Debug.Log($"找到 savePanel: {savePanel.name}");
-            }
-        }
-
-        if (loadPanel == null)
-        {
-            Transform loadPanelTransform = transform.Find("LoadPanel");
-            if (loadPanelTransform != null)
-            {
-                loadPanel = loadPanelTransform.gameObject;
-                Debug.Log($"找到 loadPanel: {loadPanel.name}");
-            }
-        }
-
-        Debug.Log("自动查找完成");
     }
 }
