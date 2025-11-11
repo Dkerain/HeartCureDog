@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/PetShopScene.unity
     guid: 0902288bd1a2944499ef7c9fe32a0ca1
   - enabled: 1
-    path: Assets/Scenes/StartScene.unity
+    path: Assets/Scenes/LxtScene/StartScene.unity
     guid: 43d78407a900f89478670fb19eac190a
   - enabled: 0
     path: "Assets/Scenes/\u4E0D\u7528\u7684\u573A\u666F/PetShopScene1.unity"
