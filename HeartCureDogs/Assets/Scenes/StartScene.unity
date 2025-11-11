@@ -1036,7 +1036,7 @@ GameObject:
   - component: {fileID: 716951981}
   - component: {fileID: 716951980}
   m_Layer: 5
-  m_Name: StartCanvas
+  m_Name: MainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1381,7 +1381,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6e5895768ffff4d979bbdd09ae8a0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialInterface: {fileID: 716951979}
+  sceneMainInterfaces: []
+  mainInterfaceNames:
+  - MainCanvas
+  debugMode: 1
 --- !u!1 &1085309002
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,17 @@ public class BackButtonWithStack : MonoBehaviour
 
     private void OnBackButtonClick()
     {
-        // 直接调用界面管理器的方法
-        InterfaceManager.Instance.PopInterface();
+        Debug.Log("存档界面返回按钮点击");
+        
+        if (InterfaceManager.Instance != null)
+        {
+            InterfaceManager.Instance.PopInterface();
+        }
+        else
+        {
+            Debug.LogError("InterfaceManager 未找到！");
+            // 备用方案：直接禁用当前界面
+            transform.parent.gameObject.SetActive(false);
+        }
     }
 }
