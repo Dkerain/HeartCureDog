@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -6,20 +6,20 @@ using NodeCanvas.Framework;
 
 public class StatusBarUI : MonoBehaviour
 {
-    [Header("UIÎÄ±¾×é¼þ")]
-    public TextMeshProUGUI playerEnergyText;  // Íæ¼ÒÌåÁ¦Öµ
-    public TextMeshProUGUI playerCoinsText;   // Íæ¼Ò½ð±Ò
-    public TextMeshProUGUI dogHealthText;     // Ð¡¹·½¡¿µÖµ
-    public TextMeshProUGUI dogEnergyText;     // Ð¡¹·¾«Á¦Öµ
-    public TextMeshProUGUI dogTrustText;      // Ð¡¹·ÐÅÈÎÖµ
-    public TextMeshProUGUI dogMoodText;       // Ð¡¹·ÐÄÇé
+    [Header("UIï¿½Ä±ï¿½ï¿½ï¿½ï¿½")]
+    public TextMeshProUGUI playerEnergyText;  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+    public TextMeshProUGUI playerCoinsText;   // ï¿½ï¿½Ò½ï¿½ï¿½
+    public TextMeshProUGUI dogHealthText;     // Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+    public TextMeshProUGUI dogEnergyText;     // Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+    public TextMeshProUGUI dogTrustText;      // Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+    public TextMeshProUGUI dogMoodText;       // Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
     private GlobalBlackboard globalBlackboard;
     private bool blackboardFound = false;
 
     private void Start()
     {
-        Debug.Log("UI½Å±¾Æô¶¯");
+        Debug.Log("UIï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½");
         FindGlobalBlackboard();
         UpdateUI();
     }
@@ -31,27 +31,27 @@ public class StatusBarUI : MonoBehaviour
         if (globalBlackboard != null)
         {
             blackboardFound = true;
-            Debug.Log("UI³É¹¦ÕÒµ½È«¾ÖºÚ°å£¡");
+            Debug.Log("UIï¿½É¹ï¿½ï¿½Òµï¿½È«ï¿½ÖºÚ°å£¡");
 
-            // ²âÊÔ¶ÁÈ¡Öµ
+            // ï¿½ï¿½ï¿½Ô¶ï¿½È¡Öµ
             try
             {
-                Debug.Log($"²âÊÔ¶ÁÈ¡ - ½ð±Ò: {globalBlackboard.GetValue<int>("npcCoinValue")}");
-                Debug.Log($"²âÊÔ¶ÁÈ¡ - ÌåÁ¦: {globalBlackboard.GetValue<int>("npcBrwanValue")}");
-                Debug.Log($"²âÊÔ¶ÁÈ¡ - ¾«Á¦: {globalBlackboard.GetValue<int>("dogEnergyValue")}");
-                Debug.Log($"²âÊÔ¶ÁÈ¡ - ½¡¿µ: {globalBlackboard.GetValue<int>("dogHealthValue")}");
-                Debug.Log($"²âÊÔ¶ÁÈ¡ - ÐÅÈÎ: {globalBlackboard.GetValue<int>("dogBelieveValue")}");
-                Debug.Log($"²âÊÔ¶ÁÈ¡ - ÐÄÇé: {globalBlackboard.GetValue<string>("dogEmotion")}");
+                Debug.Log($"ï¿½ï¿½ï¿½Ô¶ï¿½È¡ - ï¿½ï¿½ï¿½: {globalBlackboard.GetValue<int>("npcCoinValue")}");
+                Debug.Log($"ï¿½ï¿½ï¿½Ô¶ï¿½È¡ - ï¿½ï¿½ï¿½ï¿½: {globalBlackboard.GetValue<int>("npcBrwanValue")}");
+                Debug.Log($"ï¿½ï¿½ï¿½Ô¶ï¿½È¡ - ï¿½ï¿½ï¿½ï¿½: {globalBlackboard.GetValue<int>("dogEnergyValue")}");
+                Debug.Log($"ï¿½ï¿½ï¿½Ô¶ï¿½È¡ - ï¿½ï¿½ï¿½ï¿½: {globalBlackboard.GetValue<int>("dogHealthValue")}");
+                Debug.Log($"ï¿½ï¿½ï¿½Ô¶ï¿½È¡ - ï¿½ï¿½ï¿½ï¿½: {globalBlackboard.GetValue<int>("dogBelieveValue")}");
+                Debug.Log($"ï¿½ï¿½ï¿½Ô¶ï¿½È¡ - ï¿½ï¿½ï¿½ï¿½: {globalBlackboard.GetValue<string>("dogEmotion")}");
             }
             catch (System.Exception e)
             {
-                Debug.LogError($"¶ÁÈ¡È«¾ÖºÚ°åÖµÊ±³ö´í: {e.Message}");
+                Debug.LogError($"ï¿½ï¿½È¡È«ï¿½ÖºÚ°ï¿½ÖµÊ±ï¿½ï¿½ï¿½ï¿½: {e.Message}");
             }
         }
         else
         {
             blackboardFound = false;
-            Debug.LogError("UIÎ´ÕÒµ½È«¾ÖºÚ°å£¡ÇëÈ·±£³¡¾°ÖÐÓÐ±êÊ¶·ûÎª'Global'µÄGlobalBlackboard¡£");
+            Debug.LogError("UIÎ´ï¿½Òµï¿½È«ï¿½ÖºÚ°å£¡ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½Ê¶ï¿½ï¿½Îª'Global'ï¿½ï¿½GlobalBlackboardï¿½ï¿½");
         }
     }
 
@@ -70,89 +70,149 @@ public class StatusBarUI : MonoBehaviour
 
         try
         {
-            // ´ÓÈ«¾ÖºÚ°å»ñÈ¡Öµ²¢¸üÐÂUI
+            // ï¿½ï¿½È«ï¿½ÖºÚ°ï¿½ï¿½È¡Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½UI
             if (playerEnergyText != null)
             {
                 int value = globalBlackboard.GetValue<int>("npcBrwanValue");
-                playerEnergyText.text = "ÌåÁ¦Öµ: " + value;
-                Debug.Log($"¸üÐÂÌåÁ¦ÖµUI: {value}");
+                playerEnergyText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: " + value;
+                Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµUI: {value}");
             }
 
             if (playerCoinsText != null)
             {
                 int value = globalBlackboard.GetValue<int>("npcCoinValue");
-                playerCoinsText.text = "½ð±Ò: " + value;
-                Debug.Log($"¸üÐÂ½ð±ÒUI: {value}");
+                playerCoinsText.text = "ï¿½ï¿½ï¿½: " + value;
+                Debug.Log($"ï¿½ï¿½ï¿½Â½ï¿½ï¿½UI: {value}");
             }
 
             if (dogHealthText != null)
             {
                 int value = globalBlackboard.GetValue<int>("dogHealthValue");
-                dogHealthText.text = "ÌåÆÇÖµ: " + value;
-                Debug.Log($"¸üÐÂ½¡¿µÖµUI: {value}");
+                dogHealthText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: " + value;
+                Debug.Log($"ï¿½ï¿½ï¿½Â½ï¿½ï¿½ï¿½ÖµUI: {value}");
             }
 
             if (dogEnergyText != null)
             {
                 int value = globalBlackboard.GetValue<int>("dogEnergyValue");
-                dogEnergyText.text = "¾«Á¦Öµ: " + value;
-                Debug.Log($"¸üÐÂ¾«Á¦ÖµUI: {value}");
+                dogEnergyText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: " + value;
+                Debug.Log($"ï¿½ï¿½ï¿½Â¾ï¿½ï¿½ï¿½ÖµUI: {value}");
             }
 
             if (dogTrustText != null)
             {
                 int value = globalBlackboard.GetValue<int>("dogBelieveValue");
-                dogTrustText.text = "ÐÅÈÎÖµ: " + value;
-                Debug.Log($"¸üÐÂÐÅÈÎÖµUI: {value}");
+                dogTrustText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: " + value;
+                Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµUI: {value}");
             }
 
             if (dogMoodText != null)
             {
                 string value = globalBlackboard.GetValue<string>("dogEmotion");
-                dogMoodText.text = "ÐÄÇé: " + value;
-                Debug.Log($"¸üÐÂÐÄÇéUI: {value}");
+                dogMoodText.text = "ï¿½ï¿½ï¿½ï¿½: " + value;
+                Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½UI: {value}");
             }
         }
         catch (System.Exception e)
         {
-            Debug.LogWarning("¸üÐÂUIÊ±³ö´í: " + e.Message);
+            Debug.LogWarning("ï¿½ï¿½ï¿½ï¿½UIÊ±ï¿½ï¿½ï¿½ï¿½: " + e.Message);
             DisplayDefaultValues();
         }
     }
 
     private void DisplayDefaultValues()
     {
-        Debug.Log("ÏÔÊ¾Ä¬ÈÏÖµ");
+        Debug.Log("ï¿½ï¿½Ê¾Ä¬ï¿½ï¿½Öµ");
 
-        // µ±ÕÒ²»µ½ºÚ°åÊ±ÏÔÊ¾Ä¬ÈÏÖµ
+        // ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½Ú°ï¿½Ê±ï¿½ï¿½Ê¾Ä¬ï¿½ï¿½Öµ
         if (playerEnergyText != null)
-            playerEnergyText.text = "ÌåÁ¦Öµ: 45";
+            playerEnergyText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: 45";
 
         if (playerCoinsText != null)
-            playerCoinsText.text = "½ð±Ò: 50";
+            playerCoinsText.text = "ï¿½ï¿½ï¿½: 50";
 
         if (dogHealthText != null)
-            dogHealthText.text = "ÌåÆÇÖµ: 50";
+            dogHealthText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: 50";
 
         if (dogEnergyText != null)
-            dogEnergyText.text = "¾«Á¦Öµ: 50";
+            dogEnergyText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: 50";
 
         if (dogTrustText != null)
-            dogTrustText.text = "ÐÅÈÎÖµ: 50";
+            dogTrustText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: 50";
 
         if (dogMoodText != null)
-            dogMoodText.text = "ÐÄÇé: Æ½¾²";
+            dogMoodText.text = "ï¿½ï¿½ï¿½ï¿½: Æ½ï¿½ï¿½";
     }
 
     public void RefreshUI()
     {
-        Debug.Log("ÊÖ¶¯Ë¢ÐÂUI");
+        Debug.Log("ï¿½Ö¶ï¿½Ë¢ï¿½ï¿½UI");
         UpdateUI();
     }
 
     private void OnEnable()
     {
-        Debug.Log("UI×é¼þÆôÓÃ");
+        Debug.Log("UIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
         UpdateUI();
+    }
+}*/
+using UnityEngine;
+using TMPro;
+using NodeCanvas.Framework;
+
+public class StatusBarUI : MonoBehaviour
+{
+    public TextMeshProUGUI playerEnergyText;
+    public TextMeshProUGUI playerCoinsText;
+    public TextMeshProUGUI dogHealthText;
+    public TextMeshProUGUI dogEnergyText;
+    public TextMeshProUGUI dogTrustText;
+    public TextMeshProUGUI dogMoodText;
+
+    private Blackboard globalBlackboard;
+
+    private void Start()
+    {
+        globalBlackboard = GlobalBlackboard.Find("Global");
+
+        if (globalBlackboard == null)
+        {
+            Debug.LogError("Î´ï¿½Òµï¿½È«ï¿½ÖºÚ°å£¡");
+            return;
+        }
+
+        // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½
+        UpdateAllUI();
+    }
+
+    private void Update()
+    {
+        // Ã¿Ö¡ï¿½ï¿½ï¿½Â£ï¿½ï¿½òµ¥µï¿½Ð§ï¿½Ê½ÏµÍ£ï¿½
+        UpdateAllUI();
+    }
+
+    private void UpdateAllUI()
+    {
+        if (globalBlackboard == null) return;
+
+        try
+        {
+            if (playerEnergyText != null)
+                playerEnergyText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: " + globalBlackboard.GetVariableValue<int>("npcBrwanValue");
+            if (playerCoinsText != null)
+                playerCoinsText.text = "ï¿½ï¿½ï¿½: " + globalBlackboard.GetVariableValue<int>("npcCoinValue");
+            if (dogHealthText != null)
+                dogHealthText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: " + globalBlackboard.GetVariableValue<int>("dogHealthValue");
+            if (dogEnergyText != null)
+                dogEnergyText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: " + globalBlackboard.GetVariableValue<int>("dogEnergyValue");
+            if (dogTrustText != null)
+                dogTrustText.text = "ï¿½ï¿½ï¿½ï¿½Öµ: " + globalBlackboard.GetVariableValue<int>("dogBelieveValue");
+            if (dogMoodText != null)
+                dogMoodText.text = "ï¿½ï¿½ï¿½ï¿½: " + globalBlackboard.GetVariableValue<string>("dogEmotion");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("ï¿½ï¿½ï¿½ï¿½UIÊ±ï¿½ï¿½ï¿½ï¿½: " + e.Message);
+        }
     }
 }

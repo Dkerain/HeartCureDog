@@ -154,6 +154,7 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"dogBelieveValue":{"_value":50,"_name":"dogBelieveValue","_id":"a7fc5fb4-8ca6-4037-848a-8dc1d2e4c68d","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"dogHealthValue":{"_value":50,"_name":"dogHealthValue","_id":"4f52ea03-eb65-4914-b1ea-0701e5b76eda","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"dogEmotion":{"_value":"\u5e73\u9759","_name":"dogEmotion","_id":"c8f3c460-7e77-4cae-b2af-368fe037da12","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Chapter":{"_name":"Chapter","_id":"c9733d7d-e283-4e75-9d5b-1504a1278c26","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences: []
   _serializedVariables:
@@ -173,6 +174,9 @@ MonoBehaviour:
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":"\u5e73\u9759","_name":"dogEmotion","_id":"c8f3c460-7e77-4cae-b2af-368fe037da12","$type":"NodeCanvas.Framework.Variable`1[[System.String,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+  - _json: '{"_name":"Chapter","_id":"c9733d7d-e283-4e75-9d5b-1504a1278c26","$type":"NodeCanvas.Framework.Variable`1[[System.Int32,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   _UID: 0d731b8c-9656-4ab0-a1f1-60271b43ae7c
