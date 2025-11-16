@@ -10,6 +10,7 @@ public class SaveData
     public string Title;
     public DateTime SaveTime;
     public string SaveId;
+    public string SceneName;
 
     public SaveData()
     {

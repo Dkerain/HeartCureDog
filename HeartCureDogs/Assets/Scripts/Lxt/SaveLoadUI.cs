@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class SaveLoadUI : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class SaveLoadUI : MonoBehaviour
     public TextMeshProUGUI[] loadTexts;
     public GameObject savePanel;
     public GameObject loadPanel;
+
+    [Header("场景设置")]
+    public string loadSceneName = "PetShopScene0"; // 加载后要切换的场景名
 
     [Header("预制体设置")]
     public static SaveLoadUI Instance;
@@ -192,16 +196,66 @@ public class SaveLoadUI : MonoBehaviour
     private void OnLoadButtonClicked(int slotIndex)
     {
         Debug.Log($"点击了读档按钮 {slotIndex}");
-        /*if (!SaveManager.Instance.IsSaveSlotEmpty(slotIndex))
+        if (!SaveManager.Instance.IsSaveSlotEmpty(slotIndex))
         {
+            // 先保存要加载的存档位信息
+            PlayerPrefs.SetInt("LoadingSaveSlot", slotIndex);
+            PlayerPrefs.Save();
+
+            // 加载存档数据到内存
             SaveManager.Instance.LoadGame(slotIndex);
+
+            // 切换到目标场景
+            StartCoroutine(LoadTargetScene());
+            /*SaveManager.Instance.LoadGame(slotIndex);
             // 读档后可以关闭界面或进行其他操作
-            gameObject.SetActive(false);
+            gameObject.SetActive(false);*/
         }
         else
         {
             Debug.Log("该存档位为空");
-        }*/
+        }
+        IEnumerator LoadTargetScene()
+        {
+            Debug.Log($"开始切换到场景: {loadSceneName}");
+
+            // 关闭读档界面
+            loadPanel.SetActive(false);
+
+            // 等待一帧确保UI更新
+            yield return null;
+
+            // 加载场景
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(loadSceneName);
+
+            // 等待场景加载完成
+            while (!asyncLoad.isDone)
+            {
+                yield return null;
+            }
+
+            Debug.Log($"场景切换完成: {loadSceneName}");
+
+            // 场景加载完成后，可以在这里执行一些初始化操作
+            OnSceneLoaded();
+        }
+        // 场景加载完成后的回调
+        void OnSceneLoaded()
+        {
+            Debug.Log("场景加载完成，执行后续初始化");
+
+            // 可以在这里添加场景加载后的初始化逻辑
+            // 例如：恢复游戏状态、更新UI等
+
+            // 销毁存档界面
+            if (Instance != null)
+            {
+                Destroy(Instance.gameObject);
+                Instance = null;
+            }
+        }
+
+
         // 在加载前检查关键对象状态
         CheckCriticalObjects("加载存档前");
 

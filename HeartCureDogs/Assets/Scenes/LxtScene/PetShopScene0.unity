@@ -3713,6 +3713,7 @@ MonoBehaviour:
   - {fileID: 1276424897}
   savePanel: {fileID: 1455218724}
   loadPanel: {fileID: 947526222}
+  loadSceneName: PetShopScene
 --- !u!1001 &1145957701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4584,6 +4585,7 @@ MonoBehaviour:
   - {fileID: 1276424897}
   savePanel: {fileID: 1455218724}
   loadPanel: {fileID: 947526222}
+  loadSceneName: PetShopScene
 --- !u!114 &1468597301 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1782824448511975061, guid: fe5ba77cbdd6b0848ab567bc5037d1a2, type: 3}
@@ -6503,6 +6505,10 @@ PrefabInstance:
       propertyPath: savePanel
       value: 
       objectReference: {fileID: 1455218724}
+    - target: {fileID: 6158177209511762452, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
+      propertyPath: loadSceneName
+      value: PetShopScene0
+      objectReference: {fileID: 0}
     - target: {fileID: 6158177209511762452, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
       propertyPath: loadTexts.Array.data[0]
       value: 

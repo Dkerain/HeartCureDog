@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/task.unity
     guid: c25e888ba6ead7042a2268923072d3f8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PetShopScene.unity
     guid: 0902288bd1a2944499ef7c9fe32a0ca1
   - enabled: 1
@@ -99,7 +99,7 @@ EditorBuildSettings:
     path: "Assets/Scenes/\u6D3B\u52A8\u573A\u666F/\u6D74\u5BA4.unity"
     guid: 53b3bcac145467549acafd8a00bbe401
   - enabled: 1
-    path: Assets/Scenes/LxtScene/PetShopScene.unity
+    path: Assets/Scenes/LxtScene/PetShopScene0.unity
     guid: 7ce680d0d38ad1745a64d53acede99fb
   - enabled: 1
     path: Assets/Scenes/LxtScene/BedroomScene.unity

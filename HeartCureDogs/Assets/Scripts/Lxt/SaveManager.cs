@@ -21,6 +21,13 @@ public class SaveManager : MonoBehaviour
         {3, "第三章：黑暗森林"},
         // 添加更多章节...
     };
+    private Dictionary<int, string> chapterScenes = new Dictionary<int, string>()
+    {
+        {1, "PetShopScene0"},
+        {2, "Chapter2Scene"},
+        {3, "Chapter3Scene"},
+        // 添加更多章节场景...
+    };
 
     void Awake()
     {
@@ -73,9 +80,11 @@ public class SaveManager : MonoBehaviour
         SaveData saveData = new SaveData
         {
             Chapter = currentChapter,
-            Title = GetChapterTitle(currentChapter)
+            Title = GetChapterTitle(currentChapter),
+            SaveTime = DateTime.Now,
+            SceneName = GetChapterScene(currentChapter) // 保存场景名
         };
-        Debug.Log($"创建存档数据：Chapter={saveData.Chapter}");
+        Debug.Log($"创建存档数据：Chapter={saveData.Chapter}, Scene={saveData.SceneName}");
 
         // 确保有足够的存档位
         while (currentSaves.SaveSlots.Count <= slotIndex)
@@ -114,7 +123,25 @@ public class SaveManager : MonoBehaviour
         }
 
         // 这里可以添加场景加载等其他逻辑
+        // 保存要加载的场景信息（供场景加载器使用）
+        if (!string.IsNullOrEmpty(saveData.SceneName))
+        {
+            PlayerPrefs.SetString("LoadTargetScene", saveData.SceneName);
+            PlayerPrefs.Save();
+            Debug.Log($"设置目标场景: {saveData.SceneName}");
+        }
     }
+    // 获取存档对应的场景名
+    public string GetSaveSceneName(int slotIndex)
+    {
+        if (currentSaves == null || currentSaves.SaveSlots.Count <= slotIndex)
+            return string.Empty;
+
+        SaveData saveData = currentSaves.SaveSlots[slotIndex];
+        return GetChapterScene(saveData.Chapter);
+    }
+
+
 
     public string GetSaveDisplayText(int slotIndex)
     {
@@ -156,7 +183,10 @@ public class SaveManager : MonoBehaviour
     {
         return chapterTitles.ContainsKey(chapter) ? chapterTitles[chapter] : $"第{chapter}章";
     }
-
+    private string GetChapterScene(int chapter)
+    {
+        return chapterScenes.ContainsKey(chapter) ? chapterScenes[chapter] : "MainScene";
+    }
     private void SaveToFile()
     {
         try
