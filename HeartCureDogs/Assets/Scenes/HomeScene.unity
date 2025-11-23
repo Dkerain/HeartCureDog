@@ -2379,6 +2379,8 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 64
+  button: {fileID: 0}
+  squareTag: TriggerSquare
 --- !u!4 &618672529
 Transform:
   m_ObjectHideFlags: 0
@@ -5224,6 +5226,8 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 64
+  button: {fileID: 0}
+  squareTag: TriggerSquare
 --- !u!1 &1976472879
 GameObject:
   m_ObjectHideFlags: 0
