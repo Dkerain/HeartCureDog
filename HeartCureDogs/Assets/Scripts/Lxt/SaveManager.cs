@@ -16,6 +16,7 @@ public class SaveManager : MonoBehaviour
     // 章节标题映射
     private Dictionary<int, string> chapterTitles = new Dictionary<int, string>()
     {
+        {0, "第零章：章节测试"},
         {1, "第一章：新的开始"},
         {2, "第二章：冒险启程"},
         {3, "第三章：黑暗森林"},
@@ -23,6 +24,7 @@ public class SaveManager : MonoBehaviour
     };
     private Dictionary<int, string> chapterScenes = new Dictionary<int, string>()
     {
+        {0, "PetShopScene0"},
         {1, "PetShopScene0"},
         {2, "Chapter2Scene"},
         {3, "Chapter3Scene"},
