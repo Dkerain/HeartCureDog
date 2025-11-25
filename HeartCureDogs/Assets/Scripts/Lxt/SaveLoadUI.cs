@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.SceneManagement;
+using NodeCanvas.Framework;
 
 public class SaveLoadUI : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class SaveLoadUI : MonoBehaviour
     public GameObject loadPanel;
 
     [Header("场景设置")]
-    public string loadSceneName = "PetShopScene0"; // 加载后要切换的场景名
+    public string loadSceneName = "PetShopScene"; // 加载后要切换的场景名
 
     [Header("预制体设置")]
     public static SaveLoadUI Instance;
@@ -204,9 +205,26 @@ public class SaveLoadUI : MonoBehaviour
 
             // 加载存档数据到内存
             SaveManager.Instance.LoadGame(slotIndex);
-
+            // 将存档的Chapter值设置到GlobalBlackboard
+            /*if (loadedData != null)
+            {
+                // 方法1：直接设置GlobalBlackboard（如果已经存在实例）
+                var globalBlackboard = GlobalBlackboard.Find("Global");
+                if (globalBlackboard != null)
+                {
+                    globalBlackboard.SetValue("Chapter", loadedData.Chapter);
+                    Debug.Log($"已设置GlobalBlackboard Chapter为: {loadedData.Chapter}");
+                }
+                else
+                {
+                    Debug.LogWarning("未找到GlobalBlackboard，将在场景加载后设置");
+                    // 保存Chapter值，在场景加载后设置
+                    PlayerPrefs.SetInt("PendingChapter", loadedData.Chapter);
+                }
+            }*/
             // 切换到目标场景
             StartCoroutine(LoadTargetScene());
+            
             /*SaveManager.Instance.LoadGame(slotIndex);
             // 读档后可以关闭界面或进行其他操作
             gameObject.SetActive(false);*/
@@ -246,7 +264,26 @@ public class SaveLoadUI : MonoBehaviour
 
             // 可以在这里添加场景加载后的初始化逻辑
             // 例如：恢复游戏状态、更新UI等
+            // 检查是否有待设置的Chapter值
+            /*if (PlayerPrefs.HasKey("PendingChapter"))
+            {
+                int pendingChapter = PlayerPrefs.GetInt("PendingChapter");
+                var globalBlackboard = GlobalBlackboard.Find("Global");
 
+                if (globalBlackboard != null)
+                {
+                    globalBlackboard.SetValue("Chapter", pendingChapter);
+                    Debug.Log($"场景加载后设置GlobalBlackboard Chapter为: {pendingChapter}");
+                }
+
+                // 清除临时数据
+                PlayerPrefs.DeleteKey("PendingChapter");
+            }*/
+            // 清理临时数据
+            if (PlayerPrefs.HasKey("LoadingSaveSlot"))
+                PlayerPrefs.DeleteKey("LoadingSaveSlot");
+            if (PlayerPrefs.HasKey("LoadTargetScene"))
+                PlayerPrefs.DeleteKey("LoadTargetScene");
             // 销毁存档界面
             if (Instance != null)
             {

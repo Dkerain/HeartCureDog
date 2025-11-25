@@ -24,10 +24,10 @@ public class SaveManager : MonoBehaviour
     };
     private Dictionary<int, string> chapterScenes = new Dictionary<int, string>()
     {
-        {0, "PetShopScene0"},
-        {1, "PetShopScene0"},
-        {2, "Chapter2Scene"},
-        {3, "Chapter3Scene"},
+        {0, "LivingroomScene"},
+        {1, "LivingroomScene"},
+        {2, "LivingroomScene"},
+        {3, "LivingroomScene"},
         // 添加更多章节场景...
     };
 
@@ -75,7 +75,7 @@ public class SaveManager : MonoBehaviour
             return;
         }
 
-        int currentChapter = globalBlackboard.GetValue<int>("Chapter");
+        int currentChapter = globalBlackboard.GetVariableValue<int>("Chapter");
         Debug.Log($"当前章节：{currentChapter}");
 
         // 创建存档数据
@@ -120,7 +120,7 @@ public class SaveManager : MonoBehaviour
         Blackboard globalBlackboard = GlobalBlackboard.Find("Global");
         if (globalBlackboard != null)
         {
-            globalBlackboard.SetValue("Chapter", saveData.Chapter);
+            globalBlackboard.SetVariableValue("Chapter", saveData.Chapter);
             Debug.Log($"已加载存档：第{saveData.Chapter}章 - {saveData.Title}");
         }
 

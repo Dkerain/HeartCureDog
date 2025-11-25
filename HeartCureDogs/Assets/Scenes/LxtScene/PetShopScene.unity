@@ -6589,7 +6589,7 @@ PrefabInstance:
       objectReference: {fileID: 1455218724}
     - target: {fileID: 6158177209511762452, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
       propertyPath: loadSceneName
-      value: PetShopScene0
+      value: PetShopScene
       objectReference: {fileID: 0}
     - target: {fileID: 6158177209511762452, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
       propertyPath: loadTexts.Array.data[0]
