@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9309baddf399d84f8fbfe118331e89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: bedroom
+  targetScene: BedroomScene
 --- !u!1 &526729707169929500
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9309baddf399d84f8fbfe118331e89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: bathroom
+  targetScene: BathroomScene
 --- !u!1 &2185459286418755937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9309baddf399d84f8fbfe118331e89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: park
+  targetScene: ParkScene
 --- !u!1 &7183376006388104122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,7 +1632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9309baddf399d84f8fbfe118331e89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: hospital
+  targetScene: HospitalScene
 --- !u!1 &8628418842590075967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1921,4 +1921,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9309baddf399d84f8fbfe118331e89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: "\u5BA2\u5385"
+  targetScene: LivingroomScene
