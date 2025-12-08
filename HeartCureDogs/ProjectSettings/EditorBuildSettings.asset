@@ -116,4 +116,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LxtScene/HospitalScene.unity
     guid: 4bc59799abf6d0c458950e2f3747eb19
+  - enabled: 1
+    path: Assets/Scenes/LmlScene/PetShopScene1.unity
+    guid: c2c740cf7e9b0264b86edbac2fb18fd2
+  - enabled: 1
+    path: Assets/Scenes/LmlScene/StartScene1.unity
+    guid: 17e4bc63aeb2a7347a194ed41ec1c5a4
+  - enabled: 1
+    path: Assets/Scenes/LmlScene/ParkScene1.unity
+    guid: 3597a43655cb21546bb9bedd3403b581
+  - enabled: 1
+    path: Assets/Scenes/LmlScene/LivingroomScene1.unity
+    guid: ecb604631c2fab14a96c28496954f398
+  - enabled: 1
+    path: Assets/Scenes/LmlScene/HospitalScene1.unity
+    guid: 7d6523de115d2694f8f2b8d0818466c2
+  - enabled: 1
+    path: Assets/Scenes/LmlScene/BedroomScene1.unity
+    guid: 089bdd088e71eb04abdb422c937a72a3
+  - enabled: 1
+    path: Assets/Scenes/LmlScene/BathroomScene1.unity
+    guid: eb3e90b5c4f277a43b86ec78f176b2a0
   m_configObjects: {}
