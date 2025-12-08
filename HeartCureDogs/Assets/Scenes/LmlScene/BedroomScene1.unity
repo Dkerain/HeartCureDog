@@ -6731,6 +6731,60 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1137328148383350733, guid: 08bcdb37d54dc094cb896a73e94c8517, type: 3}
   m_PrefabInstance: {fileID: 2020719289}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2034380721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2034380723}
+  - component: {fileID: 2034380722}
+  m_Layer: 0
+  m_Name: AttributeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2034380722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034380721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42074289d1614240b4a5a7ba5618d33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDogEnergy: 100
+  maxDogHealth: 100
+  maxDogBelieve: 100
+  maxNpcBrwan: 100
+  initialDogEnergy: 50
+  initialDogHealth: 50
+  initialDogBelieve: 50
+  initialDogEmotion: "\u5E73\u9759"
+  initialNpcCoin: 50
+  initialNpcBrwan: 45
+--- !u!4 &2034380723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034380721}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 821.84784, y: 607.6067, z: -1.509221}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2082065098
 GameObject:
   m_ObjectHideFlags: 0
@@ -6958,3 +7012,4 @@ SceneRoots:
   - {fileID: 407887207}
   - {fileID: 304171915}
   - {fileID: 582720773}
+  - {fileID: 2034380723}
