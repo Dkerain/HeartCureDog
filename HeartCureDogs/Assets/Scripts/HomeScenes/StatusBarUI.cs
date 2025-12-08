@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -6,20 +6,20 @@ using NodeCanvas.Framework;
 
 public class StatusBarUI : MonoBehaviour
 {
-    [Header("UI�ı����")]
-    public TextMeshProUGUI playerEnergyText;  // �������ֵ
-    public TextMeshProUGUI playerCoinsText;   // ��ҽ��
-    public TextMeshProUGUI dogHealthText;     // С������ֵ
-    public TextMeshProUGUI dogEnergyText;     // С������ֵ
-    public TextMeshProUGUI dogTrustText;      // С������ֵ
-    public TextMeshProUGUI dogMoodText;       // С������
+    [Header("UI文本引用")]
+    public TextMeshProUGUI playerEnergyText;  // 玩家体力值
+    public TextMeshProUGUI playerCoinsText;   // 玩家金币
+    public TextMeshProUGUI dogHealthText;     // 狗狗健康值
+    public TextMeshProUGUI dogEnergyText;     // 狗狗精力值
+    public TextMeshProUGUI dogTrustText;      // 狗狗信任值
+    public TextMeshProUGUI dogMoodText;       // 狗狗情绪
 
     private GlobalBlackboard globalBlackboard;
     private bool blackboardFound = false;
 
     private void Start()
     {
-        Debug.Log("UI�ű�����");
+        Debug.Log("UI脚本启动");
         FindGlobalBlackboard();
         UpdateUI();
     }
@@ -31,27 +31,27 @@ public class StatusBarUI : MonoBehaviour
         if (globalBlackboard != null)
         {
             blackboardFound = true;
-            Debug.Log("UI�ɹ��ҵ�ȫ�ֺڰ壡");
+            Debug.Log("UI成功找到全局黑板！");
 
-            // ���Զ�ȡֵ
+            // 测试读取值
             try
             {
-                Debug.Log($"���Զ�ȡ - ���: {globalBlackboard.GetValue<int>("npcCoinValue")}");
-                Debug.Log($"���Զ�ȡ - ����: {globalBlackboard.GetValue<int>("npcBrwanValue")}");
-                Debug.Log($"���Զ�ȡ - ����: {globalBlackboard.GetValue<int>("dogEnergyValue")}");
-                Debug.Log($"���Զ�ȡ - ����: {globalBlackboard.GetValue<int>("dogHealthValue")}");
-                Debug.Log($"���Զ�ȡ - ����: {globalBlackboard.GetValue<int>("dogBelieveValue")}");
-                Debug.Log($"���Զ�ȡ - ����: {globalBlackboard.GetValue<string>("dogEmotion")}");
+                Debug.Log($"测试读取 - 金币: {globalBlackboard.GetValue<int>("npcCoinValue")}");
+                Debug.Log($"测试读取 - 体力: {globalBlackboard.GetValue<int>("npcBrwanValue")}");
+                Debug.Log($"测试读取 - 精力: {globalBlackboard.GetValue<int>("dogEnergyValue")}");
+                Debug.Log($"测试读取 - 健康: {globalBlackboard.GetValue<int>("dogHealthValue")}");
+                Debug.Log($"测试读取 - 信任: {globalBlackboard.GetValue<int>("dogBelieveValue")}");
+                Debug.Log($"测试读取 - 情绪: {globalBlackboard.GetValue<string>("dogEmotion")}");
             }
             catch (System.Exception e)
             {
-                Debug.LogError($"��ȡȫ�ֺڰ�ֵʱ����: {e.Message}");
+                Debug.LogError($"读取全局黑板值时出错: {e.Message}");
             }
         }
         else
         {
             blackboardFound = false;
-            Debug.LogError("UIδ�ҵ�ȫ�ֺڰ壡��ȷ���������б�ʶ��Ϊ'Global'��GlobalBlackboard��");
+            Debug.LogError("UI未找到全局黑板！请确保场景中有标识为'Global'的GlobalBlackboard对象");
         }
     }
 
@@ -70,93 +70,93 @@ public class StatusBarUI : MonoBehaviour
 
         try
         {
-            // ��ȫ�ֺڰ��ȡֵ������UI
+            // 从全局黑板读取值并更新UI
             if (playerEnergyText != null)
             {
                 int value = globalBlackboard.GetValue<int>("npcBrwanValue");
-                playerEnergyText.text = "����ֵ: " + value;
-                Debug.Log($"��������ֵUI: {value}");
+                playerEnergyText.text = "体力值: " + value;
+                Debug.Log($"更新玩家体力值UI: {value}");
             }
 
             if (playerCoinsText != null)
             {
                 int value = globalBlackboard.GetValue<int>("npcCoinValue");
-                playerCoinsText.text = "���: " + value;
-                Debug.Log($"���½��UI: {value}");
+                playerCoinsText.text = "金币: " + value;
+                Debug.Log($"更新金币UI: {value}");
             }
 
             if (dogHealthText != null)
             {
                 int value = globalBlackboard.GetValue<int>("dogHealthValue");
-                dogHealthText.text = "����ֵ: " + value;
-                Debug.Log($"���½���ֵUI: {value}");
+                dogHealthText.text = "健康值: " + value;
+                Debug.Log($"更新健康值UI: {value}");
             }
 
             if (dogEnergyText != null)
             {
                 int value = globalBlackboard.GetValue<int>("dogEnergyValue");
-                dogEnergyText.text = "����ֵ: " + value;
-                Debug.Log($"���¾���ֵUI: {value}");
+                dogEnergyText.text = "精力值: " + value;
+                Debug.Log($"更新精力值UI: {value}");
             }
 
             if (dogTrustText != null)
             {
                 int value = globalBlackboard.GetValue<int>("dogBelieveValue");
-                dogTrustText.text = "����ֵ: " + value;
-                Debug.Log($"��������ֵUI: {value}");
+                dogTrustText.text = "信任值: " + value;
+                Debug.Log($"更新信任值UI: {value}");
             }
 
             if (dogMoodText != null)
             {
                 string value = globalBlackboard.GetValue<string>("dogEmotion");
-                dogMoodText.text = "����: " + value;
-                Debug.Log($"��������UI: {value}");
+                dogMoodText.text = "情绪: " + value;
+                Debug.Log($"更新情绪UI: {value}");
             }
         }
         catch (System.Exception e)
         {
-            Debug.LogWarning("����UIʱ����: " + e.Message);
+            Debug.LogWarning("更新UI时出错: " + e.Message);
             DisplayDefaultValues();
         }
     }
 
     private void DisplayDefaultValues()
     {
-        Debug.Log("��ʾĬ��ֵ");
+        Debug.Log("显示默认值");
 
-        // ���Ҳ����ڰ�ʱ��ʾĬ��ֵ
+        // 找不到黑板时显示默认值
         if (playerEnergyText != null)
-            playerEnergyText.text = "����ֵ: 45";
+            playerEnergyText.text = "体力值: 45";
 
         if (playerCoinsText != null)
-            playerCoinsText.text = "���: 50";
+            playerCoinsText.text = "金币: 50";
 
         if (dogHealthText != null)
-            dogHealthText.text = "����ֵ: 50";
+            dogHealthText.text = "健康值: 50";
 
         if (dogEnergyText != null)
-            dogEnergyText.text = "����ֵ: 50";
+            dogEnergyText.text = "精力值: 50";
 
         if (dogTrustText != null)
-            dogTrustText.text = "����ֵ: 50";
+            dogTrustText.text = "信任值: 50";
 
         if (dogMoodText != null)
-            dogMoodText.text = "����: ƽ��";
+            dogMoodText.text = "情绪: 平静";
     }
 
     public void RefreshUI()
     {
-        Debug.Log("�ֶ�ˢ��UI");
+        Debug.Log("手动刷新UI");
         UpdateUI();
     }
 
     private void OnEnable()
     {
-        Debug.Log("UI�������");
+        Debug.Log("UI组件启用");
         UpdateUI();
     }
-}*/
-using UnityEngine;
+}
+/*using UnityEngine;
 using TMPro;
 using NodeCanvas.Framework;
 
@@ -215,4 +215,4 @@ public class StatusBarUI : MonoBehaviour
             Debug.LogError("����UIʱ����: " + e.Message);
         }
     }
-}
+}*/
