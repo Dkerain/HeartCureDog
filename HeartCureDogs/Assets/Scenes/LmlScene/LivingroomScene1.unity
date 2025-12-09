@@ -6918,6 +6918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GlobalBlackboard
       objectReference: {fileID: 0}
+    - target: {fileID: 436925807943825772, guid: 08bcdb37d54dc094cb896a73e94c8517, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 738818711593217234, guid: 08bcdb37d54dc094cb896a73e94c8517, type: 3}
       propertyPath: m_SizeDelta.x
       value: 104.5517
