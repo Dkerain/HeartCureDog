@@ -3954,7 +3954,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3273859030929533118, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: targetScene
-      value: PetShopScene
+      value: PetShopScene1
       objectReference: {fileID: 0}
     - target: {fileID: 3639537349170160800, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: m_Name
@@ -3966,15 +3966,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3694062960166317193, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: targetScene
-      value: BedroomScene
+      value: BedroomScene1
       objectReference: {fileID: 0}
     - target: {fileID: 6114341688309795280, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: targetScene
-      value: HospitalScene
+      value: HospitalScene1
       objectReference: {fileID: 0}
     - target: {fileID: 6131062642209544390, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: targetScene
-      value: ParkScene
+      value: ParkScene1
       objectReference: {fileID: 0}
     - target: {fileID: 7447686909621113854, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -4080,9 +4080,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8415305501463064652, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
+      propertyPath: targetScene
+      value: LivingroomScene1
+      objectReference: {fileID: 0}
     - target: {fileID: 9042010924000485541, guid: cd8b3b895628f7547bc54f9d384b0200, type: 3}
       propertyPath: targetScene
-      value: BathroomScene
+      value: BathroomScene1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
