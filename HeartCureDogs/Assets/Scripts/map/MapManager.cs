@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class MapManager : MonoBehaviour
 {
     public GameObject mapPanel; // 拖入MapPanel
- 
+
     public GameObject sceneButtonPrefab; // 拖入按钮预制体
 
     void Start()
@@ -26,8 +26,11 @@ public class MapManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         Time.timeScale = 1; // 恢复时间
+        if (mapPanel != null)
+            mapPanel.SetActive(false);
         SceneManager.LoadScene(sceneName);
     }
+
     // 新增控制方法
     public void CloseMap()
     {

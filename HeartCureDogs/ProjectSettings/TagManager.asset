@@ -10,6 +10,8 @@ TagManager:
   - DialogPanel
   - DogController
   - TriggerSquare
+  - DogSpawnPoint
+  - PlayerDog
   layers:
   - Default
   - TransparentFX
