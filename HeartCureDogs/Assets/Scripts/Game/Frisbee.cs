@@ -13,9 +13,12 @@ public class Frisbee : MonoBehaviour
     [Tooltip("飞盘是否被接住")]
     public bool IsCaught { get; private set; } = false;
 
+    private FrisbeeGame gameManager;
+
     void Start()
     {
-        // 初始化，不需要特殊设置
+        // 初始化，尝试获取游戏管理器
+        gameManager = FindObjectOfType<FrisbeeGame>();
     }
 
     void Update()
@@ -52,5 +55,33 @@ public class Frisbee : MonoBehaviour
         Debug.Log("飞盘被接住了！");
         // 延迟销毁，以便显示动画
         Destroy(gameObject, 0.2f);
+    }
+
+    /// <summary>
+    /// 设置游戏管理器引用
+    /// </summary>
+    public void SetGameManager(FrisbeeGame manager)
+    {
+        gameManager = manager;
+    }
+
+    /// <summary>
+    /// 碰撞检测 - 当飞盘与小狗碰撞时触发
+    /// </summary>
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (IsCaught) return;
+
+        // 检测是否与小狗相撞（通过DogControllerr脚本判断）
+        DogControllerr dogController = collision.GetComponent<DogControllerr>();
+        if (dogController != null)
+        {
+            Debug.Log("飞盘与狗发生碰撞！接住了！");
+            if (gameManager != null)
+            {
+                gameManager.OnFrisbeeCaught();
+            }
+            Catch();
+        }
     }
 }

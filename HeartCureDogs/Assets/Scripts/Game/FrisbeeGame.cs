@@ -30,7 +30,7 @@ public class FrisbeeGame : MonoBehaviour
     [Header("狗与碰撞")]
     [Tooltip("小狗Transform")]
     public Transform dogTransform;
-    [Tooltip("检测碰撞的距离")]
+    [Tooltip("检测碰撞的距离（已弃用，使用碰撞器）")]
     public float catchDistance = 0.5f;
 
     [Header("UI")]
@@ -44,6 +44,12 @@ public class FrisbeeGame : MonoBehaviour
     [Header("控制")]
     [Tooltip("狗的控制器（用来启用/禁用移动）")]
     public DogControllerr dogController;
+
+    [Header("界面")]
+    [Tooltip("主界面 Canvas（Game Button 所在）")]
+    public GameObject mainCanvas;
+    [Tooltip("小游戏 Canvas（GameCanvas）")]
+    public GameObject gameCanvas;
 
     // 游戏状态
     private int currentHearts;
@@ -62,7 +68,7 @@ public class FrisbeeGame : MonoBehaviour
     {
         if (isGameActive)
         {
-            CheckFrisbeeCatch();
+            // 碰撞检测现在在Frisbee脚本中处理
             RemoveOffscreenFrisbees();
         }
     }
@@ -72,6 +78,22 @@ public class FrisbeeGame : MonoBehaviour
     /// </summary>
     public void InitializeGame()
     {
+        // 切换界面
+        if (mainCanvas != null)
+            mainCanvas.SetActive(false);
+        if (gameCanvas != null)
+            gameCanvas.SetActive(true);
+
+        // 确保脚本组件激活
+        this.enabled = true;
+
+        // 清理所有旧飞盘
+        Frisbee[] oldFrisbees = FindObjectsOfType<Frisbee>();
+        foreach (Frisbee frisbee in oldFrisbees)
+        {
+            Destroy(frisbee.gameObject);
+        }
+
         currentHearts = maxHearts;
         currentSpawnInterval = frisbeeSpawnInterval;
         currentFrisbeeSpeed = frisbeeSpeed;
@@ -88,10 +110,14 @@ public class FrisbeeGame : MonoBehaviour
         if (dogController != null)
             dogController.EnableMovement();
 
-        // 开始生成飞盘
+        // 停止之前的协程
         if (spawnCoroutine != null)
             StopCoroutine(spawnCoroutine);
+
+        // 直接启动飞盘生成协程
         spawnCoroutine = StartCoroutine(SpawnFrisbeesCoroutine());
+
+        Debug.Log("游戏已初始化！飞盘生成协程已启动！");
     }
 
     /// <summary>
@@ -127,37 +153,22 @@ public class FrisbeeGame : MonoBehaviour
         // 实例化飞盘
         GameObject frisbee = Instantiate(frisbeePrefab, spawnPos, Quaternion.identity);
 
-        // 添加飞盘脚本并设置速度
-        Frisbee frisbeeScript = frisbee.AddComponent<Frisbee>();
-        frisbeeScript.SetSpeed(currentFrisbeeSpeed);
-    }
-
-    /// <summary>
-    /// 检测狗是否接住飞盘
-    /// </summary>
-    private void CheckFrisbeeCatch()
-    {
-        if (dogTransform == null) return;
-
-        Frisbee[] allFrisbees = FindObjectsOfType<Frisbee>();
-        foreach (Frisbee frisbee in allFrisbees)
+        // 获取或添加飞盘脚本并设置速度和游戏管理器
+        Frisbee frisbeeScript = frisbee.GetComponent<Frisbee>();
+        if (frisbeeScript == null)
         {
-            if (frisbee != null && !frisbee.IsCaught)
-            {
-                float distance = Vector3.Distance(dogTransform.position, frisbee.transform.position);
-                if (distance < catchDistance)
-                {
-                    frisbee.Catch();
-                    OnFrisbeeCaught();
-                }
-            }
+            frisbeeScript = frisbee.AddComponent<Frisbee>();
         }
+        frisbeeScript.SetSpeed(currentFrisbeeSpeed);
+        frisbeeScript.SetGameManager(this);
+        
+        Debug.Log("生成了一个新飞盘！");
     }
 
     /// <summary>
     /// 飞盘被接住时的回调
     /// </summary>
-    private void OnFrisbeeCaught()
+    public void OnFrisbeeCaught()
     {
         // 增加难度
         currentSpawnInterval *= difficultyMultiplier;
@@ -224,7 +235,19 @@ public class FrisbeeGame : MonoBehaviour
         if (gameOverPanel != null)
             gameOverPanel.SetActive(true);
 
-        Debug.Log("游戏结束！");
+        Debug.Log("游戏结束！2秒后自动返回主界面...");
+
+        // 2秒后自动返回主界面
+        StartCoroutine(AutoReturnToMain());
+    }
+
+    /// <summary>
+    /// 自动返回主界面的协程
+    /// </summary>
+    private IEnumerator AutoReturnToMain()
+    {
+        yield return new WaitForSeconds(2f);
+        BackToPark();
     }
 
     /// <summary>
@@ -255,20 +278,62 @@ public class FrisbeeGame : MonoBehaviour
     }
 
     /// <summary>
-    /// 返回到ParkScene主界面
+    /// 完全重置游戏状态
     /// </summary>
-    public void BackToPark()
+    private void ResetGameState()
     {
+        // 重置所有游戏变量
+        currentHearts = maxHearts;
+        currentSpawnInterval = frisbeeSpawnInterval;
+        currentFrisbeeSpeed = frisbeeSpeed;
         isGameActive = false;
-        if (dogController != null)
-            dogController.DisableMovement();
+
+        // 停止协程
+        if (spawnCoroutine != null)
+        {
+            StopCoroutine(spawnCoroutine);
+            spawnCoroutine = null;
+        }
+
         // 清理所有飞盘
         Frisbee[] allFrisbees = FindObjectsOfType<Frisbee>();
         foreach (Frisbee frisbee in allFrisbees)
         {
             Destroy(frisbee.gameObject);
         }
-        // 隐藏游戏UI（即GameCanvas中的小游戏部分）
-        gameObject.SetActive(false);
+
+        // 清理心脏UI
+        foreach (GameObject heart in heartUIList)
+        {
+            Destroy(heart);
+        }
+        heartUIList.Clear();
+
+        // 隐藏游戏结束面板
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+
+        Debug.Log("游戏状态已完全重置！");
+    }
+
+    /// <summary>
+    /// 返回到ParkScene主界面
+    /// </summary>
+    public void BackToPark()
+    {
+        // 完全重置游戏状态
+        ResetGameState();
+
+        // 禁用狗的移动
+        if (dogController != null)
+            dogController.DisableMovement();
+
+        // 切换界面
+        if (gameCanvas != null)
+            gameCanvas.SetActive(false);
+        if (mainCanvas != null)
+            mainCanvas.SetActive(true);
+
+        Debug.Log("已返回主界面，游戏状态已完全重置！");
     }
 }
