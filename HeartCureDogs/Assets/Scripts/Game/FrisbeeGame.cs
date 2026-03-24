@@ -29,7 +29,13 @@ public class FrisbeeGame : MonoBehaviour
 
     [Header("狗与碰撞")]
     [Tooltip("小狗Transform")]
-    public Transform dogTransform;
+    private Transform dogTransform;
+    
+    [Header("控制")]
+    [Tooltip("狗的控制器（用来启用/禁用移动）")]
+    // 动态获取狗引用，不再使用公共字段
+    private DogControllerr dogController;
+   
     [Tooltip("检测碰撞的距离（已弃用，使用碰撞器）")]
     public float catchDistance = 0.5f;
 
@@ -41,9 +47,6 @@ public class FrisbeeGame : MonoBehaviour
     [Tooltip("游戏结束时显示的面板")]
     public GameObject gameOverPanel;
 
-    [Header("控制")]
-    [Tooltip("狗的控制器（用来启用/禁用移动）")]
-    public DogControllerr dogController;
 
     [Header("界面")]
     [Tooltip("主界面 Canvas（Game Button 所在）")]
@@ -86,6 +89,26 @@ public class FrisbeeGame : MonoBehaviour
 
         // 确保脚本组件激活
         this.enabled = true;
+
+        // 2. 获取小狗实例（通过单例 DogController）
+        if (DogController.Instance == null)
+        {
+            Debug.LogError("DogController 单例不存在！无法开始游戏。");
+            return;
+        }
+        GameObject dogInstance = DogController.Instance.DogInstance;
+        if (dogInstance == null)
+        {
+            Debug.LogError("小狗实例未创建！");
+            return;
+        }
+        dogTransform = dogInstance.transform;
+        dogController = dogInstance.GetComponent<DogControllerr>();
+        if (dogController == null)
+        {
+            Debug.LogError("小狗身上没有 DogControllerr 组件！");
+            return;
+        }
 
         // 清理所有旧飞盘
         Frisbee[] oldFrisbees = FindObjectsOfType<Frisbee>();
