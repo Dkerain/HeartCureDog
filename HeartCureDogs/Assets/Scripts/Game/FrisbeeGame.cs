@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using NodeCanvas.Framework;
 
 /// <summary>
 /// 飞盘接取小游戏管理器
@@ -16,6 +17,8 @@ public class FrisbeeGame : MonoBehaviour
     public float frisbeeSpawnInterval = 2f;
     [Tooltip("难度递增系数（每次失误后调整）")]
     public float difficultyMultiplier = 1.05f;
+   
+    private int caughtCount = 0;    // 本次游戏接住的飞盘数
 
     [Header("飞盘设置")]
     [Tooltip("飞盘预制体")]
@@ -121,6 +124,7 @@ public class FrisbeeGame : MonoBehaviour
         currentSpawnInterval = frisbeeSpawnInterval;
         currentFrisbeeSpeed = frisbeeSpeed;
         isGameActive = true;
+        caughtCount = 0;   // 重置计数
 
         // 显示生命值UI
         UpdateHeartsUI();
@@ -193,6 +197,8 @@ public class FrisbeeGame : MonoBehaviour
     /// </summary>
     public void OnFrisbeeCaught()
     {
+        caughtCount++;   // 每次接住增加
+        Debug.Log($"接住飞盘！累计接住: {caughtCount}");
         // 增加难度
         currentSpawnInterval *= difficultyMultiplier;
         currentFrisbeeSpeed *= difficultyMultiplier;
@@ -239,6 +245,71 @@ public class FrisbeeGame : MonoBehaviour
         }
     }
 
+    private void ApplyGameResult()
+    {
+        // 获取全局黑板
+        GlobalBlackboard gb = GlobalBlackboard.Find("Global");
+        if (gb == null)
+        {
+            Debug.LogError("未找到名为 'Global' 的全局黑板！");
+            return;
+        }
+
+        // 根据接住数量确定奖励/扣除
+        int goldReward = 0;
+        int staminaCost = 0;
+
+        if (caughtCount <= 3)
+        {
+            goldReward = 50;
+            staminaCost = 20;
+        }
+        else if (caughtCount <= 6)
+        {
+            goldReward = 100;
+            staminaCost = 25;
+        }
+        else // 7个及以上
+        {
+            goldReward = 150;
+            staminaCost = 30;
+        }
+
+        // 1. 更新金币 (npcCoinValue)
+        if (gb.GetVariable("npcCoinValue") != null)
+        {
+            int currentCoin = gb.GetVariableValue<int>("npcCoinValue");
+            int newCoin = currentCoin + goldReward;
+            gb.SetVariableValue("npcCoinValue", newCoin);
+            Debug.Log($"获得金币 +{goldReward}，现有金币: {newCoin}");
+        }
+        else
+        {
+            Debug.LogError("全局黑板中没有 'npcCoinValue' 变量！");
+        }
+
+        // 2. 更新体力 (npcBrwanValue)
+        if (gb.GetVariable("npcBrwanValue") != null)
+        {
+            int currentStamina = gb.GetVariableValue<int>("npcBrwanValue");
+            int newStamina = Mathf.Max(0, currentStamina - staminaCost);
+            gb.SetVariableValue("npcBrwanValue", newStamina);
+            Debug.Log($"扣除体力 -{staminaCost}，剩余体力: {newStamina}");
+
+            // 可选：体力耗尽处理
+            if (newStamina <= 0)
+            {
+                Debug.Log("体力已耗尽，可以触发额外事件");
+                // 例如设置全局变量 "isExhausted" = true
+                // gb.SetVariableValue("isExhausted", true);
+            }
+        }
+        else
+        {
+            Debug.LogError("全局黑板中没有 'npcBrwanValue' 变量！");
+        }
+    }
+
     /// <summary>
     /// 游戏结束
     /// </summary>
@@ -253,6 +324,9 @@ public class FrisbeeGame : MonoBehaviour
         // 停止生成飞盘
         if (spawnCoroutine != null)
             StopCoroutine(spawnCoroutine);
+        
+        // 应用游戏结果（影响金币和体力）
+        ApplyGameResult();
 
         // 显示游戏结束面板
         if (gameOverPanel != null)
