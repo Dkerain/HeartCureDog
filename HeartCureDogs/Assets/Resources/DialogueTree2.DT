@@ -1,0 +1,828 @@
+{
+    "type": "NodeCanvas.DialogueTrees.DialogueTree",
+    "nodes": [
+        {
+            "_action": {
+                "actions": [
+                    {
+                        "sceneName": {
+                            "_value": "LivingroomScene1"
+                        },
+                        "mode": {
+
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.LoadScene"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|SetNpcBrwan|System.Void",
+                            "_paramsInfo": "System.Int32"
+                        },
+                        "parameters": [
+                            {
+                                "_type": "System.Int32",
+                                "_value": {
+                                    "$content": 45,
+                                    "$type": "System.Int32"
+                                }
+                            }
+                        ],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "boolVariable": {
+                            "_name": "Global/sleepButtonPressed",
+                            "_targetVariableID": "c9cc2646-2773-40ec-b29c-a05ad8c17d6c"
+                        },
+                        "setTo": 0,
+                        "$type": "NodeCanvas.Tasks.Actions.SetBoolean"
+                    }
+                ],
+                "$type": "NodeCanvas.Framework.ActionList"
+            },
+            "_position": {
+                "x": 510.2616,
+                "y": -184.0842
+            },
+            "$type": "NodeCanvas.DialogueTrees.ActionNode",
+            "$id": "0"
+        },
+        {
+            "statement": {
+                "_text": "\u6f06\u9ed1\u7684\u5ba2\u5385\uff0c\u58a9\u58a9\u8fd8\u8737\u7f29\u5728\u6bef\u5b50\u4e0a\u5b89\u8be6\u5730\u7761\u89c9\u3002"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 441.0894,
+                "y": 16.75767
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "1"
+        },
+        {
+            "statement": {
+                "_text": "\u706f\u4eae\u4e86\uff0c\u58a9\u58a9\u542c\u5230\u58f0\u97f3\uff0c\u5fae\u5fae\u52a8\u4e86\u4e00\u4e0b\uff0c\u6162\u6162\u7741\u5f00\u53cc\u773c\u3002\r\n\u58a9\u58a9\u5f39\u4e86\u8d77\u6765\uff0c\u5c3e\u5df4\u5f00\u59cb\u75af\u72c2\u5730\u6447\u6446\uff0c\u4eff\u4f5b\u8981\u6447\u6389\u6240\u6709\u7684\u77dc\u6301\u548c\u7b49\u5f85\u7684\u7126\u8651\u3002\u5b83\u7684\u524d\u722a\u6025\u5207\u5730\u6252\u62c9\u7740\u5730\u9762\uff0c\u5c0f\u5c0f\u7684\u8eab\u8eaf\u51e0\u4e4e\u8981\u8dc3\u51fa\u5c0f\u7a9d\uff0c\u773c\u795e\u4e2d\u5145\u6ee1\u4e86\u65e0\u6bd4\u7684\u559c\u60a6\u548c\u671f\u5f85\u3002"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 422.0,
+                "y": 113.3333
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "2"
+        },
+        {
+            "statement": {
+                "_text": "\u201c\u6c6a\u6c6a\uff01\u201d\u5b83\u5174\u594b\u5730\u5420\u53eb\u4e86\u4e24\u58f0\uff0c\u58f0\u97f3\u91cc\u8fd8\u5e26\u7740\u4e00\u4e1d\u7a1a\u5ae9\u7684\u5976\u6c14\uff0c\u4f46\u8fd9\u4e1d\u6beb\u6ca1\u6709\u51cf\u5f31\u5b83\u7684\u70ed\u60c5\u3002"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 409.3334,
+                "y": 204.0
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "3"
+        },
+        {
+            "statement": {
+                "_text": "\u4f60\u62ff\u7740\u4e00\u4e2a\u8272\u5f69\u6591\u6593\u7684\u5c0f\u7403\uff0c\u58a9\u58a9\u534a\u8e72\u7740\uff0c\u7acb\u523b\u77aa\u5927\u4e86\u773c\u775b\uff0c\u5c3e\u5df4\u5174\u594b\u5730\u6447\u6446\u8d77\u6765\uff0c\u4eff\u4f5b\u5728\u8bf4\uff1a\u201c\u592a\u597d\u4e86\uff0c\u6211\u6700\u559c\u6b22\u7684\u6e38\u620f\u65f6\u95f4\u5230\u4e86\uff01\u201d"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 418.0,
+                "y": 282.6667
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "4"
+        },
+        {
+            "statement": {
+                "_text": "\u7b2c\u4e00\u6b21\u6295\u7403\u533a\u57df\u5728\u5ba2\u5385\r\uff0c\u58a9\u58a9\u5c06\u5c0f\u7403\u53fc\u56de\u6765\u540e\uff0c\r\u5feb\u5938\u4e00\u4e0b\u58a9\u58a9\u5427......"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 442.0,
+                "y": 358.0
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "5"
+        },
+        {
+            "availableChoices": [
+                {
+                    "statement": {
+                        "_text": "\u58a9\u58a9\u592a\u68d2\u5566\uff01"
+                    }
+                },
+                {
+                    "statement": {
+                        "_text": "\u592a\u5389\u5bb3\u5566\uff0c\u6211\u7684\u58a9\uff01"
+                    }
+                },
+                {
+                    "statement": {
+                        "_text": "\u4f60\u8dd1\u7684\u771f\u5feb\uff0c\u50cf\u4e2a\u5c0f\u95ea\u7535\uff01"
+                    }
+                }
+            ],
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 442.386,
+                "y": 434.0
+            },
+            "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+            "$id": "6"
+        },
+        {
+            "_action": {
+                "actions": [
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|SetDogEmotionHappy|System.Void",
+                            "_paramsInfo": ""
+                        },
+                        "parameters": [],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddDogHealth5|System.Void",
+                            "_paramsInfo": ""
+                        },
+                        "parameters": [],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddDogEnergy|System.Void",
+                            "_paramsInfo": "System.Int32"
+                        },
+                        "parameters": [
+                            {
+                                "_type": "System.Int32",
+                                "_value": {
+                                    "$content": -10,
+                                    "$type": "System.Int32"
+                                }
+                            }
+                        ],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddDogBelieve|System.Void",
+                            "_paramsInfo": "System.Int32"
+                        },
+                        "parameters": [
+                            {
+                                "_type": "System.Int32",
+                                "_value": {
+                                    "$content": 10,
+                                    "$type": "System.Int32"
+                                }
+                            }
+                        ],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddNpcCoin50|System.Void",
+                            "_paramsInfo": ""
+                        },
+                        "parameters": [],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddNpcBrwan10|System.Void",
+                            "_paramsInfo": ""
+                        },
+                        "parameters": [],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    }
+                ],
+                "$type": "NodeCanvas.Framework.ActionList"
+            },
+            "_position": {
+                "x": 828.0946,
+                "y": 497.0924
+            },
+            "$type": "NodeCanvas.DialogueTrees.ActionNode",
+            "$id": "7"
+        },
+        {
+            "statement": {
+                "_text": "\u7b2c\u4e8c\u6b21\u6295\u7403\u533a\u57df\u5728\u6f06\u9ed1\u7684\u8d70\u5eca\u4e0a\r\n\u591c\u5e55\u964d\u4e34\uff0c\u6240\u6709\u623f\u95f4\u548c\u8d70\u5eca\u88ab\u591c\u8272\u5305\u88f9\uff0c\u552f\u6709\u5ba2\u5385\u7684\u706f\u5149\u72ec\u81ea\u95ea\u8000\u3002"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 549.0576,
+                "y": 623.616
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "8"
+        },
+        {
+            "statement": {
+                "_text": "\u58a9\u58a9\u5411\u8d70\u5eca\u8dd1\u53bb\uff0c\u6700\u7ec8\u5728\u660e\u6697\u4ea4\u754c\u7684\u5730\u65b9\u505c\u4e86\u4e0b\u6765\uff0c\u5c3e\u5df4\u7d27\u7d27\u5939\u5728\u4e24\u817f\u4e4b\u95f4\uff0c\u8eab\u4f53\u5fae\u5fae\u53d1\u6296\uff0c\u56de\u5934\u770b\u5411\u73a9\u5bb6\uff0c\u773c\u795e\u900f\u9732\u51fa\u60ca\u6050\u548c\u6c42\u52a9\u7684\u4fe1\u53f7\uff0c\r\n\u4f60\u4f1a\u9009\u62e9......"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 458.5264,
+                "y": 702.4155
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "9"
+        },
+        {
+            "availableChoices": [
+                {
+                    "statement": {
+                        "_text": "\u70b9\u4eae\u623f\u95f4\u5185\u7684\u706f\u5149\uff0c\u8ba9\u58a9\u58a9\u5b89\u5fc3\u628a\u7403\u6361\u56de\u6765\u3002"
+                    }
+                },
+                {
+                    "statement": {
+                        "_text": "\u5e26\u7740\u58a9\u58a9\u4e00\u8d77\u8d70\u5411\u9ed1\u6697\uff0c\u8ba9\u5b83\u514b\u670d\u5bf9\u9ed1\u6697\u7684\u6050\u60e7"
+                    }
+                }
+            ],
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 567.8597,
+                "y": 775.0822
+            },
+            "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+            "$id": "10"
+        },
+        {
+            "statement": {
+                "_text": "\u9ed1\u6697\u7684\u8d70\u5eca\u4e00\u4e0b\u5b50\u706f\u706b\u901a\u660e\uff0c\u58a9\u58a9\u5411\u524d\u51b2\u53bb\uff0c\u5c06\u7403\u53fc\u56de\u6765\uff0c\r\u4ece\u6b64\uff0c\u58a9\u58a9\u5bf9\u4e8e\u9ed1\u6697\u8fd8\u662f\u5fc3\u5b58\u754f\u60e7\u3002"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 236.0493,
+                "y": 1113.397
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "11"
+        },
+        {
+            "_position": {
+                "x": 594.2168,
+                "y": 1827.546
+            },
+            "$type": "NodeCanvas.DialogueTrees.FinishNode",
+            "$id": "12"
+        },
+        {
+            "statement": {
+                "_text": "\u4f60\u6765\u5230\u58a9\u58a9\u524d\u9762\uff0c\u58a9\u58a9\u4ecd\u7136\u505c\u5728\u539f\u5730\u3002\r\u4f60\u56de\u5934\u793a\u610f\u58a9\u58a9\u8ddf\u4e0a\u6765......"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 752.306,
+                "y": 932.5942
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "13"
+        },
+        {
+            "availableChoices": [
+                {
+                    "statement": {
+                        "_text": "\u5f2f\u4e0b\u8170\uff0c\u4f38\u51fa\u624b\u638c\uff0c\u8f7b\u8f7b\u62cd\u81ea\u5df1\u7684\u5927\u817f\u3002"
+                    }
+                },
+                {
+                    "statement": {
+                        "_text": "\u5f2f\u4e0b\u8170\uff0c\u4f38\u51fa\u624b\u638c\uff0c\u8f7b\u8f7b\u62cd\u624b"
+                    }
+                }
+            ],
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 803.0923,
+                "y": 1006.719
+            },
+            "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+            "$id": "14"
+        },
+        {
+            "statement": {
+                "_text": "\u58a9\u58a9\uff0c\u6765\uff0c\u8ddf\u7740\u6211\uff0c\u6211\u4eec\u4e00\u8d77\u53bb\u6361\u7403\u3002"
+            },
+            "_actorName": "player",
+            "_actorParameterID": "1eefdd73-c754-4f0a-9dc7-9b1db3ef86b1",
+            "_position": {
+                "x": 796.9766,
+                "y": 1130.964
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "15"
+        },
+        {
+            "statement": {
+                "_text": "\u8fd9\u53e5\u8bdd\u4eff\u4f5b\u5e26\u6709\u9b54\u529b\uff0c\u8ba9\u58a9\u58a9\u539f\u672c\u53d1\u6296\u7684\u8eab\u4f53\u53d8\u5f97\u5e73\u9759\uff0c\u5145\u6ee1\u4e86\u63a2\u7d22\u672a\u77e5\u7684\u597d\u5947\u611f\u3002\u58a9\u58a9\u7684\u5c0f\u77ed\u817f\u4e00\u6b65\u6b65\u9760\u8fd1\u4e3b\u4eba\uff0c\u8d70\u5230\u4e3b\u4eba\u65c1\u8fb9\u65f6\uff0c\u4e3b\u4eba\u5f00\u59cb\u7f13\u6162\u5411\u524d\u8fc8\u6b65\uff0c\u58a9\u58a9\u7684\u5c0f\u77ed\u817f\u52aa\u529b\u8ddf\u4e0a\u4e3b\u4eba\u7684\u6b65\u4f10\u3002\u5feb\u5230\u7403\u65c1\u8fb9\u7684\u65f6\u5019\uff0c\u58a9\u58a9\u8fc5\u901f\u5411\u524d\u7528\u5634\u53fc\u4f4f\u7403\uff0c\u7136\u540e\u8f6c\u8eab\u5e26\u7740\u80dc\u5229\u8005\u7684\u59ff\u52bf\u628a\u7403\u53fc\u7ed9\u4e3b\u4eba\u3002"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 831.6433,
+                "y": 1214.72
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "16"
+        },
+        {
+            "statement": {
+                "_text": "\u58a9\u58a9\u6210\u529f\u5728\u9ed1\u6697\u4e2d\u6361\u5230\u4e86\u7403\uff0c\u5feb\u5938\u8d5e\u58a9\u58a9......"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 871.9534,
+                "y": 1295.236
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "17"
+        },
+        {
+            "availableChoices": [
+                {
+                    "statement": {
+                        "_text": "\u58a9\u58a9\uff0c\u4f60\u771f\u662f\u4e2a\u4e0d\u6015\u9ed1\u7684\u5c0f\u52c7\u58eb\uff01"
+                    }
+                },
+                {
+                    "statement": {
+                        "_text": "\u4f60\u771f\u68d2\uff0c\u58a9\u58a9\uff01\u5373\u4f7f\u5728\u9ed1\u6697\u4e2d\uff0c\u4f60\u4e5f\u80fd\u627e\u5230\u4f60\u7684\u7403"
+                    }
+                },
+                {
+                    "statement": {
+                        "_text": "\u54c7\uff0c\u58a9\u58a9\uff0c\u4f60\u5728\u9ed1\u6697\u91cc\u4e5f\u80fd\u627e\u5230\u7403\uff0c\u592a\u5389\u5bb3\u4e86\uff01"
+                    }
+                }
+            ],
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 945.4086,
+                "y": 1371.781
+            },
+            "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+            "$id": "18"
+        },
+        {
+            "_action": {
+                "actions": [
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|SetDogEmotionHappy|System.Void",
+                            "_paramsInfo": ""
+                        },
+                        "parameters": [],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddDogHealth5|System.Void",
+                            "_paramsInfo": ""
+                        },
+                        "parameters": [],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddDogEnergy|System.Void",
+                            "_paramsInfo": "System.Int32"
+                        },
+                        "parameters": [
+                            {
+                                "_type": "System.Int32",
+                                "_value": {
+                                    "$content": -10,
+                                    "$type": "System.Int32"
+                                }
+                            }
+                        ],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddDogBelieve|System.Void",
+                            "_paramsInfo": "System.Int32"
+                        },
+                        "parameters": [
+                            {
+                                "_type": "System.Int32",
+                                "_value": {
+                                    "$content": 10,
+                                    "$type": "System.Int32"
+                                }
+                            }
+                        ],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddNpcCoin50|System.Void",
+                            "_paramsInfo": ""
+                        },
+                        "parameters": [],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    },
+                    {
+                        "method": {
+                            "_baseInfo": "DogAttributeManager|AddNpcBrwan10|System.Void",
+                            "_paramsInfo": ""
+                        },
+                        "parameters": [],
+                        "returnValue": {
+
+                        },
+                        "overrideAgent": {
+                            "_type": "DogAttributeManager",
+                            "_value": 1
+                        },
+                        "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform"
+                    }
+                ],
+                "$type": "NodeCanvas.Framework.ActionList"
+            },
+            "_position": {
+                "x": 1314.627,
+                "y": 1463.513
+            },
+            "$type": "NodeCanvas.DialogueTrees.ActionNode",
+            "$id": "19"
+        },
+        {
+            "statement": {
+                "_text": "\u58a9\u58a9\u542c\u5230\u4f60\u7684\u8868\u626c\uff0c\u5f00\u5fc3\u5730\u5420\u53eb\u4e86\u4e24\u58f0\uff0c\u5c3e\u5df4\u6447\u7684\u50cf\u62e8\u6d6a\u9f13\u4e00\u6837\uff0c\u4ece\u6b64\uff0c\u58a9\u58a9\u514b\u670d\u4e86\u5bf9\u9ed1\u6697\u7684\u6050\u60e7\u3002"
+            },
+            "_actorName": "\u7cfb\u7edf",
+            "_actorParameterID": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+            "_position": {
+                "x": 784.2141,
+                "y": 1615.442
+            },
+            "$type": "NodeCanvas.DialogueTrees.StatementNode",
+            "$id": "20"
+        }
+    ],
+    "connections": [
+        {
+            "_sourceNode": {
+                "$ref": "0"
+            },
+            "_targetNode": {
+                "$ref": "1"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "1"
+            },
+            "_targetNode": {
+                "$ref": "2"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "2"
+            },
+            "_targetNode": {
+                "$ref": "3"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "3"
+            },
+            "_targetNode": {
+                "$ref": "4"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "4"
+            },
+            "_targetNode": {
+                "$ref": "5"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "5"
+            },
+            "_targetNode": {
+                "$ref": "6"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "6"
+            },
+            "_targetNode": {
+                "$ref": "7"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "6"
+            },
+            "_targetNode": {
+                "$ref": "7"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "6"
+            },
+            "_targetNode": {
+                "$ref": "7"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "7"
+            },
+            "_targetNode": {
+                "$ref": "8"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "8"
+            },
+            "_targetNode": {
+                "$ref": "9"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "9"
+            },
+            "_targetNode": {
+                "$ref": "10"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "10"
+            },
+            "_targetNode": {
+                "$ref": "11"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "10"
+            },
+            "_targetNode": {
+                "$ref": "13"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "11"
+            },
+            "_targetNode": {
+                "$ref": "12"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "13"
+            },
+            "_targetNode": {
+                "$ref": "14"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "14"
+            },
+            "_targetNode": {
+                "$ref": "15"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "14"
+            },
+            "_targetNode": {
+                "$ref": "15"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "15"
+            },
+            "_targetNode": {
+                "$ref": "16"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "16"
+            },
+            "_targetNode": {
+                "$ref": "17"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "17"
+            },
+            "_targetNode": {
+                "$ref": "18"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "18"
+            },
+            "_targetNode": {
+                "$ref": "19"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "18"
+            },
+            "_targetNode": {
+                "$ref": "19"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "18"
+            },
+            "_targetNode": {
+                "$ref": "19"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "19"
+            },
+            "_targetNode": {
+                "$ref": "20"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        },
+        {
+            "_sourceNode": {
+                "$ref": "20"
+            },
+            "_targetNode": {
+                "$ref": "12"
+            },
+            "$type": "NodeCanvas.DialogueTrees.DTConnection"
+        }
+    ],
+    "canvasGroups": [],
+    "localBlackboard": {
+        "_variables": {
+
+        }
+    },
+    "derivedData": {
+        "actorParameters": [
+            {
+                "_keyName": "\u7cfb\u7edf",
+                "_id": "37d08775-b2e5-4cab-864f-14bbed2bd41c",
+                "_actorObject": 2
+            },
+            {
+                "_keyName": "player",
+                "_id": "1eefdd73-c754-4f0a-9dc7-9b1db3ef86b1",
+                "_actorObject": 3
+            }
+        ],
+        "$type": "NodeCanvas.DialogueTrees.DialogueTree+DerivedSerializationData"
+    }
+}

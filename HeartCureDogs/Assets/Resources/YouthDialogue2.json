@@ -1,0 +1,4439 @@
+{
+  "type": "NodeCanvas.DialogueTrees.DialogueTree",
+  "nodes": [
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "0",
+      "_position": {
+        "x": 0,
+        "y": 0
+      },
+      "statement": {
+        "_text": "2-6岁 成年期"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "1",
+      "_position": {
+        "x": 0,
+        "y": 120
+      },
+      "statement": {
+        "_text": "成熟与责任篇"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "2",
+      "_position": {
+        "x": 0,
+        "y": 240
+      },
+      "statement": {
+        "_text": "群体认同、社会性强化"
+      },
+      "_actorName": "核心心理学概念",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "3",
+      "_position": {
+        "x": 0,
+        "y": 360
+      },
+      "statement": {
+        "_text": "初始体力值：50"
+      },
+      "_actorName": "玩家初始属性",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "4",
+      "_position": {
+        "x": 0,
+        "y": 480
+      },
+      "statement": {
+        "_text": "体魄：50 心情：平静 精力：50 信任：50"
+      },
+      "_actorName": "小狗初始属性",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "5",
+      "_position": {
+        "x": 0,
+        "y": 600
+      },
+      "statement": {
+        "_text": "夕阳将天边染成一片温暖的橘红，公园的轮廓在斜照中变得柔和。您正带着三岁的墩墩悠闲散步，一道被落日拉得极长的影子却倏地笼罩了你们——一只体型健硕的德国牧羊犬静立在不远处。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "6",
+      "_position": {
+        "x": 0,
+        "y": 720
+      },
+      "statement": {
+        "_text": "低沉的、带着警告意味的吼声从德牧喉间滚出。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "7",
+      "_position": {
+        "x": 0,
+        "y": 840
+      },
+      "statement": {
+        "_text": "耳朵瞬间向后紧贴头顶，尾巴像一根僵直的旗杆般垂下，鼻翼剧烈翕动，发出“呼呼”的急促喘息。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "8",
+      "_position": {
+        "x": 0,
+        "y": 960
+      },
+      "statement": {
+        "_text": "它的前爪开始不安地刨挖草地，从试探变为用力蹬踏，溅起细碎的草屑与泥土。随即，它整个背部弓起，毛发炸开，发出了尖锐而充满威胁的吠叫。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "9",
+      "_position": {
+        "x": 0,
+        "y": 1080
+      },
+      "statement": {
+        "_text": "请选择化解冲突的方式。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+      "$id": "10",
+      "_position": {
+        "x": 0,
+        "y": 1200
+      },
+      "availableChoices": [
+        {
+          "statement": {
+            "_text": "拽紧牵引绳，将墩墩拉至身后"
+          }
+        }
+      ],
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "11",
+      "_position": {
+        "x": 0,
+        "y": 1320
+      },
+      "statement": {
+        "_text": "下意识地后退一步，全力拽紧牵引绳！"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "12",
+      "_position": {
+        "x": 0,
+        "y": 1440
+      },
+      "statement": {
+        "_text": "绳圈瞬间勒进墩墩颈部的软毛，它因这股突如其来的力量而前爪深陷泥地，后腿肌肉剧烈收缩，全力对抗着。“嘣——！”牵引绳竟应声断裂！失去束缚的墩墩在惯性驱使下，猛地朝德牧冲去。这一举动彻底激怒了对方，一场紧张的追逐就此触发。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "13",
+      "_position": {
+        "x": 0,
+        "y": 1560
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "14",
+      "_position": {
+        "x": 0,
+        "y": 1680
+      },
+      "statement": {
+        "_text": "-25"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "15",
+      "_position": {
+        "x": 0,
+        "y": 1800
+      },
+      "statement": {
+        "_text": "恼怒"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+      "$id": "16",
+      "_position": {
+        "x": 0,
+        "y": 1920
+      },
+      "availableChoices": [
+        {
+          "statement": {
+            "_text": "蹲下轻抚墩墩背部，发出平静指令“放松”"
+          }
+        }
+      ],
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "17",
+      "_position": {
+        "x": 0,
+        "y": 2040
+      },
+      "statement": {
+        "_text": "缓缓蹲下身，与墩墩保持同一高度。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "18",
+      "_position": {
+        "x": 0,
+        "y": 2160
+      },
+      "statement": {
+        "_text": "它的瞳孔微微收缩，尾巴尖难以自控地轻颤了两下。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "19",
+      "_position": {
+        "x": 0,
+        "y": 2280
+      },
+      "statement": {
+        "_text": "当您温暖的掌心贴上它紧绷的脊背，并发出沉稳的“放松”指令时，它肩胛骨的僵硬感逐渐化开，喉间的低吼最终化作一声委屈的短促呜咽。它侧过身，轻轻蹭了蹭您的膝盖，尾巴开始小幅度地摆动。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "20",
+      "_position": {
+        "x": 0,
+        "y": 2400
+      },
+      "statement": {
+        "_text": "此时，德牧的主人也及时介入。在双方主人的平静氛围影响下，两只狗狗进行了短暂的嗅闻，达成了和解。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "21",
+      "_position": {
+        "x": 0,
+        "y": 2520
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "22",
+      "_position": {
+        "x": 0,
+        "y": 2640
+      },
+      "statement": {
+        "_text": "+10"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "23",
+      "_position": {
+        "x": 0,
+        "y": 2760
+      },
+      "statement": {
+        "_text": "+15"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "24",
+      "_position": {
+        "x": 0,
+        "y": 2880
+      },
+      "statement": {
+        "_text": "成年犬的此类防御行为，常源于“资源保护”（如空间、主人）或“地位焦虑”。主人需要通过自身镇定的行为（如缓慢眨眼、侧身站位等“镇定信号”）来传递安全感，直接对抗或惩罚反而会强化它们的敌意联想。"
+      },
+      "_actorName": "宠物专家",
+      "_actorParameterID": "22222222-2222-2222-2222-222222222222"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "25",
+      "_position": {
+        "x": 0,
+        "y": 3000
+      },
+      "statement": {
+        "_text": "又是一个平静的傍晚，您和墩墩一如往常地在公园漫步。突然，路边环卫工人回收垃圾时，发出了尖锐刺耳的金属碰撞声！"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "26",
+      "_position": {
+        "x": 0,
+        "y": 3120
+      },
+      "statement": {
+        "_text": "这声音如同一个无形的开关——墩墩瞬间弓背跳起，后腿在慌乱中撞翻了路边的空水瓶。“咕噜噜……”瓶子的滚动声进一步放大了它的恐慌，它夹着尾巴，惊慌地向后撤退。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "27",
+      "_position": {
+        "x": 0,
+        "y": 3240
+      },
+      "statement": {
+        "_text": "请选择安抚受惊的墩墩的方式。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+      "$id": "28",
+      "_position": {
+        "x": 0,
+        "y": 3360
+      },
+      "availableChoices": [
+        {
+          "statement": {
+            "_text": "立即抱离现场"
+          }
+        }
+      ],
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "29",
+      "_position": {
+        "x": 0,
+        "y": 3480
+      },
+      "statement": {
+        "_text": "情况紧急，您俯身用虎口卡住墩墩肋下的软肉，左臂托住它的腹部，一把将它抱离地面。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "30",
+      "_position": {
+        "x": 0,
+        "y": 3600
+      },
+      "statement": {
+        "_text": "突如其来的悬空感让它更加不安，它忍不住紧紧咬住您的袖口，身体微微发抖。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "31",
+      "_position": {
+        "x": 0,
+        "y": 3720
+      },
+      "statement": {
+        "_text": "一路小跑，只想尽快带它离开这个让它恐惧的地方。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "32",
+      "_position": {
+        "x": 0,
+        "y": 3840
+      },
+      "statement": {
+        "_text": "-15"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "33",
+      "_position": {
+        "x": 0,
+        "y": 3960
+      },
+      "statement": {
+        "_text": "-30"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "34",
+      "_position": {
+        "x": 0,
+        "y": 4080
+      },
+      "statement": {
+        "_text": "压抑"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+      "$id": "35",
+      "_position": {
+        "x": 0,
+        "y": 4200
+      },
+      "availableChoices": [
+        {
+          "statement": {
+            "_text": "安抚墩墩，并施加平静口令"
+          }
+        }
+      ],
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "36",
+      "_position": {
+        "x": 0,
+        "y": 4320
+      },
+      "statement": {
+        "_text": "没有慌乱，而是立刻蹲下来，用身体为它营造一个安全的角落。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "37",
+      "_position": {
+        "x": 0,
+        "y": 4440
+      },
+      "statement": {
+        "_text": "掏出口袋里它最爱的薄荷味磨牙棒，用轻快的语调哼唱起熟悉的《小星星》，同时用零食引导它的注意力。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "38",
+      "_position": {
+        "x": 0,
+        "y": 4560
+      },
+      "statement": {
+        "_text": "耳朵逐渐从平贴变为竖起，鼻尖追随着磨牙棒左右晃动，最终，它用前爪抱住零食，趴在地上专注地啃咬起来，尾巴在地面扫出一个安心的半圆。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "39",
+      "_position": {
+        "x": 0,
+        "y": 4680
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "40",
+      "_position": {
+        "x": 0,
+        "y": 4800
+      },
+      "statement": {
+        "_text": "+15"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "41",
+      "_position": {
+        "x": 0,
+        "y": 4920
+      },
+      "statement": {
+        "_text": "-5"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "42",
+      "_position": {
+        "x": 0,
+        "y": 5040
+      },
+      "statement": {
+        "_text": "犬类对恐惧的记忆遵循“瞬间铭刻”原理，最佳干预窗口在事件发生后的30秒内。若未得到正确引导，恐惧会发生“泛化”，导致狗狗对类似场景（如所有金属声）都产生应激。此外，犬类听觉对突发高频噪音的敏感度是人类4倍，金属碰撞声极易激活其远古祖先对天敌的防御本能。"
+      },
+      "_actorName": "宠物专家",
+      "_actorParameterID": "22222222-2222-2222-2222-222222222222"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "43",
+      "_position": {
+        "x": 0,
+        "y": 5160
+      },
+      "statement": {
+        "_text": "职业使命——工作犬的试炼"
+      },
+      "_actorName": "第二章",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "44",
+      "_position": {
+        "x": 0,
+        "y": 5280
+      },
+      "statement": {
+        "_text": "自我效能感、任务驱动、情感同步"
+      },
+      "_actorName": "核心心理学概念",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "45",
+      "_position": {
+        "x": 0,
+        "y": 5400
+      },
+      "statement": {
+        "_text": "你决定让墩墩参与导盲犬的训练。训练师提出三项测试："
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "46",
+      "_position": {
+        "x": 0,
+        "y": 5520
+      },
+      "statement": {
+        "_text": "1.抗干扰训练：嘈杂环境中保持专注"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "47",
+      "_position": {
+        "x": 0,
+        "y": 5640
+      },
+      "statement": {
+        "_text": "-20"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.ActionNode",
+      "$id": "48",
+      "_position": {
+        "x": 0,
+        "y": 5760
+      },
+      "_action": {
+        "$type": "NodeCanvas.Framework.ActionList",
+        "actions": [
+          {
+            "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform",
+            "method": {
+              "_baseInfo": "DogAttributeManager|AddDogHealth|System.Void",
+              "_paramsInfo": "System.Int32"
+            },
+            "parameters": [
+              {
+                "_type": "System.Int32",
+                "_value": {
+                  "$content": -10,
+                  "$type": "System.Int32"
+                }
+              }
+            ],
+            "returnValue": {},
+            "overrideAgent": {
+              "_type": "DogAttributeManager",
+              "_value": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "49",
+      "_position": {
+        "x": 0,
+        "y": 5880
+      },
+      "statement": {
+        "_text": "2.障碍导航：引导蒙眼玩家绕过路障"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "50",
+      "_position": {
+        "x": 0,
+        "y": 6000
+      },
+      "statement": {
+        "_text": "在绕过路障时，会先用前爪轻拍地面试探虚实，遇到矮凳时压低身子匍匐前进，尾巴如船舵般左右摆动保持平衡。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "51",
+      "_position": {
+        "x": 0,
+        "y": 6120
+      },
+      "statement": {
+        "_text": "-20"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "52",
+      "_position": {
+        "x": 0,
+        "y": 6240
+      },
+      "statement": {
+        "_text": "训练基地暴雨突袭，墩墩在湿滑地面连续撞倒障碍物。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "53",
+      "_position": {
+        "x": 0,
+        "y": 6360
+      },
+      "statement": {
+        "_text": "爪垫在积水里打滑，踉跄时撞翻锥形桶，泥水溅满脸颊。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "54",
+      "_position": {
+        "x": 0,
+        "y": 6480
+      },
+      "statement": {
+        "_text": "突然蜷缩在墙角，用尾巴盖住眼睛，喉咙发出断续呜咽。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "55",
+      "_position": {
+        "x": 0,
+        "y": 6600
+      },
+      "statement": {
+        "_text": "暴雨将训练场的沙土地面冲刷成泥潭，锥形桶在积水中漂浮如孤岛，远处雷声闷响如巨兽低吼。墩墩的毛发紧贴身体，雨水顺着睫毛滴落，在鼻尖凝成颤抖的水珠。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "56",
+      "_position": {
+        "x": 0,
+        "y": 6720
+      },
+      "statement": {
+        "_text": "请选择应对方式。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "57",
+      "_position": {
+        "x": 0,
+        "y": 6840
+      },
+      "statement": {
+        "_text": "毫不犹豫蹚进泥水，双膝浸没在浑浊的水洼中，掌心向上摊开在墩墩视线高度，袖口被雨水染成深色。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "58",
+      "_position": {
+        "x": 0,
+        "y": 6960
+      },
+      "statement": {
+        "_text": "嘴里哼唱着墩墩爱听的调子。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "59",
+      "_position": {
+        "x": 0,
+        "y": 7080
+      },
+      "statement": {
+        "_text": "不一会儿，墩墩蜷缩在身上的尾巴就松了下来。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "60",
+      "_position": {
+        "x": 0,
+        "y": 7200
+      },
+      "statement": {
+        "_text": "呜咽声逐渐减弱，转为短促的“嗯嗯”声，然后尾巴在泥地里连续划出弧线。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "61",
+      "_position": {
+        "x": 0,
+        "y": 7320
+      },
+      "statement": {
+        "_text": "两只手托起墩墩的上半身，然后将墩墩抱在自己怀里面，将墩墩抱离水潭。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "62",
+      "_position": {
+        "x": 0,
+        "y": 7440
+      },
+      "statement": {
+        "_text": "解锁隐藏成就：“暴雨中的灯塔”"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "63",
+      "_position": {
+        "x": 0,
+        "y": 7560
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "64",
+      "_position": {
+        "x": 0,
+        "y": 7680
+      },
+      "statement": {
+        "_text": "+10%"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "65",
+      "_position": {
+        "x": 0,
+        "y": 7800
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "66",
+      "_position": {
+        "x": 0,
+        "y": 7920
+      },
+      "statement": {
+        "_text": "站立在墩墩面前，嘴里喊着命令墩墩的话语。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "67",
+      "_position": {
+        "x": 0,
+        "y": 8040
+      },
+      "statement": {
+        "_text": "耳朵瞬间向后紧贴在脑袋上，像是在逃避什么一样，瞳孔瞬间缩成针尖大小。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "68",
+      "_position": {
+        "x": 0,
+        "y": 8160
+      },
+      "statement": {
+        "_text": "前爪在泥地里面划出两道深沟。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "69",
+      "_position": {
+        "x": 0,
+        "y": 8280
+      },
+      "statement": {
+        "_text": "踉跄起身时后腿还打滑了的，却强行绷直这个关节继续往遮雨棚走墩墩边走边回头看向你手中的牛肉棒"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "70",
+      "_position": {
+        "x": 0,
+        "y": 8400
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "71",
+      "_position": {
+        "x": 0,
+        "y": 8520
+      },
+      "statement": {
+        "_text": "-20"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "72",
+      "_position": {
+        "x": 0,
+        "y": 8640
+      },
+      "statement": {
+        "_text": "-20"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "73",
+      "_position": {
+        "x": 0,
+        "y": 8760
+      },
+      "statement": {
+        "_text": "犬类在压力下的反应受“镜像神经元”支配：主人的肢体语言会直接激活其大脑应激区。拥抱时需保持肌肉松弛（避免传递紧张），指令训练则必须配合明确后续奖励，否则会引发“冻结-逃避”行为链。"
+      },
+      "_actorName": "宠物专家",
+      "_actorParameterID": "22222222-2222-2222-2222-222222222222"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "74",
+      "_position": {
+        "x": 0,
+        "y": 8880
+      },
+      "statement": {
+        "_text": "悲情共鸣"
+      },
+      "_actorName": "第三幕",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "75",
+      "_position": {
+        "x": 0,
+        "y": 9000
+      },
+      "statement": {
+        "_text": "（雨声）此时你还没有回家，墩墩一个人坐在门附近，昂起头来望着家门，这是墩墩从坐姿变成了站立状态。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "76",
+      "_position": {
+        "x": 0,
+        "y": 9120
+      },
+      "statement": {
+        "_text": "似乎听到了主人的脚步"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "77",
+      "_position": {
+        "x": 0,
+        "y": 9240
+      },
+      "statement": {
+        "_text": "过了一会，你推开了家里的房门，你因为工作受挫在沙发上哭泣，墩墩反常地没有讨要零食。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "78",
+      "_position": {
+        "x": 0,
+        "y": 9360
+      },
+      "statement": {
+        "_text": "将自己心爱的玩具推到了主人的脚边。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "79",
+      "_position": {
+        "x": 0,
+        "y": 9480
+      },
+      "statement": {
+        "_text": "-20"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "80",
+      "_position": {
+        "x": 0,
+        "y": 9600
+      },
+      "statement": {
+        "_text": "爬上沙发舔去你眼泪，用湿漉漉的鼻尖轻触你的手背，再蜷缩成团将下巴搁在你膝上，喉咙里发出轻柔的“呼噜”声，尾巴像节拍器一样规律摆动。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "81",
+      "_position": {
+        "x": 0,
+        "y": 9720
+      },
+      "statement": {
+        "_text": "触发隐藏成就“心灵治愈师”"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "82",
+      "_position": {
+        "x": 0,
+        "y": 9840
+      },
+      "statement": {
+        "_text": "共情"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "83",
+      "_position": {
+        "x": 0,
+        "y": 9960
+      },
+      "statement": {
+        "_text": "+10"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "84",
+      "_position": {
+        "x": 0,
+        "y": 10080
+      },
+      "statement": {
+        "_text": "在主人前面焦虑的来回踱步（同步压力）"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "85",
+      "_position": {
+        "x": 0,
+        "y": 10200
+      },
+      "statement": {
+        "_text": "焦虑"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "86",
+      "_position": {
+        "x": 0,
+        "y": 10320
+      },
+      "statement": {
+        "_text": "-20"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "87",
+      "_position": {
+        "x": 0,
+        "y": 10440
+      },
+      "statement": {
+        "_text": "犬类能识别人类哭声的200-600Hz频段（进化保留技能），但恰当回应需要后天引导，当引导正确，主人能在自己心情不好的时候得到狗狗的安抚。"
+      },
+      "_actorName": "宠物专家",
+      "_actorParameterID": "22222222-2222-2222-2222-222222222222"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "88",
+      "_position": {
+        "x": 0,
+        "y": 10560
+      },
+      "statement": {
+        "_text": "分离-个体化、环境丰容"
+      },
+      "_actorName": "核心心理学概念",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "89",
+      "_position": {
+        "x": 0,
+        "y": 10680
+      },
+      "statement": {
+        "_text": "清晨的阳光从百叶窗缝隙刺入，在木地板上投下监狱栏杆般的阴影。墩墩踱步时，爪垫踩过光暗交界处，影子忽而膨胀如巨兽，忽而坍缩成颤抖的毛团。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "90",
+      "_position": {
+        "x": 0,
+        "y": 10800
+      },
+      "statement": {
+        "_text": "沙发扶手上残留着昨夜你的气味，墩墩每隔三分钟会跳上去猛嗅坐垫，鼻尖沾满织物纤维，像粘了层苍白的雪。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "91",
+      "_position": {
+        "x": 0,
+        "y": 10920
+      },
+      "statement": {
+        "_text": "墙上的挂钟秒针跳动声被摄像头麦克风放大，每一声“滴答”都让墩墩耳廓抽搐，仿佛在倒计时主人的归来。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "92",
+      "_position": {
+        "x": 0,
+        "y": 11040
+      },
+      "statement": {
+        "_text": "（你在家里安装宠物摄像头，观察独居墩墩行为。画面显示：）"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "93",
+      "_position": {
+        "x": 0,
+        "y": 11160
+      },
+      "statement": {
+        "_text": "00："
+      },
+      "_actorName": "10",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "94",
+      "_position": {
+        "x": 0,
+        "y": 11280
+      },
+      "statement": {
+        "_text": "焦躁踱步，牙齿在木框上留下深浅不一的划痕，咬到兴起时后腿蹬地，全身肌肉紧绷如拉满的弓弦，耳朵却向后耷拉着暴露不安。（分离焦虑复发）"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "95",
+      "_position": {
+        "x": 0,
+        "y": 11400
+      },
+      "statement": {
+        "_text": "焦虑"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "96",
+      "_position": {
+        "x": 0,
+        "y": 11520
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "97",
+      "_position": {
+        "x": 0,
+        "y": 11640
+      },
+      "statement": {
+        "_text": "00："
+      },
+      "_actorName": "12",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "98",
+      "_position": {
+        "x": 0,
+        "y": 11760
+      },
+      "statement": {
+        "_text": "触发自动投喂器发放漏食球，墩墩专注解谜。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "99",
+      "_position": {
+        "x": 0,
+        "y": 11880
+      },
+      "statement": {
+        "_text": "用前掌拍击球体时，尾巴像节拍器般左右摆动。当食物从漏球中掉落出来，墩墩会叼着战利品到摄像头前，望着摄像头，像是期望得到你主人的回应。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "100",
+      "_position": {
+        "x": 0,
+        "y": 12000
+      },
+      "statement": {
+        "_text": "平静"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "101",
+      "_position": {
+        "x": 0,
+        "y": 12120
+      },
+      "statement": {
+        "_text": "玩家可以进行远程干预。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "102",
+      "_position": {
+        "x": 0,
+        "y": 12240
+      },
+      "statement": {
+        "_text": "系统：你的声音从摄像头喇叭传出时，墩墩会突然定格，左耳转向声源呈现耸起的状态，右耳却顽固下垂。（矛盾型依恋表征）"
+      },
+      "_actorName": "1.语音安抚",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "103",
+      "_position": {
+        "x": 0,
+        "y": 12360
+      },
+      "statement": {
+        "_text": "小激动"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "104",
+      "_position": {
+        "x": 0,
+        "y": 12480
+      },
+      "statement": {
+        "_text": "系统：启动自动抛球机，引导墩墩追逐（玩家可以操作抛球机抛出小球）"
+      },
+      "_actorName": "2.遥控玩具",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "105",
+      "_position": {
+        "x": 0,
+        "y": 12600
+      },
+      "statement": {
+        "_text": "-20%"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "106",
+      "_position": {
+        "x": 0,
+        "y": 12720
+      },
+      "statement": {
+        "_text": "兴奋"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "107",
+      "_position": {
+        "x": 0,
+        "y": 12840
+      },
+      "statement": {
+        "_text": "系统：你发现外面准备下雨了，但是家里的窗户没有关闭。"
+      },
+      "_actorName": "3.关窗避雨",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "108",
+      "_position": {
+        "x": 0,
+        "y": 12960
+      },
+      "statement": {
+        "_text": "你通过摄像头引导墩墩用鼻子顶住窗框边缘。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "109",
+      "_position": {
+        "x": 0,
+        "y": 13080
+      },
+      "statement": {
+        "_text": "先是歪头盯着摄像头，接着后腿发力跃上窗台，前爪扒住玻璃，留下梅花状的泥印，最终用头顶“咚”一声撞上窗栓。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "110",
+      "_position": {
+        "x": 0,
+        "y": 13200
+      },
+      "statement": {
+        "_text": "成功后，它得意地摇尾转圈，叼来拖鞋向摄像头炫耀。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "111",
+      "_position": {
+        "x": 0,
+        "y": 13320
+      },
+      "statement": {
+        "_text": "鼓励墩墩，并在自动投喂机处投喂食物给墩墩。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "112",
+      "_position": {
+        "x": 0,
+        "y": 13440
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "113",
+      "_position": {
+        "x": 0,
+        "y": 13560
+      },
+      "statement": {
+        "_text": "+5"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "114",
+      "_position": {
+        "x": 0,
+        "y": 13680
+      },
+      "statement": {
+        "_text": "还是像往常一样蹲在家门前，等待着主人回来。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "115",
+      "_position": {
+        "x": 0,
+        "y": 13800
+      },
+      "statement": {
+        "_text": "“嗒嗒嗒、嗒嗒嗒……”"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "116",
+      "_position": {
+        "x": 0,
+        "y": 13920
+      },
+      "statement": {
+        "_text": "突然的站起来，以为是你回来了，当脚步的声音越来越小，墩墩发现不是你的脚步。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "117",
+      "_position": {
+        "x": 0,
+        "y": 14040
+      },
+      "statement": {
+        "_text": "“…嗒、嗒、嗒…”"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "118",
+      "_position": {
+        "x": 0,
+        "y": 14160
+      },
+      "statement": {
+        "_text": "又蹲在了家门附近。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "119",
+      "_position": {
+        "x": 0,
+        "y": 14280
+      },
+      "statement": {
+        "_text": "失落"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "120",
+      "_position": {
+        "x": 0,
+        "y": 14400
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "121",
+      "_position": {
+        "x": 0,
+        "y": 14520
+      },
+      "statement": {
+        "_text": "成年犬分离焦虑常与“主人依赖惯性”相关。需通过“预离训练”（如短暂出门并逐步延长时长）重塑独处安全感（系统脱敏法）。"
+      },
+      "_actorName": "宠物专家",
+      "_actorParameterID": "22222222-2222-2222-2222-222222222222"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "122",
+      "_position": {
+        "x": 0,
+        "y": 14640
+      },
+      "statement": {
+        "_text": "健康危机——肥胖与关节保卫战"
+      },
+      "_actorName": "第四章",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "123",
+      "_position": {
+        "x": 0,
+        "y": 14760
+      },
+      "statement": {
+        "_text": "行为经济学、延迟满足"
+      },
+      "_actorName": "核心心理学概念",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "124",
+      "_position": {
+        "x": 0,
+        "y": 14880
+      },
+      "statement": {
+        "_text": "宠物医院的日光灯在墩墩蓬松的皮毛上投下冷白色光晕，消毒水的气味让它不停抽动鼻翼。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "125",
+      "_position": {
+        "x": 0,
+        "y": 15000
+      },
+      "statement": {
+        "_text": "将听诊器贴上它胸口。"
+      },
+      "_actorName": "医生",
+      "_actorParameterID": "46a67c48-922a-4b49-bc56-afd5e42ec247"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "126",
+      "_position": {
+        "x": 0,
+        "y": 15120
+      },
+      "statement": {
+        "_text": "突然缩成一颗毛茸茸的“海胆”，爪子勾住体检台边缘，指甲与金属台面摩擦发出“吱——”的锐响。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "127",
+      "_position": {
+        "x": 0,
+        "y": 15240
+      },
+      "statement": {
+        "_text": "体重秤的数字跳至28kg。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "128",
+      "_position": {
+        "x": 0,
+        "y": 15360
+      },
+      "statement": {
+        "_text": "左后腿微微发抖，尾巴下意识卷住你的手腕——这是它幼年打疫苗留下的“求援习惯”。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "129",
+      "_position": {
+        "x": 0,
+        "y": 15480
+      },
+      "statement": {
+        "_text": "翻动检查报告，纸张哗啦声惊得墩墩耳朵一颤，一滴口水“啪嗒”落在报告单的“关节承压预警”红字上，晕染开像朵小小的警报灯。"
+      },
+      "_actorName": "医生",
+      "_actorParameterID": "46a67c48-922a-4b49-bc56-afd5e42ec247"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "130",
+      "_position": {
+        "x": 0,
+        "y": 15600
+      },
+      "statement": {
+        "_text": "指出墩墩超重20%，关节承压过大。玩家需制定减肥计划。"
+      },
+      "_actorName": "医生",
+      "_actorParameterID": "46a67c48-922a-4b49-bc56-afd5e42ec247"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "131",
+      "_position": {
+        "x": 0,
+        "y": 15720
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "132",
+      "_position": {
+        "x": 0,
+        "y": 15840
+      },
+      "statement": {
+        "_text": "饮食调整："
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+      "$id": "133",
+      "_position": {
+        "x": 0,
+        "y": 15960
+      },
+      "availableChoices": [
+        {
+          "statement": {
+            "_text": "直接减少狗粮20%"
+          }
+        }
+      ],
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "134",
+      "_position": {
+        "x": 0,
+        "y": 16080
+      },
+      "statement": {
+        "_text": "倒出减量狗粮。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "135",
+      "_position": {
+        "x": 0,
+        "y": 16200
+      },
+      "statement": {
+        "_text": "把空碗拱到墙角，转身用屁股对着主人，背毛炸起如抗议的旗帜，喉咙里挤出断续的呜咽声，每10秒偷瞄一次食盆。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "136",
+      "_position": {
+        "x": 0,
+        "y": 16320
+      },
+      "statement": {
+        "_text": "不开心"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "137",
+      "_position": {
+        "x": 0,
+        "y": 16440
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+      "$id": "138",
+      "_position": {
+        "x": 0,
+        "y": 16560
+      },
+      "availableChoices": [
+        {
+          "statement": {
+            "_text": "替换低脂粮+蔬果零食"
+          }
+        }
+      ],
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "139",
+      "_position": {
+        "x": 0,
+        "y": 16680
+      },
+      "statement": {
+        "_text": "嗅闻新狗粮时，鼻尖皱出三道褶，突然叼起一颗西兰花跑到窗边，对着阳光端详这颗“绿色不明物体”。直到你掰开西兰花示范咀嚼，它才恍然大悟般猛甩头，将菜叶甩成漫天绿雨，最后用门牙小心地啃食根部。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "140",
+      "_position": {
+        "x": 0,
+        "y": 16800
+      },
+      "statement": {
+        "_text": "开心"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "141",
+      "_position": {
+        "x": 0,
+        "y": 16920
+      },
+      "statement": {
+        "_text": "+10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "142",
+      "_position": {
+        "x": 0,
+        "y": 17040
+      },
+      "statement": {
+        "_text": "运动方案："
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "143",
+      "_position": {
+        "x": 0,
+        "y": 17160
+      },
+      "statement": {
+        "_text": "带墩墩到浴室里来。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "144",
+      "_position": {
+        "x": 0,
+        "y": 17280
+      },
+      "statement": {
+        "_text": "畏畏缩缩地见到有好多水，不敢径直向前。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "145",
+      "_position": {
+        "x": 0,
+        "y": 17400
+      },
+      "statement": {
+        "_text": "“快过来墩墩，到这里来，这里好好玩的。”"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "146",
+      "_position": {
+        "x": 0,
+        "y": 17520
+      },
+      "statement": {
+        "_text": "你拍着墩墩的屁股，溅起一些水到墩墩的身子上。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "147",
+      "_position": {
+        "x": 0,
+        "y": 17640
+      },
+      "statement": {
+        "_text": "踉踉跄跄地到了浴缸里来。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "148",
+      "_position": {
+        "x": 0,
+        "y": 17760
+      },
+      "statement": {
+        "_text": "当墩墩游了一会后发现很好玩，墩墩就在浴缸里面快乐地游了起来，溅起的水花到你身上。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.ActionNode",
+      "$id": "149",
+      "_position": {
+        "x": 0,
+        "y": 17880
+      },
+      "_action": {
+        "$type": "NodeCanvas.Framework.ActionList",
+        "actions": [
+          {
+            "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform",
+            "method": {
+              "_baseInfo": "DogAttributeManager|AddDogHealth|System.Void",
+              "_paramsInfo": "System.Int32"
+            },
+            "parameters": [
+              {
+                "_type": "System.Int32",
+                "_value": {
+                  "$content": 5,
+                  "$type": "System.Int32"
+                }
+              }
+            ],
+            "returnValue": {},
+            "overrideAgent": {
+              "_type": "DogAttributeManager",
+              "_value": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "150",
+      "_position": {
+        "x": 0,
+        "y": 18000
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "151",
+      "_position": {
+        "x": 0,
+        "y": 18120
+      },
+      "statement": {
+        "_text": "开心"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "152",
+      "_position": {
+        "x": 0,
+        "y": 18240
+      },
+      "statement": {
+        "_text": "嗅觉游戏：藏零食于花园，激发搜寻本能（认知消耗＞体力消耗）。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "153",
+      "_position": {
+        "x": 0,
+        "y": 18360
+      },
+      "statement": {
+        "_text": "在花园搜寻零食时，会像考古学家般用爪子刨土，鼻尖沾满泥点，偶尔抬起一只前腿定格不动，仿佛在“分析气味轨迹”。找到零食后，它会叼着战利品小跑到你脚边，用脑袋猛蹭你小腿，尾巴摇出残影。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "154",
+      "_position": {
+        "x": 0,
+        "y": 18480
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "155",
+      "_position": {
+        "x": 0,
+        "y": 18600
+      },
+      "statement": {
+        "_text": "+10"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "156",
+      "_position": {
+        "x": 0,
+        "y": 18720
+      },
+      "statement": {
+        "_text": "开心"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "157",
+      "_position": {
+        "x": 0,
+        "y": 18840
+      },
+      "statement": {
+        "_text": "犬类对食物减少的焦虑源于“生存本能囤积”，建议将减量狗粮分装在漏食球中，通过延长进食时间制造“虚假丰裕感”。"
+      },
+      "_actorName": "宠物专家",
+      "_actorParameterID": "22222222-2222-2222-2222-222222222222"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "158",
+      "_position": {
+        "x": 0,
+        "y": 18960
+      },
+      "statement": {
+        "_text": "家庭新成员——育儿与嫉妒管理"
+      },
+      "_actorName": "第五章",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "159",
+      "_position": {
+        "x": 0,
+        "y": 19080
+      },
+      "statement": {
+        "_text": "同胞竞争、资源分配公平性"
+      },
+      "_actorName": "核心心理学概念",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "160",
+      "_position": {
+        "x": 0,
+        "y": 19200
+      },
+      "statement": {
+        "_text": "怀抱新生儿回家。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "161",
+      "_position": {
+        "x": 0,
+        "y": 19320
+      },
+      "statement": {
+        "_text": "凑近嗅闻，突然叼走婴儿袜（资源争夺行为）。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "162",
+      "_position": {
+        "x": 0,
+        "y": 19440
+      },
+      "statement": {
+        "_text": "婴儿床边的摇铃在晨光中投下细碎光斑，奶瓶和尿布散落在地毯上，空气中浮动着婴儿爽身粉的甜腻气息。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "163",
+      "_position": {
+        "x": 0,
+        "y": 19560
+      },
+      "statement": {
+        "_text": "鼻子因频繁嗅探而沾上白色粉末，像戴了一副滑稽的小丑面具。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "164",
+      "_position": {
+        "x": 0,
+        "y": 19680
+      },
+      "statement": {
+        "_text": "叼走婴儿袜后，跃上书架顶层，尾巴高竖如旗杆，却将袜子垫在爪下轻轻揉搓，模仿母犬安抚幼崽的动作。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "165",
+      "_position": {
+        "x": 0,
+        "y": 19800
+      },
+      "statement": {
+        "_text": "它的左耳高频颤动（紧张信号），右耳却向后贴住脖颈（示弱信号），暴露矛盾心态。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "166",
+      "_position": {
+        "x": 0,
+        "y": 19920
+      },
+      "statement": {
+        "_text": "-5"
+      },
+      "_actorName": "体力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "167",
+      "_position": {
+        "x": 0,
+        "y": 20040
+      },
+      "statement": {
+        "_text": "请选择平衡关注的方式。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+      "$id": "168",
+      "_position": {
+        "x": 0,
+        "y": 20160
+      },
+      "availableChoices": [
+        {
+          "statement": {
+            "_text": "呵斥并夺回袜子"
+          }
+        }
+      ],
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "169",
+      "_position": {
+        "x": 0,
+        "y": 20280
+      },
+      "statement": {
+        "_text": "抬高音量。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "170",
+      "_position": {
+        "x": 0,
+        "y": 20400
+      },
+      "statement": {
+        "_text": "瞳孔骤然放大，喉咙里挤出短促的“嗷呜”声，像被踩到尾巴。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "171",
+      "_position": {
+        "x": 0,
+        "y": 20520
+      },
+      "statement": {
+        "_text": "它叼着袜子缩进床底，爪子扒拉出几道棉絮，仿佛在筑巢自卫。床底阴影中，它的眼睛如两盏幽绿小灯，随主人脚步声忽明忽暗。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "172",
+      "_position": {
+        "x": 0,
+        "y": 20640
+      },
+      "statement": {
+        "_text": "-20"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "173",
+      "_position": {
+        "x": 0,
+        "y": 20760
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.MultipleChoiceNode",
+      "$id": "174",
+      "_position": {
+        "x": 0,
+        "y": 20880
+      },
+      "availableChoices": [
+        {
+          "statement": {
+            "_text": "用玩具交换袜子+抚摸奖励"
+          }
+        }
+      ],
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "175",
+      "_position": {
+        "x": 0,
+        "y": 21000
+      },
+      "statement": {
+        "_text": "用门牙叼住玩具球，却故意让球从书架边缘滚落。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "176",
+      "_position": {
+        "x": 0,
+        "y": 21120
+      },
+      "statement": {
+        "_text": "弯腰捡球。"
+      },
+      "_actorName": "玩家",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "177",
+      "_position": {
+        "x": 0,
+        "y": 21240
+      },
+      "statement": {
+        "_text": "闪电般窜下书架，用鼻尖将婴儿袜推到主人脚边，随即仰头露出“求摸下巴”的标准姿势，尾巴摇动幅度精确控制在30°（克制版开心）。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "178",
+      "_position": {
+        "x": 0,
+        "y": 21360
+      },
+      "statement": {
+        "_text": "开心"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "179",
+      "_position": {
+        "x": 0,
+        "y": 21480
+      },
+      "statement": {
+        "_text": "+10"
+      },
+      "_actorName": "信任",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "180",
+      "_position": {
+        "x": 0,
+        "y": 21600
+      },
+      "statement": {
+        "_text": "犬类对“公平性”极度敏感（比较心理学）。需建立“婴儿=积极刺激”联结（如婴儿哭时给墩墩零食），避免剥夺感引发攻击行为。"
+      },
+      "_actorName": "宠物专家",
+      "_actorParameterID": "22222222-2222-2222-2222-222222222222"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "181",
+      "_position": {
+        "x": 0,
+        "y": 21720
+      },
+      "statement": {
+        "_text": "接受衰老、临终关怀"
+      },
+      "_actorName": "核心心理学概念",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "182",
+      "_position": {
+        "x": 0,
+        "y": 21840
+      },
+      "statement": {
+        "_text": "客厅地毯换成防滑材质，矮几边散落着墩墩最爱的磨牙棒（已啃成光滑木棍）和关节保健药瓶。窗台上摆着幼年期与你的合影相框，玻璃罩上印着梅花状的鼻纹。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "183",
+      "_position": {
+        "x": 0,
+        "y": 21960
+      },
+      "statement": {
+        "_text": "墩墩跳跃高度降低，散步时常落后。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "184",
+      "_position": {
+        "x": 0,
+        "y": 22080
+      },
+      "statement": {
+        "_text": "慢速捡球时，墩墩的后腿会不自主打滑，但它用前爪死死扣住地板，像台老旧的拖拉机倔强前行。接到球后不急于归还，而是侧躺下来用爪子拨弄球体，眯眼享受阳光透过毛缝的暖意。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "185",
+      "_position": {
+        "x": 0,
+        "y": 22200
+      },
+      "statement": {
+        "_text": "享受"
+      },
+      "_actorName": "心情",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "186",
+      "_position": {
+        "x": 0,
+        "y": 22320
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "187",
+      "_position": {
+        "x": 0,
+        "y": 22440
+      },
+      "statement": {
+        "_text": "热敷时墩墩的右后腿微微抽搐，但它用尾巴盖住颤抖部位，假装专注舔舐前爪。当你按摩到敏感点，它会突然扭头轻咬主人指尖，力道轻柔如蒲公英拂过——这是它特有的“够了，但给你面子”信号。"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.ActionNode",
+      "$id": "188",
+      "_position": {
+        "x": 0,
+        "y": 22560
+      },
+      "_action": {
+        "$type": "NodeCanvas.Framework.ActionList",
+        "actions": [
+          {
+            "$type": "NodeCanvas.Tasks.Actions.ExecuteFunction_Multiplatform",
+            "method": {
+              "_baseInfo": "DogAttributeManager|AddDogHealth|System.Void",
+              "_paramsInfo": "System.Int32"
+            },
+            "parameters": [
+              {
+                "_type": "System.Int32",
+                "_value": {
+                  "$content": -5,
+                  "$type": "System.Int32"
+                }
+              }
+            ],
+            "returnValue": {},
+            "overrideAgent": {
+              "_type": "DogAttributeManager",
+              "_value": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "189",
+      "_position": {
+        "x": 0,
+        "y": 22680
+      },
+      "statement": {
+        "_text": "-10"
+      },
+      "_actorName": "精力",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "190",
+      "_position": {
+        "x": 0,
+        "y": 22800
+      },
+      "statement": {
+        "_text": "墩墩：协助教导你的幼子学步，缓慢跟随防止摔倒（自我价值感重建）。"
+      },
+      "_actorName": "剧情高潮",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "191",
+      "_position": {
+        "x": 0,
+        "y": 22920
+      },
+      "statement": {
+        "_text": "行走时左后腿拖出细长痕迹，却在孩子踉跄瞬间爆发出残存的敏捷。它用侧腰抵住幼儿臀部，力道如海浪托起贝壳，尾巴始终横在孩子身后充当“护栏”。"
+      },
+      "_actorName": "墩墩",
+      "_actorParameterID": "11111111-1111-1111-1111-111111111111"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "192",
+      "_position": {
+        "x": 0,
+        "y": 23040
+      },
+      "statement": {
+        "_text": "当幼儿成功迈步时，墩墩突然仰头长嗥，声线沙哑却绵长，惊起窗外一群白鸽，羽翼掠过夕阳如撒落的金粉。画面定格在夕阳下三代同行的剪影，字幕浮现："
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "193",
+      "_position": {
+        "x": 0,
+        "y": 23160
+      },
+      "statement": {
+        "_text": "“成熟不是终点，而是用一生学会温柔地承担责任。”"
+      },
+      "_actorName": "系统",
+      "_actorParameterID": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.StatementNode",
+      "$id": "194",
+      "_position": {
+        "x": 0,
+        "y": 23280
+      },
+      "statement": {
+        "_text": "老年犬的“自我价值感”衰退可通过“低难度任务”重建。例如藏匿药片在漏食玩具中，让其通过嗅觉搜寻获得“我还行”的心理暗示。"
+      },
+      "_actorName": "宠物专家",
+      "_actorParameterID": "22222222-2222-2222-2222-222222222222"
+    },
+    {
+      "$type": "NodeCanvas.DialogueTrees.FinishNode",
+      "$id": "195",
+      "_position": {
+        "x": 0,
+        "y": 23460
+      }
+    }
+  ],
+  "connections": [
+    {
+      "_sourceNode": {
+        "$ref": "0"
+      },
+      "_targetNode": {
+        "$ref": "1"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "1"
+      },
+      "_targetNode": {
+        "$ref": "2"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "2"
+      },
+      "_targetNode": {
+        "$ref": "3"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "3"
+      },
+      "_targetNode": {
+        "$ref": "4"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "4"
+      },
+      "_targetNode": {
+        "$ref": "5"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "5"
+      },
+      "_targetNode": {
+        "$ref": "6"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "6"
+      },
+      "_targetNode": {
+        "$ref": "7"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "7"
+      },
+      "_targetNode": {
+        "$ref": "8"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "8"
+      },
+      "_targetNode": {
+        "$ref": "9"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "9"
+      },
+      "_targetNode": {
+        "$ref": "10"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "10"
+      },
+      "_targetNode": {
+        "$ref": "11"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "11"
+      },
+      "_targetNode": {
+        "$ref": "12"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "12"
+      },
+      "_targetNode": {
+        "$ref": "13"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "13"
+      },
+      "_targetNode": {
+        "$ref": "14"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "14"
+      },
+      "_targetNode": {
+        "$ref": "15"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "15"
+      },
+      "_targetNode": {
+        "$ref": "16"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "16"
+      },
+      "_targetNode": {
+        "$ref": "17"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "17"
+      },
+      "_targetNode": {
+        "$ref": "18"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "18"
+      },
+      "_targetNode": {
+        "$ref": "19"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "19"
+      },
+      "_targetNode": {
+        "$ref": "20"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "20"
+      },
+      "_targetNode": {
+        "$ref": "21"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "21"
+      },
+      "_targetNode": {
+        "$ref": "22"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "22"
+      },
+      "_targetNode": {
+        "$ref": "23"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "23"
+      },
+      "_targetNode": {
+        "$ref": "24"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "24"
+      },
+      "_targetNode": {
+        "$ref": "25"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "25"
+      },
+      "_targetNode": {
+        "$ref": "26"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "26"
+      },
+      "_targetNode": {
+        "$ref": "27"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "27"
+      },
+      "_targetNode": {
+        "$ref": "28"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "28"
+      },
+      "_targetNode": {
+        "$ref": "29"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "29"
+      },
+      "_targetNode": {
+        "$ref": "30"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "30"
+      },
+      "_targetNode": {
+        "$ref": "31"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "31"
+      },
+      "_targetNode": {
+        "$ref": "32"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "32"
+      },
+      "_targetNode": {
+        "$ref": "33"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "33"
+      },
+      "_targetNode": {
+        "$ref": "34"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "34"
+      },
+      "_targetNode": {
+        "$ref": "35"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "35"
+      },
+      "_targetNode": {
+        "$ref": "36"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "36"
+      },
+      "_targetNode": {
+        "$ref": "37"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "37"
+      },
+      "_targetNode": {
+        "$ref": "38"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "38"
+      },
+      "_targetNode": {
+        "$ref": "39"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "39"
+      },
+      "_targetNode": {
+        "$ref": "40"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "40"
+      },
+      "_targetNode": {
+        "$ref": "41"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "41"
+      },
+      "_targetNode": {
+        "$ref": "42"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "42"
+      },
+      "_targetNode": {
+        "$ref": "43"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "43"
+      },
+      "_targetNode": {
+        "$ref": "44"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "44"
+      },
+      "_targetNode": {
+        "$ref": "45"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "45"
+      },
+      "_targetNode": {
+        "$ref": "46"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "46"
+      },
+      "_targetNode": {
+        "$ref": "47"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "47"
+      },
+      "_targetNode": {
+        "$ref": "48"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "48"
+      },
+      "_targetNode": {
+        "$ref": "49"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "49"
+      },
+      "_targetNode": {
+        "$ref": "50"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "50"
+      },
+      "_targetNode": {
+        "$ref": "51"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "51"
+      },
+      "_targetNode": {
+        "$ref": "52"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "52"
+      },
+      "_targetNode": {
+        "$ref": "53"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "53"
+      },
+      "_targetNode": {
+        "$ref": "54"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "54"
+      },
+      "_targetNode": {
+        "$ref": "55"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "55"
+      },
+      "_targetNode": {
+        "$ref": "56"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "56"
+      },
+      "_targetNode": {
+        "$ref": "57"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "57"
+      },
+      "_targetNode": {
+        "$ref": "58"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "58"
+      },
+      "_targetNode": {
+        "$ref": "59"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "59"
+      },
+      "_targetNode": {
+        "$ref": "60"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "60"
+      },
+      "_targetNode": {
+        "$ref": "61"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "61"
+      },
+      "_targetNode": {
+        "$ref": "62"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "62"
+      },
+      "_targetNode": {
+        "$ref": "63"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "63"
+      },
+      "_targetNode": {
+        "$ref": "64"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "64"
+      },
+      "_targetNode": {
+        "$ref": "65"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "65"
+      },
+      "_targetNode": {
+        "$ref": "66"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "66"
+      },
+      "_targetNode": {
+        "$ref": "67"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "67"
+      },
+      "_targetNode": {
+        "$ref": "68"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "68"
+      },
+      "_targetNode": {
+        "$ref": "69"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "69"
+      },
+      "_targetNode": {
+        "$ref": "70"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "70"
+      },
+      "_targetNode": {
+        "$ref": "71"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "71"
+      },
+      "_targetNode": {
+        "$ref": "72"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "72"
+      },
+      "_targetNode": {
+        "$ref": "73"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "73"
+      },
+      "_targetNode": {
+        "$ref": "74"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "74"
+      },
+      "_targetNode": {
+        "$ref": "75"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "75"
+      },
+      "_targetNode": {
+        "$ref": "76"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "76"
+      },
+      "_targetNode": {
+        "$ref": "77"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "77"
+      },
+      "_targetNode": {
+        "$ref": "78"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "78"
+      },
+      "_targetNode": {
+        "$ref": "79"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "79"
+      },
+      "_targetNode": {
+        "$ref": "80"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "80"
+      },
+      "_targetNode": {
+        "$ref": "81"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "81"
+      },
+      "_targetNode": {
+        "$ref": "82"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "82"
+      },
+      "_targetNode": {
+        "$ref": "83"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "83"
+      },
+      "_targetNode": {
+        "$ref": "84"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "84"
+      },
+      "_targetNode": {
+        "$ref": "85"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "85"
+      },
+      "_targetNode": {
+        "$ref": "86"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "86"
+      },
+      "_targetNode": {
+        "$ref": "87"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "87"
+      },
+      "_targetNode": {
+        "$ref": "88"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "88"
+      },
+      "_targetNode": {
+        "$ref": "89"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "89"
+      },
+      "_targetNode": {
+        "$ref": "90"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "90"
+      },
+      "_targetNode": {
+        "$ref": "91"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "91"
+      },
+      "_targetNode": {
+        "$ref": "92"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "92"
+      },
+      "_targetNode": {
+        "$ref": "93"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "93"
+      },
+      "_targetNode": {
+        "$ref": "94"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "94"
+      },
+      "_targetNode": {
+        "$ref": "95"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "95"
+      },
+      "_targetNode": {
+        "$ref": "96"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "96"
+      },
+      "_targetNode": {
+        "$ref": "97"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "97"
+      },
+      "_targetNode": {
+        "$ref": "98"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "98"
+      },
+      "_targetNode": {
+        "$ref": "99"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "99"
+      },
+      "_targetNode": {
+        "$ref": "100"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "100"
+      },
+      "_targetNode": {
+        "$ref": "101"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "101"
+      },
+      "_targetNode": {
+        "$ref": "102"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "102"
+      },
+      "_targetNode": {
+        "$ref": "103"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "103"
+      },
+      "_targetNode": {
+        "$ref": "104"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "104"
+      },
+      "_targetNode": {
+        "$ref": "105"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "105"
+      },
+      "_targetNode": {
+        "$ref": "106"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "106"
+      },
+      "_targetNode": {
+        "$ref": "107"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "107"
+      },
+      "_targetNode": {
+        "$ref": "108"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "108"
+      },
+      "_targetNode": {
+        "$ref": "109"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "109"
+      },
+      "_targetNode": {
+        "$ref": "110"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "110"
+      },
+      "_targetNode": {
+        "$ref": "111"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "111"
+      },
+      "_targetNode": {
+        "$ref": "112"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "112"
+      },
+      "_targetNode": {
+        "$ref": "113"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "113"
+      },
+      "_targetNode": {
+        "$ref": "114"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "114"
+      },
+      "_targetNode": {
+        "$ref": "115"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "115"
+      },
+      "_targetNode": {
+        "$ref": "116"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "116"
+      },
+      "_targetNode": {
+        "$ref": "117"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "117"
+      },
+      "_targetNode": {
+        "$ref": "118"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "118"
+      },
+      "_targetNode": {
+        "$ref": "119"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "119"
+      },
+      "_targetNode": {
+        "$ref": "120"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "120"
+      },
+      "_targetNode": {
+        "$ref": "121"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "121"
+      },
+      "_targetNode": {
+        "$ref": "122"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "122"
+      },
+      "_targetNode": {
+        "$ref": "123"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "123"
+      },
+      "_targetNode": {
+        "$ref": "124"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "124"
+      },
+      "_targetNode": {
+        "$ref": "125"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "125"
+      },
+      "_targetNode": {
+        "$ref": "126"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "126"
+      },
+      "_targetNode": {
+        "$ref": "127"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "127"
+      },
+      "_targetNode": {
+        "$ref": "128"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "128"
+      },
+      "_targetNode": {
+        "$ref": "129"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "129"
+      },
+      "_targetNode": {
+        "$ref": "130"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "130"
+      },
+      "_targetNode": {
+        "$ref": "131"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "131"
+      },
+      "_targetNode": {
+        "$ref": "132"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "132"
+      },
+      "_targetNode": {
+        "$ref": "133"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "133"
+      },
+      "_targetNode": {
+        "$ref": "134"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "134"
+      },
+      "_targetNode": {
+        "$ref": "135"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "135"
+      },
+      "_targetNode": {
+        "$ref": "136"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "136"
+      },
+      "_targetNode": {
+        "$ref": "137"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "137"
+      },
+      "_targetNode": {
+        "$ref": "138"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "138"
+      },
+      "_targetNode": {
+        "$ref": "139"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "139"
+      },
+      "_targetNode": {
+        "$ref": "140"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "140"
+      },
+      "_targetNode": {
+        "$ref": "141"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "141"
+      },
+      "_targetNode": {
+        "$ref": "142"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "142"
+      },
+      "_targetNode": {
+        "$ref": "143"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "143"
+      },
+      "_targetNode": {
+        "$ref": "144"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "144"
+      },
+      "_targetNode": {
+        "$ref": "145"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "145"
+      },
+      "_targetNode": {
+        "$ref": "146"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "146"
+      },
+      "_targetNode": {
+        "$ref": "147"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "147"
+      },
+      "_targetNode": {
+        "$ref": "148"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "148"
+      },
+      "_targetNode": {
+        "$ref": "149"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "149"
+      },
+      "_targetNode": {
+        "$ref": "150"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "150"
+      },
+      "_targetNode": {
+        "$ref": "151"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "151"
+      },
+      "_targetNode": {
+        "$ref": "152"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "152"
+      },
+      "_targetNode": {
+        "$ref": "153"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "153"
+      },
+      "_targetNode": {
+        "$ref": "154"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "154"
+      },
+      "_targetNode": {
+        "$ref": "155"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "155"
+      },
+      "_targetNode": {
+        "$ref": "156"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "156"
+      },
+      "_targetNode": {
+        "$ref": "157"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "157"
+      },
+      "_targetNode": {
+        "$ref": "158"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "158"
+      },
+      "_targetNode": {
+        "$ref": "159"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "159"
+      },
+      "_targetNode": {
+        "$ref": "160"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "160"
+      },
+      "_targetNode": {
+        "$ref": "161"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "161"
+      },
+      "_targetNode": {
+        "$ref": "162"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "162"
+      },
+      "_targetNode": {
+        "$ref": "163"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "163"
+      },
+      "_targetNode": {
+        "$ref": "164"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "164"
+      },
+      "_targetNode": {
+        "$ref": "165"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "165"
+      },
+      "_targetNode": {
+        "$ref": "166"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "166"
+      },
+      "_targetNode": {
+        "$ref": "167"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "167"
+      },
+      "_targetNode": {
+        "$ref": "168"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "168"
+      },
+      "_targetNode": {
+        "$ref": "169"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "169"
+      },
+      "_targetNode": {
+        "$ref": "170"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "170"
+      },
+      "_targetNode": {
+        "$ref": "171"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "171"
+      },
+      "_targetNode": {
+        "$ref": "172"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "172"
+      },
+      "_targetNode": {
+        "$ref": "173"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "173"
+      },
+      "_targetNode": {
+        "$ref": "174"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "174"
+      },
+      "_targetNode": {
+        "$ref": "175"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "175"
+      },
+      "_targetNode": {
+        "$ref": "176"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "176"
+      },
+      "_targetNode": {
+        "$ref": "177"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "177"
+      },
+      "_targetNode": {
+        "$ref": "178"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "178"
+      },
+      "_targetNode": {
+        "$ref": "179"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "179"
+      },
+      "_targetNode": {
+        "$ref": "180"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "180"
+      },
+      "_targetNode": {
+        "$ref": "181"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "181"
+      },
+      "_targetNode": {
+        "$ref": "182"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "182"
+      },
+      "_targetNode": {
+        "$ref": "183"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "183"
+      },
+      "_targetNode": {
+        "$ref": "184"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "184"
+      },
+      "_targetNode": {
+        "$ref": "185"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "185"
+      },
+      "_targetNode": {
+        "$ref": "186"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "186"
+      },
+      "_targetNode": {
+        "$ref": "187"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "187"
+      },
+      "_targetNode": {
+        "$ref": "188"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "188"
+      },
+      "_targetNode": {
+        "$ref": "189"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "189"
+      },
+      "_targetNode": {
+        "$ref": "190"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "190"
+      },
+      "_targetNode": {
+        "$ref": "191"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "191"
+      },
+      "_targetNode": {
+        "$ref": "192"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "192"
+      },
+      "_targetNode": {
+        "$ref": "193"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "193"
+      },
+      "_targetNode": {
+        "$ref": "194"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    },
+    {
+      "_sourceNode": {
+        "$ref": "194"
+      },
+      "_targetNode": {
+        "$ref": "195"
+      },
+      "$type": "NodeCanvas.DialogueTrees.DTConnection"
+    }
+  ],
+  "canvasGroups": [],
+  "localBlackboard": {
+    "_variables": {}
+  },
+  "derivedData": {
+    "actorParameters": [
+      {
+        "_keyName": "系统",
+        "_id": "24cb8fd9-bbe9-4e6f-8f56-1eb7609c0ca4",
+        "_actorObject": 2
+      },
+      {
+        "_keyName": "player",
+        "_id": "635bc1e3-b2ab-4aa3-ae2b-6401c38ac879",
+        "_actorObject": 3
+      },
+      {
+        "_keyName": "医生",
+        "_id": "46a67c48-922a-4b49-bc56-afd5e42ec247",
+        "_actorObject": 4
+      },
+      {
+        "_keyName": "墩墩",
+        "_id": "11111111-1111-1111-1111-111111111111",
+        "_actorObject": 5
+      },
+      {
+        "_keyName": "宠物专家",
+        "_id": "22222222-2222-2222-2222-222222222222",
+        "_actorObject": 6
+      },
+      {
+        "_keyName": "柯基",
+        "_id": "11111111-1111-1111-1111-111111111111",
+        "_actorObject": 7
+      }
+    ],
+    "$type": "NodeCanvas.DialogueTrees.DialogueTree+DerivedSerializationData"
+  }
+}
