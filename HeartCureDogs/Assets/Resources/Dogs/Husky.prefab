@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 885774991901556013}
   - component: {fileID: -5086809450714989383}
   - component: {fileID: -2102069333056075204}
+  - component: {fileID: 8398180784605577188}
   m_Layer: 0
   m_Name: Husky
   m_TagString: Dog
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 1e11397e82b5f154687af057fa07be96, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -210,3 +211,42 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
+--- !u!114 &8398180784605577188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423234306042550231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f327b5b04742d4596ce8e7fcd2cc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emotionSprites:
+  - emotionName: "\u4F4E\u843D"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u5F00\u5FC3"
+    sprite: {fileID: 21300000, guid: e03aa345b795d6b4ba8f60d3582989f6, type: 3}
+  - emotionName: "\u7D27\u5F20"
+    sprite: {fileID: 21300000, guid: 39183197721811748878af7d5444dbec, type: 3}
+  - emotionName: "\u5174\u594B"
+    sprite: {fileID: 21300000, guid: 8b52c32aac4b8de4389995e505959a62, type: 3}
+  - emotionName: "\u607C\u6012"
+    sprite: {fileID: 21300000, guid: 39183197721811748878af7d5444dbec, type: 3}
+  - emotionName: "\u538B\u6291"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u7126\u8651"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u5C0F\u6FC0\u52A8"
+    sprite: {fileID: 21300000, guid: cc67ed0b7e0b3374f8fe50a1e599e73e, type: 3}
+  - emotionName: "\u5931\u843D"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u5171\u60C5"
+    sprite: {fileID: 21300000, guid: e2b27e72e12982543bb4d82b6d3eef08, type: 3}
+  - emotionName: "\u4EAB\u53D7"
+    sprite: {fileID: 21300000, guid: b13bbe717dc9bdd4aba7ba6c61efd2d4, type: 3}
+  - emotionName: "\u70E6\u95F7"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u60B2\u4F24"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}

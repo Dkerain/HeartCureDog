@@ -5,6 +5,7 @@ using NodeCanvas.DialogueTrees;
 using UnityEngine.UI; // 添加命名空间引用
 public class DogControllerr : MonoBehaviour
 {
+    public bool IsMoving => isMoving;   // 只读属性，返回 isMoving 的值
     [Header("动画控制")]
     public Animator dogAnimator;
     [Header("移动参数")]

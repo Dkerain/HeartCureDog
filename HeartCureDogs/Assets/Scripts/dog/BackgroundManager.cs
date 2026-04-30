@@ -1,22 +1,41 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class BackgroundManager : MonoBehaviour
 {
-    public Image backgroundImage;
-    public Sprite[] backgroundSprites;
-    // 用名字映射更方便
-    public void ChangeBackground(string bgName)
+    [System.Serializable]
+    public class BackgroundEntry
     {
-        Sprite target = System.Array.Find(backgroundSprites, s => s.name == bgName);
-        if (target != null)
-            backgroundImage.sprite = target;
+        public string name;          // 背景名称，例如 "客厅"
+        public GameObject bgObject;  // 对应的背景物体（Panel或Canvas）
     }
 
-    // 或者用索引
-    public void ChangeBackgroundByIndex(int index)
+    public List<BackgroundEntry> backgrounds;
+    private GameObject currentActiveBg;
+
+    public void SwitchTo(string bgName)
     {
-        if (index >= 0 && index < backgroundSprites.Length)
-            backgroundImage.sprite = backgroundSprites[index];
+        BackgroundEntry target = backgrounds.Find(b => b.name == bgName);
+        if (target == null || target.bgObject == null)
+        {
+            Debug.LogWarning($"背景管理器：找不到名为 '{bgName}' 的背景");
+            return;
+        }
+
+        if (currentActiveBg != null)
+            currentActiveBg.SetActive(false);
+
+        target.bgObject.SetActive(true);
+        currentActiveBg = target.bgObject;
+    }
+
+    public void HideAllBackgrounds()
+    {
+        foreach (var bg in backgrounds)
+        {
+            if (bg.bgObject != null)
+                bg.bgObject.SetActive(false);
+        }
+        currentActiveBg = null;
     }
 }

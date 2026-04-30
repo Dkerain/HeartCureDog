@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cf24708f785f34e479ad71af60f45b34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,6 +105,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   stopDistance: 0.1
+  useUnscaledTime: 1
   showDebug: 1
 --- !u!50 &4243498116869576503
 Rigidbody2D:
@@ -150,6 +151,8 @@ MonoBehaviour:
   walkableLayer:
     serializedVersion: 2
     m_Bits: 64
+  button: {fileID: 0}
+  squareTag: TriggerSquare
 --- !u!95 &5248582339107779670
 Animator:
   serializedVersion: 5
