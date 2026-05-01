@@ -1,85 +1,65 @@
-ï»¿using UnityEngine;
-using TMPro;          // å¼•å…¥ TMPro å‘½åç©ºé—´
-using System.Collections;
+using UnityEngine;
+using System.Text;
 
+[RequireComponent(typeof(Collider2D))]
 public class ClickableProp : MonoBehaviour
 {
-    [Header("ç‰©å“ä¿¡æ¯")]
-    public string propName = "ç‰©å“";
+    [Header("ÎïÆ·ĞÅÏ¢")]
+    public string propName = "ÎïÆ·";
 
-    [Header("å±æ€§å˜åŒ–å€¼ï¼ˆæ­£æ•°ä¸ºå¢åŠ ï¼Œè´Ÿæ•°ä¸ºå‡å°‘ï¼‰")]
+    [Header("ÊôĞÔ±ä»¯£¨ÕıÊıÔö¼Ó£¬¸ºÊı¼õÉÙ£©")]
     public int dogHealthDelta = 0;
     public int dogEnergyDelta = 0;
     public int dogBelieveDelta = 0;
     public int npcCoinDelta = 0;
     public int npcBrwanDelta = 0;
-    public string dogEmotion = "";
+    public string setDogEmotion = "";   // ÀıÈç "¿ªĞÄ"£¬»áµ÷ÓÃ SetDogEmotion
 
-    [Header("åé¦ˆæ•ˆæœ")]
-    public string floatingText = "";
-    public string emoji = "ğŸ˜€";
+    [Header("ÌáÊ¾Ìõ")]
+    public string customTipText = "";    // Áô¿ÕÔò×Ô¶¯Éú³É
+    public float tipDuration = 4f;
 
-    [Header("ç‚¹å‡»åæ˜¯å¦é”€æ¯ç‰©å“")]
+    [Header("µã»÷ºóĞĞÎª")]
     public bool destroyAfterClick = false;
 
     private DogAttributeManager attrManager;
-    private GameObject dog;
-    private DogEmotionController dogEmotionController;
 
-    void Start()
+    private void Start()
     {
         attrManager = FindObjectOfType<DogAttributeManager>();
         if (attrManager == null)
-            Debug.LogError("ClickableProp: æœªæ‰¾åˆ° DogAttributeManagerï¼");
-
-        dog = GameObject.FindGameObjectWithTag("PlayerDog");
-        if (dog == null)
-            dog = GameObject.Find("Dog");
-
-        if (dog != null)
-            dogEmotionController = dog.GetComponent<DogEmotionController>();
+            Debug.LogError($"ClickableProp {propName}: Î´ÕÒµ½ DogAttributeManager£¡");
     }
 
-    void OnMouseDown()
+    private void OnMouseDown()
     {
         if (attrManager == null) return;
 
-        // 1. åº”ç”¨å±æ€§å˜åŒ–
-        if (dogHealthDelta != 0)
-            attrManager.AddDogHealth(dogHealthDelta);
-        if (dogEnergyDelta != 0)
-            attrManager.AddDogEnergy(dogEnergyDelta);
-        if (dogBelieveDelta != 0)
-            attrManager.AddDogBelieve(dogBelieveDelta);
-        if (npcCoinDelta != 0)
-            attrManager.AddNpcCoin(npcCoinDelta);
-        if (npcBrwanDelta != 0)
-            attrManager.AddNpcBrwan(npcBrwanDelta);
-        if (!string.IsNullOrEmpty(dogEmotion))
-            attrManager.SetDogEmotion(dogEmotion);
+        // 1. ĞŞ¸ÄÊôĞÔ
+        if (dogHealthDelta != 0) attrManager.AddDogHealth(dogHealthDelta);
+        if (dogEnergyDelta != 0) attrManager.AddDogEnergy(dogEnergyDelta);
+        if (dogBelieveDelta != 0) attrManager.AddDogBelieve(dogBelieveDelta);
+        if (npcCoinDelta != 0) attrManager.AddNpcCoin(npcCoinDelta);
+        if (npcBrwanDelta != 0) attrManager.AddNpcBrwan(npcBrwanDelta);
+        if (!string.IsNullOrEmpty(setDogEmotion)) attrManager.SetDogEmotion(setDogEmotion);
 
-        // 2. æ˜¾ç¤ºæµ®åŠ¨æç¤ºæ¡
-        string tipText = string.IsNullOrEmpty(floatingText) ? GenerateTipText() : floatingText;
-        ShowFloatingTip(tipText);
+        // 2. ÏÔÊ¾¸¡¶¯ÌáÊ¾Ìõ
+        string tip = string.IsNullOrEmpty(customTipText) ? GenerateTipText() : customTipText;
+        ShowFloatingTip(tip);
 
-        // 3. å°ç‹—å¤´é¡¶ emoji
-        if (dogEmotionController != null)
-            dogEmotionController.ShowEmoji(emoji);
-
-        // 4. å¯é€‰ï¼šé”€æ¯ç‰©å“
-        if (destroyAfterClick)
-            Destroy(gameObject);
+        // 3. µã»÷ºóÏú»Ù
+        if (destroyAfterClick) Destroy(gameObject);
     }
 
     private string GenerateTipText()
     {
-        System.Text.StringBuilder sb = new System.Text.StringBuilder();
-        if (dogHealthDelta != 0) sb.Append($"ä½“é­„{(dogHealthDelta > 0 ? "+" : "")}{dogHealthDelta} ");
-        if (dogEnergyDelta != 0) sb.Append($"ç²¾åŠ›{(dogEnergyDelta > 0 ? "+" : "")}{dogEnergyDelta} ");
-        if (dogBelieveDelta != 0) sb.Append($"ä¿¡ä»»{(dogBelieveDelta > 0 ? "+" : "")}{dogBelieveDelta} ");
-        if (npcCoinDelta != 0) sb.Append($"é‡‘å¸{(npcCoinDelta > 0 ? "+" : "")}{npcCoinDelta} ");
-        if (npcBrwanDelta != 0) sb.Append($"ä½“åŠ›{(npcBrwanDelta > 0 ? "+" : "")}{npcBrwanDelta} ");
-        if (!string.IsNullOrEmpty(dogEmotion)) sb.Append($"å¿ƒæƒ…å˜ä¸º{dogEmotion}");
+        StringBuilder sb = new StringBuilder();
+        if (dogHealthDelta != 0) sb.Append($"ÌåÆÇ{(dogHealthDelta > 0 ? "+" : "")}{dogHealthDelta} ");
+        if (dogEnergyDelta != 0) sb.Append($"¾«Á¦{(dogEnergyDelta > 0 ? "+" : "")}{dogEnergyDelta} ");
+        if (dogBelieveDelta != 0) sb.Append($"ĞÅÈÎ{(dogBelieveDelta > 0 ? "+" : "")}{dogBelieveDelta} ");
+        if (npcCoinDelta != 0) sb.Append($"½ğ±Ò{(npcCoinDelta > 0 ? "+" : "")}{npcCoinDelta} ");
+        if (npcBrwanDelta != 0) sb.Append($"ÌåÁ¦{(npcBrwanDelta > 0 ? "+" : "")}{npcBrwanDelta} ");
+        if (!string.IsNullOrEmpty(setDogEmotion)) sb.Append($"ĞÄÇé¡ú{setDogEmotion}");
         return sb.ToString().Trim();
     }
 
@@ -87,28 +67,31 @@ public class ClickableProp : MonoBehaviour
     {
         if (string.IsNullOrEmpty(text)) return;
 
-        Canvas canvas = FindObjectOfType<Canvas>();
-        if (canvas == null)
-        {
-            Debug.LogWarning("æœªæ‰¾åˆ° Canvasï¼Œæ— æ³•æ˜¾ç¤ºæç¤ºæ¡ï¼");
-            return;
-        }
+        // ´´½¨ Canvas
+        GameObject canvasObj = new GameObject("FloatingTipCanvas");
+        Canvas canvas = canvasObj.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.WorldSpace;
+        canvas.sortingOrder = 3;   // Í¼²ã = 3
 
-        // ä½¿ç”¨ TextMeshProUGUI
-        GameObject floatingObj = new GameObject("FloatingTip");
-        floatingObj.transform.SetParent(canvas.transform, false);
-        // å°†å±å¹•åæ ‡è®¾ç½®ä¸ºç‰©å“ä¸Šæ–¹
-        Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * 1.5f);
-        floatingObj.transform.position = screenPos;
+        // ¿ÉÑ¡£ºÌí¼Ó CanvasScaler ºÍ GraphicRaycaster£¨²»ĞèÒª£©
 
-        TextMeshProUGUI textComp = floatingObj.AddComponent<TextMeshProUGUI>();
-        textComp.text = text;
-        textComp.fontSize = 24;
-        textComp.color = Color.yellow;
-        textComp.outlineWidth = 0.2f;
-        textComp.outlineColor = Color.black;
+        // ÉèÖÃ Canvas Î»ÖÃÎªÎïÆ·ÉÏ·½
+        canvasObj.transform.position = transform.position + Vector3.up * 1.2f;
+        // ÈÃ Canvas Ê¼ÖÕÃæÏòÉãÏñ»ú£¨Èç¹ûÊÇÊÀ½ç¿Õ¼äÇÒĞèÒªÃæÏòÉãÏñ»ú£¬¿ÉÒÔÈ¡Ïû×¢ÊÍ£©
+        // canvasObj.transform.LookAt(Camera.main.transform);
+        // »òÕßÈÃ Canvas ¹Ì¶¨·½Ïò£¬×Ô¼ºµ÷Õû
 
-        // 2ç§’åè‡ªåŠ¨é”€æ¯
-        Destroy(floatingObj, 2f);
+        // Ìí¼Ó TextMeshProUGUI
+        var tmp = canvasObj.AddComponent<TMPro.TextMeshProUGUI>();
+        tmp.text = text;
+        tmp.fontSize = 50;      // ´óĞ¡ 50
+        tmp.color = Color.black; // ºÚÉ«×ÖÌå
+        tmp.alignment = TMPro.TextAlignmentOptions.Center;
+
+        // µ÷Õû Canvas Ëõ·Å£¬Ê¹ÎÄ×Ö´óĞ¡ÊÊÖĞ£¨¸ù¾İÄãµÄÊÀ½çµ¥Î»£¬¿ÉÄÜĞèÒªµ÷Õû£©
+        canvasObj.transform.localScale = Vector3.one * 0.01f; // ¸ù¾İÊµ¼Ê³¡¾°µ÷Õû
+
+        // ×Ô¶¯Ïú»Ù
+        Destroy(canvasObj, tipDuration);
     }
 }

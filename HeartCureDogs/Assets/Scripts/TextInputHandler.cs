@@ -68,7 +68,7 @@ public class TextInputHandler : MonoBehaviour
             StopCoroutine(hideBubbleCoroutine);
 
         // ¿ªÊ¼5ÃëºóÒþ²Ø
-        hideBubbleCoroutine = StartCoroutine(HideBubbleAfterDelay(5f));
+        hideBubbleCoroutine = StartCoroutine(HideBubbleAfterDelay(15f));
     }
 
     private void ShowBubble()

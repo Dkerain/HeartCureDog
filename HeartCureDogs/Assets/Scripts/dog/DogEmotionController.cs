@@ -1,6 +1,5 @@
 using UnityEngine;
 using NodeCanvas.Framework;
-using TMPro; // 如果使用 TextMeshPro，否则改用 UnityEngine.UI
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class DogEmotionController : MonoBehaviour
@@ -12,16 +11,11 @@ public class DogEmotionController : MonoBehaviour
         public Sprite sprite;
     }
 
-    [Header("表情配置")]
+   
     public EmotionSprite[] emotionSprites;
-
-    [Header("Emoji 气泡（可选）")]
-    public GameObject emojiBubblePrefab;   // 预制体：一个带背景和文字的 Canvas（World Space）
-    public float emojiDisplayDuration = 1.5f;
-
     private SpriteRenderer spriteRenderer;
     private Blackboard globalBlackboard;
-    private DogControllerr dogController;   // 引用移动控制器，判断是否移动
+    private DogControllerr dogController;   // 引用小狗移动控制器
     private string currentEmotion;
 
     void Start()
@@ -33,14 +27,14 @@ public class DogEmotionController : MonoBehaviour
             return;
         }
 
-        // 获取移动控制脚本（注意：你的脚本名是 DogControllerr，不是 DogMovement）
+        // 获取小狗移动控制器
         dogController = GetComponent<DogControllerr>();
         if (dogController == null)
         {
-            Debug.LogWarning("DogEmotionController: 未找到 DogControllerr 组件，将无法区分移动/静止状态，表情将在所有状态下覆盖。");
+            Debug.LogError("DogEmotionController: 未找到 DogControllerr 组件！将无法区分移动/静止状态。");
         }
 
-        // 查找全局黑板（标识符 "Global"）
+        // 找到全局黑板（标识符为 "Global"）
         globalBlackboard = GlobalBlackboard.Find("Global");
         if (globalBlackboard == null)
         {
@@ -48,7 +42,7 @@ public class DogEmotionController : MonoBehaviour
             return;
         }
 
-        // 初始应用表情
+        // 初始化时立即应用当前情绪（静止状态）
         UpdateEmotionFromBlackboard();
     }
 
@@ -58,7 +52,7 @@ public class DogEmotionController : MonoBehaviour
         if (dogController != null && dogController.IsMoving)
             return;
 
-        // 静止状态下，强制应用当前情绪精灵
+        // 静止状态下，每帧强制应用当前情绪对应的精灵（覆盖可能的 idle 动画）
         if (globalBlackboard != null && spriteRenderer != null)
         {
             string targetEmotion = globalBlackboard.GetValue<string>("dogEmotion");
@@ -66,7 +60,7 @@ public class DogEmotionController : MonoBehaviour
         }
     }
 
-    // 从黑板读取 dogEmotion 并刷新精灵（供外部手动调用）
+    // 从黑板读取 dogEmotion 并刷新精灵
     public void UpdateEmotionFromBlackboard()
     {
         if (globalBlackboard == null || spriteRenderer == null) return;
@@ -74,7 +68,7 @@ public class DogEmotionController : MonoBehaviour
         SetSpriteForEmotion(emotion);
     }
 
-    // 设置精灵（内部使用）
+    // 核心：设置精灵，如果已经相同则跳过
     private void SetSpriteForEmotion(string emotionName)
     {
         foreach (var item in emotionSprites)
@@ -91,52 +85,18 @@ public class DogEmotionController : MonoBehaviour
             }
         }
         Debug.LogWarning($"DogEmotionController: 没有找到名为 '{emotionName}' 的表情配置，请检查 Inspector");
+       
     }
 
-    // 直接修改黑板中的心情（可选）
+    // 可选：直接修改黑板中的 dogEmotion，表情会自动更新
     public void SetEmotion(string emotionName)
     {
         if (globalBlackboard != null)
         {
             globalBlackboard.SetValue("dogEmotion", emotionName);
-            // 如果是静止状态，立即应用
+            // 如果是静止状态，立即应用；移动状态则无需立即应用，等静止时自动应用
             if (dogController != null && !dogController.IsMoving)
                 SetSpriteForEmotion(emotionName);
         }
-    }
-
-    // ========== Emoji 气泡功能 ==========
-    public void ShowEmoji(string emoji)
-    {
-        if (emojiBubblePrefab != null)
-        {
-            // 使用预制体实例化气泡
-            Vector3 spawnPos = transform.position + Vector3.up * 1.2f; // 头顶偏移
-            GameObject bubble = Instantiate(emojiBubblePrefab, spawnPos, Quaternion.identity, transform);
-            var textComp = bubble.GetComponentInChildren<TMP_Text>();
-            if (textComp != null)
-                textComp.text = emoji;
-            // 如果预制体是 Sprite 方式，可以再处理
-            Destroy(bubble, emojiDisplayDuration);
-        }
-        else
-        {
-            // 简易方式：动态创建文本
-            ShowSimpleEmojiText(emoji);
-        }
-    }
-
-    private void ShowSimpleEmojiText(string emoji)
-    {
-        GameObject go = new GameObject("EmojiBubble");
-        go.transform.position = transform.position + Vector3.up * 1.2f;
-        go.transform.SetParent(transform);
-        var textMesh = go.AddComponent<TextMesh>();
-        textMesh.text = emoji;
-        textMesh.fontSize = 50;
-        textMesh.characterSize = 0.1f;
-        textMesh.alignment = TextAlignment.Center;
-        // 添加一个简单的背景（可选）
-        Destroy(go, emojiDisplayDuration);
     }
 }
