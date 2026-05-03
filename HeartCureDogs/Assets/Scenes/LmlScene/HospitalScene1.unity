@@ -826,7 +826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &99734621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,6 +1758,7 @@ MonoBehaviour:
   playerInputField: {fileID: 1567941672}
   glmText: {fileID: 577826483}
   DialogueImage: {fileID: 99734621}
+  bubblePanel: {fileID: 0}
   chatHistory: []
 --- !u!114 &470963272
 MonoBehaviour:
@@ -2003,7 +2004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &549695273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2234,7 +2235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &628023490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3221,6 +3222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaveLoadUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2239655018415730761, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6158177209511762452, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
       propertyPath: loadPanel
       value: 
@@ -3867,7 +3872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6427230104526972574, guid: 92b919679cda71e4d9140b2b685bab50, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7294387822585835025, guid: 92b919679cda71e4d9140b2b685bab50, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4006,7 +4011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1183519817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4153,7 +4158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1198732394
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4677,7 +4682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1567941672
 MonoBehaviour:
   m_ObjectHideFlags: 0

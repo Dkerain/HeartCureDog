@@ -1777,7 +1777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &517487573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2318,7 +2318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 496, y: -159}
   m_SizeDelta: {x: 693.3384, y: 252.4236}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &587584939
@@ -2411,9 +2411,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648266273}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 656538436}
@@ -2422,9 +2422,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960.00006, y: 540.00006}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &648266275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2507,7 +2507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &655202510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3296,6 +3296,7 @@ MonoBehaviour:
   playerInputField: {fileID: 0}
   glmText: {fileID: 0}
   DialogueImage: {fileID: 0}
+  bubblePanel: {fileID: 0}
   chatHistory: []
 --- !u!114 &822273634
 MonoBehaviour:
@@ -4572,7 +4573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6427230104526972574, guid: 92b919679cda71e4d9140b2b685bab50, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7294387822585835025, guid: 92b919679cda71e4d9140b2b685bab50, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4747,12 +4748,10 @@ MonoBehaviour:
   frisbeeSpeed: 5
   spawnXPosition: 10
   spawnYRange: {x: -2, y: 2}
-  dogTransform: {fileID: 4030238060154544736, guid: ded91ac012b99534ba7eecd35152a711, type: 3}
   catchDistance: 0.5
   heartsContainer: {fileID: 587584938}
   heartPrefab: {fileID: 5498178037322218158, guid: 2b099a1c78604a548a4f4e568437e9f1, type: 3}
   gameOverPanel: {fileID: 1219880547}
-  dogController: {fileID: 304864277}
   mainCanvas: {fileID: 822273632}
   gameCanvas: {fileID: 1799557832}
 --- !u!1 &1350637733
@@ -6146,8 +6145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -217.30005, y: -12.100098}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -204.07, y: -43}
+  m_SizeDelta: {x: 261.4763, y: 113.2334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938583394
 MonoBehaviour:
@@ -6238,8 +6237,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6b895f97fcaebbf45855bf67f5fd458e, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
