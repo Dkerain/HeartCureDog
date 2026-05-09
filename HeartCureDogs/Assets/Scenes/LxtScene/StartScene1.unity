@@ -648,7 +648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &662347431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1277,6 +1277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: '@GlobalBlackboard'
       objectReference: {fileID: 0}
+    - target: {fileID: 436925807943825772, guid: 08bcdb37d54dc094cb896a73e94c8517, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1137328148383350733, guid: 08bcdb37d54dc094cb896a73e94c8517, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1317,6 +1321,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5893229749641993271, guid: 08bcdb37d54dc094cb896a73e94c8517, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1338,7 +1346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1058721827
 Transform:
   m_ObjectHideFlags: 0
@@ -1987,7 +1995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae61c0f310a399a4297c05e49b1fd169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petShopSceneName: PetShopScene
+  petShopSceneName: dogselectscene1
 --- !u!4 &1419595685
 Transform:
   m_ObjectHideFlags: 0
@@ -2581,7 +2589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2002203356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,6 +2628,10 @@ PrefabInstance:
     - target: {fileID: 2239655018415730761, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
       propertyPath: m_Name
       value: SaveLoadUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 2239655018415730761, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6158177209511762452, guid: 54f1fbf81fd796a488b94cc2189707ce, type: 3}
       propertyPath: loadPanel

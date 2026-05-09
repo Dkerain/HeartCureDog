@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae61c0f310a399a4297c05e49b1fd169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  petShopSceneName: PetShopScene
+  petShopSceneName: PetShopScene1
 --- !u!4 &1419595685
 Transform:
   m_ObjectHideFlags: 0

@@ -84,7 +84,7 @@ public class ClickableProp : MonoBehaviour
         // 添加 TextMeshProUGUI
         var tmp = canvasObj.AddComponent<TMPro.TextMeshProUGUI>();
         tmp.text = text;
-        tmp.fontSize = 50;      // 大小 50
+        tmp.fontSize = 14;      // 大小 50
         tmp.color = Color.black; // 黑色字体
         tmp.alignment = TMPro.TextAlignmentOptions.Center;
 

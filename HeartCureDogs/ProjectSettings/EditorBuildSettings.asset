@@ -120,7 +120,7 @@ EditorBuildSettings:
     path: Assets/Scenes/LmlScene/PetShopScene1.unity
     guid: c2c740cf7e9b0264b86edbac2fb18fd2
   - enabled: 1
-    path: Assets/Scenes/LmlScene/StartScene1.unity
+    path: Assets/Scenes/LxtScene/StartScene1.unity
     guid: 17e4bc63aeb2a7347a194ed41ec1c5a4
   - enabled: 1
     path: Assets/Scenes/LmlScene/ParkScene1.unity
@@ -137,4 +137,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LmlScene/BathroomScene1.unity
     guid: eb3e90b5c4f277a43b86ec78f176b2a0
+  - enabled: 1
+    path: Assets/Scenes/LmlScene/dogselectscene1.unity
+    guid: fffe193ca3cd4864aa4e2fd8881d2f53
   m_configObjects: {}

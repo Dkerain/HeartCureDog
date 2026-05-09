@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: -8534307019784150756}
   - component: {fileID: -5614660349743982702}
   - component: {fileID: -4120690394276491284}
+  - component: {fileID: -4439754531674213741}
+  - component: {fileID: -8830440313772206352}
+  - component: {fileID: 8131676270003784064}
   m_Layer: 0
   m_Name: Corgi
   m_TagString: Dog
@@ -190,3 +193,116 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-4439754531674213741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807379293324936156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0fc71f8f8ed1b24c9f96cffe8194475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleCanvas: {fileID: 7839226265796661633, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  emojiMappings:
+  - emotionName: "\u5F00\u5FC3"
+    emojiImage: {fileID: 1526223386890121434, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u7D27\u5F20"
+    emojiImage: {fileID: 114091490611326765, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u5174\u594B"
+    emojiImage: {fileID: 5348659764024877025, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u607C\u6012"
+    emojiImage: {fileID: 4555133391617040779, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u538B\u6291"
+    emojiImage: {fileID: 5041292687809527850, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u7126\u8651"
+    emojiImage: {fileID: 6335684062255288111, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u5C0F\u6FC0\u52A8"
+    emojiImage: {fileID: 2842163844267411551, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u5931\u843D"
+    emojiImage: {fileID: 4069804832167913088, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u5171\u60C5"
+    emojiImage: {fileID: 8393525981064332211, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u4EAB\u53D7"
+    emojiImage: {fileID: 1998250891777870855, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u70E6\u95F7"
+    emojiImage: {fileID: 3302657924660203321, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  - emotionName: "\u60B2\u4F24"
+    emojiImage: {fileID: 1797346939222899637, guid: 08f5aa98a6759a0449878edb87b7a09b, type: 3}
+  displayDuration: 3
+--- !u!114 &-8830440313772206352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807379293324936156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f327b5b04742d4596ce8e7fcd2cc67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emotionSprites:
+  - emotionName: "\u4F4E\u843D"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u5F00\u5FC3"
+    sprite: {fileID: 21300000, guid: e03aa345b795d6b4ba8f60d3582989f6, type: 3}
+  - emotionName: "\u7D27\u5F20"
+    sprite: {fileID: 21300000, guid: 39183197721811748878af7d5444dbec, type: 3}
+  - emotionName: "\u5174\u594B"
+    sprite: {fileID: 21300000, guid: 8b52c32aac4b8de4389995e505959a62, type: 3}
+  - emotionName: "\u607C\u6012"
+    sprite: {fileID: 21300000, guid: 39183197721811748878af7d5444dbec, type: 3}
+  - emotionName: "\u538B\u6291"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u7126\u8651"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u5C0F\u6FC0\u52A8"
+    sprite: {fileID: 21300000, guid: cc67ed0b7e0b3374f8fe50a1e599e73e, type: 3}
+  - emotionName: "\u5931\u843D"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u5171\u60C5"
+    sprite: {fileID: 21300000, guid: e2b27e72e12982543bb4d82b6d3eef08, type: 3}
+  - emotionName: "\u4EAB\u53D7"
+    sprite: {fileID: 21300000, guid: b13bbe717dc9bdd4aba7ba6c61efd2d4, type: 3}
+  - emotionName: "\u70E6\u95F7"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+  - emotionName: "\u60B2\u4F24"
+    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+--- !u!58 &8131676270003784064
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807379293324936156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4
