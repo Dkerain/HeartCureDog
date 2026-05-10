@@ -230,31 +230,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   emotionSprites:
   - emotionName: "\u4F4E\u843D"
-    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+    sprite: {fileID: 21300000, guid: b6968898d63afae41a4d2812f3acd427, type: 3}
   - emotionName: "\u5F00\u5FC3"
-    sprite: {fileID: 21300000, guid: e03aa345b795d6b4ba8f60d3582989f6, type: 3}
+    sprite: {fileID: 21300000, guid: bf4f5617ff6dc1d44b6d8d9308e37e88, type: 3}
   - emotionName: "\u7D27\u5F20"
-    sprite: {fileID: 21300000, guid: 39183197721811748878af7d5444dbec, type: 3}
+    sprite: {fileID: 21300000, guid: 21a7657bfd2ed76418a025c15484383f, type: 3}
   - emotionName: "\u5174\u594B"
-    sprite: {fileID: 21300000, guid: 8b52c32aac4b8de4389995e505959a62, type: 3}
+    sprite: {fileID: 21300000, guid: 187d4ea08178a7f4f8937f1395ea1644, type: 3}
   - emotionName: "\u607C\u6012"
-    sprite: {fileID: 21300000, guid: 39183197721811748878af7d5444dbec, type: 3}
+    sprite: {fileID: 21300000, guid: a196494004fa82c4ca1d39c52cd2cf98, type: 3}
   - emotionName: "\u538B\u6291"
-    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+    sprite: {fileID: 21300000, guid: b6968898d63afae41a4d2812f3acd427, type: 3}
   - emotionName: "\u7126\u8651"
-    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+    sprite: {fileID: 21300000, guid: c8facc12b32f7d443975839f26767bf5, type: 3}
   - emotionName: "\u5C0F\u6FC0\u52A8"
-    sprite: {fileID: 21300000, guid: cc67ed0b7e0b3374f8fe50a1e599e73e, type: 3}
+    sprite: {fileID: 21300000, guid: 110fb6f319e163f409b15e9c0ebaad98, type: 3}
   - emotionName: "\u5931\u843D"
-    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+    sprite: {fileID: 21300000, guid: b0e2a56d92cf3b9449326f5d63a4cc29, type: 3}
   - emotionName: "\u5171\u60C5"
-    sprite: {fileID: 21300000, guid: e2b27e72e12982543bb4d82b6d3eef08, type: 3}
+    sprite: {fileID: 21300000, guid: d566710515dac634a912e999df1e91af, type: 3}
   - emotionName: "\u4EAB\u53D7"
-    sprite: {fileID: 21300000, guid: b13bbe717dc9bdd4aba7ba6c61efd2d4, type: 3}
+    sprite: {fileID: 21300000, guid: 1821a3e175ac47f4b8bbf08e245ff561, type: 3}
   - emotionName: "\u70E6\u95F7"
-    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+    sprite: {fileID: 21300000, guid: b6968898d63afae41a4d2812f3acd427, type: 3}
   - emotionName: "\u60B2\u4F24"
-    sprite: {fileID: 21300000, guid: 7acab75bc65340049a1ab3904da18fb8, type: 3}
+    sprite: {fileID: 21300000, guid: 2f46190e3a8cd2543997a16f63a4d8c8, type: 3}
 --- !u!58 &224070635916524595
 CircleCollider2D:
   m_ObjectHideFlags: 0
